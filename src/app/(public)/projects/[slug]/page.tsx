@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getPublicProjectBySlug } from "@/server/repositories/projectRepository";
+import { getPublicProjectBySlug, getPublicProjects } from "@/server/repositories/projectRepository";
 import {
   MapPin,
   Calendar,
@@ -15,6 +15,13 @@ import {
   Check,
 } from "lucide-react";
 import { generateWhatsAppUrl } from "@/lib/whatsapp/url";
+
+export async function generateStaticParams() {
+  const projects = await getPublicProjects();
+  return projects.map((p: any) => ({
+    slug: p.slug,
+  }));
+}
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const project = await getPublicProjectBySlug(params.slug);

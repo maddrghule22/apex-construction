@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getProjectById } from "@/server/repositories/projectRepository";
+import { getProjectById, getAllProjects } from "@/server/repositories/projectRepository";
 import { getExpensesByProject } from "@/server/repositories/expenseRepository";
 import { calculateBudgetMetrics, calculateWeightedProjectProgress } from "@/lib/calculations/budget";
 import {
@@ -21,6 +21,13 @@ import {
   Phone,
 } from "lucide-react";
 import MilestoneManager from "@/components/dashboard/MilestoneManager";
+
+export async function generateStaticParams() {
+  const projects = await getAllProjects();
+  return projects.map((p: any) => ({
+    id: p.id,
+  }));
+}
 
 export default async function DashboardProjectDetailPage({
   params,
