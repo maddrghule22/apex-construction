@@ -10,150 +10,175 @@ import {
   ArrowRight,
   Calculator,
   MessageSquare,
+  Sparkles,
 } from "lucide-react";
 import { generateWhatsAppUrl } from "@/lib/whatsapp/url";
+import VisitingCardShowcase from "./VisitingCardShowcase";
 
 export default function Hero() {
   const generalWhatsApp = generateWhatsAppUrl({ type: "GENERAL" });
   const tankerWhatsApp = generateWhatsAppUrl({ type: "TANKER" });
 
   return (
-    <section className="relative bg-navy-950 text-white overflow-hidden">
-      {/* Background architectural image overlay */}
+    <section className="relative bg-gradient-to-b from-slate-950 via-navy-950 to-slate-900 text-white overflow-hidden">
+      {/* High-res architectural background image with subtle blend */}
       <div
-        className="absolute inset-0 bg-cover bg-center opacity-20 mix-blend-luminosity"
+        className="absolute inset-0 bg-cover bg-center opacity-15 mix-blend-luminosity scale-105 transition-transform duration-1000"
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/photo-1541888946425-d0fbb1861564?auto=format&fit=crop&w=2000&q=80')",
         }}
       />
-      {/* Subtle gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-900/95 to-navy-950/80" />
+      {/* Radial ambient lighting */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-construction-500/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-28">
-        <div className="max-w-4xl space-y-6">
-          {/* Top Auspicious Pill */}
-          <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-navy-900/90 border border-construction-500/40 text-construction-400 text-xs sm:text-sm font-bold backdrop-blur-md">
-            <span>॥ श्री ॥</span>
-            <span>•</span>
-            <span>॥ श्रीराम समर्थ ॥</span>
-            <span>•</span>
-            <span>॥ जय जय रघुवीर समर्थ ॥</span>
-          </div>
-
-          {/* Main Headline */}
-          <div className="space-y-2">
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
-              SREE SAMARTH KRUPA <br />
-              <span className="text-construction-500 text-2xl sm:text-4xl lg:text-5xl font-extrabold">
-                ENTERPRISES
-              </span>
-            </h1>
-
-            {/* Dual Core Pillar Subtitle */}
-            <div className="pt-2 flex flex-wrap items-center gap-3 text-xs sm:text-sm font-extrabold uppercase tracking-wider">
-              <span className="bg-construction-500 text-white px-3 py-1.5 rounded-lg flex items-center shadow-md">
-                <HardHat className="w-4 h-4 mr-1.5" />
-                Builders & Developers
-              </span>
-              <span className="bg-blue-600 text-white px-3 py-1.5 rounded-lg flex items-center shadow-md">
-                <Droplets className="w-4 h-4 mr-1.5" />
-                Water Tanker & Industrial Suppliers
-              </span>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20 lg:py-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          {/* Left Column: Headline, Services & Actions (7 cols) */}
+          <div className="lg:col-span-7 space-y-6">
+            {/* Top Auspicious Pill Badge */}
+            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-construction-500/40 text-construction-400 text-xs sm:text-sm font-extrabold shadow-lg shadow-black/40 backdrop-blur-md">
+              <span className="text-red-500">॥ श्री ॥</span>
+              <span className="text-slate-600">•</span>
+              <span>॥ श्रीराम समर्थ ॥</span>
+              <span className="text-slate-600">•</span>
+              <span className="hidden sm:inline">॥ जय जय रघुवीर समर्थ ॥</span>
             </div>
-          </div>
 
-          {/* Supporting description */}
-          <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed max-w-3xl">
-            Your single trusted partner for complete turnkey residential bungalows, commercial shopfronts, and structural civil development — integrated with a dedicated 24x7 Water Tanker fleet for construction site curing, potable water supply, and industrial raw materials.
-          </p>
-
-          {/* Proprietors Direct Call Badges */}
-          <div className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-2xl">
-            <div className="p-3.5 rounded-xl bg-navy-900/80 border border-navy-700/80 flex items-center justify-between">
-              <div>
-                <span className="text-[10px] text-gray-400 uppercase font-bold tracking-wider block">
-                  Proprietor
+            {/* Main Headline */}
+            <div className="space-y-2">
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
+                SREE SAMARTH KRUPA <br />
+                <span className="bg-gradient-to-r from-construction-400 via-orange-400 to-amber-300 bg-clip-text text-transparent font-black">
+                  ENTERPRISES
                 </span>
-                <span className="text-xs sm:text-sm font-bold text-white">
-                  ज्ञानेश्वर पवळे (Dnyaneshwar Pawale)
+              </h1>
+
+              {/* Dual Core Pillar Subtitle */}
+              <div className="pt-2 flex flex-wrap items-center gap-2.5 text-xs sm:text-sm font-black uppercase tracking-wider">
+                <span className="bg-construction-500/90 hover:bg-construction-500 text-white px-3.5 py-1.5 rounded-xl flex items-center shadow-md shadow-construction-500/20 border border-construction-400/30 transition">
+                  <HardHat className="w-4 h-4 mr-1.5 text-construction-200" />
+                  Builders &amp; Developers
+                </span>
+                <span className="bg-blue-600/90 hover:bg-blue-600 text-white px-3.5 py-1.5 rounded-xl flex items-center shadow-md shadow-blue-600/20 border border-blue-400/30 transition">
+                  <Droplets className="w-4 h-4 mr-1.5 text-blue-200" />
+                  Water Tanker &amp; Industrial Suppliers
                 </span>
               </div>
-              <a
-                href="tel:+919850291262"
-                className="inline-flex items-center text-xs font-bold px-3 py-1.5 rounded-lg bg-navy-800 text-construction-400 hover:bg-navy-700 transition border border-navy-600"
-              >
-                <Phone className="w-3.5 h-3.5 mr-1 text-construction-500" />
-                98502 91262
-              </a>
             </div>
 
-            <div className="p-3.5 rounded-xl bg-navy-900/80 border border-navy-700/80 flex items-center justify-between">
-              <div>
-                <span className="text-[10px] text-gray-400 uppercase font-bold tracking-wider block">
-                  Proprietor / Partner
-                </span>
-                <span className="text-xs sm:text-sm font-bold text-white">
-                  श्रवण पवळे (Shravan Pawale)
-                </span>
+            {/* Supporting description */}
+            <p className="text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl">
+              Turnkey residential bungalows, independent houses, and commercial shopfronts with structural precision — paired with an independent <strong>24x7 Water Tanker fleet</strong> for construction slab curing, concrete mixing, and industrial raw material supply.
+            </p>
+
+            {/* Proprietor Direct Hotline Cards */}
+            <div className="pt-1 grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-xl">
+              <div className="p-3 rounded-2xl bg-slate-900/90 border border-slate-700/80 shadow-md flex items-center justify-between">
+                <div>
+                  <span className="text-[10px] text-slate-400 uppercase font-extrabold tracking-wider block">
+                    Senior Proprietor
+                  </span>
+                  <span className="text-xs font-bold text-white block">
+                    ज्ञानेश्वर पवळे (Dnyaneshwar)
+                  </span>
+                  <a
+                    href="tel:+919850291262"
+                    className="text-xs font-black text-construction-400 hover:text-construction-300 flex items-center mt-0.5"
+                  >
+                    <Phone className="w-3 h-3 mr-1 text-construction-500" />
+                    98502 91262
+                  </a>
+                </div>
+                <a
+                  href="tel:+919850291262"
+                  className="p-2 rounded-xl bg-navy-800 hover:bg-navy-700 text-white transition border border-slate-700"
+                  title="Call Dnyaneshwar Pawale"
+                >
+                  <Phone className="w-4 h-4 text-construction-400" />
+                </a>
               </div>
+
+              <div className="p-3 rounded-2xl bg-slate-900/90 border border-slate-700/80 shadow-md flex items-center justify-between">
+                <div>
+                  <span className="text-[10px] text-blue-400 uppercase font-extrabold tracking-wider block">
+                    Managing Partner
+                  </span>
+                  <span className="text-xs font-bold text-white block">
+                    श्रवण पवळे (Shravan)
+                  </span>
+                  <a
+                    href="tel:+917276484671"
+                    className="text-xs font-black text-blue-400 hover:text-blue-300 flex items-center mt-0.5"
+                  >
+                    <Phone className="w-3 h-3 mr-1 text-blue-400" />
+                    72764 84671
+                  </a>
+                </div>
+                <a
+                  href="tel:+917276484671"
+                  className="p-2 rounded-xl bg-navy-800 hover:bg-navy-700 text-white transition border border-slate-700"
+                  title="Call Shravan Pawale"
+                >
+                  <Phone className="w-4 h-4 text-blue-400" />
+                </a>
+              </div>
+            </div>
+
+            {/* Action Buttons */}
+            <div className="pt-2 flex flex-wrap items-center gap-3">
               <a
-                href="tel:+917276484671"
-                className="inline-flex items-center text-xs font-bold px-3 py-1.5 rounded-lg bg-navy-800 text-construction-400 hover:bg-navy-700 transition border border-navy-600"
+                href={tankerWhatsApp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-5 py-3 rounded-xl text-xs sm:text-sm font-black text-white bg-blue-600 hover:bg-blue-700 shadow-lg shadow-blue-600/30 transition transform hover:-translate-y-0.5 active:translate-y-0"
               >
-                <Phone className="w-3.5 h-3.5 mr-1 text-construction-500" />
-                72764 84671
+                <Truck className="w-4 h-4 mr-2" />
+                Book Water Tanker (24x7)
               </a>
+
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-5 py-3 rounded-xl text-xs sm:text-sm font-black text-white bg-construction-500 hover:bg-construction-600 shadow-lg shadow-construction-500/25 transition transform hover:-translate-y-0.5 active:translate-y-0"
+              >
+                Free Site Consultation
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+
+              <Link
+                href="/estimate"
+                className="inline-flex items-center justify-center px-4 py-3 rounded-xl text-xs sm:text-sm font-bold text-construction-400 bg-slate-900/90 hover:bg-slate-800 border border-construction-500/40 transition"
+              >
+                <Calculator className="w-4 h-4 mr-2 text-construction-500" />
+                Cost Estimator (₹)
+              </Link>
+            </div>
+
+            {/* Trust Signals */}
+            <div className="pt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 border-t border-slate-800/80">
+              <div className="flex items-center space-x-2 text-xs text-slate-300 font-medium">
+                <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
+                <span>Turnkey Quality</span>
+              </div>
+              <div className="flex items-center space-x-2 text-xs text-slate-300 font-medium">
+                <Droplets className="w-4 h-4 text-blue-400 shrink-0" />
+                <span>Prompt Curing Water</span>
+              </div>
+              <div className="flex items-center space-x-2 text-xs text-slate-300 font-medium">
+                <CheckCircle2 className="w-4 h-4 text-construction-400 shrink-0" />
+                <span>Fixed BOQ Pricing</span>
+              </div>
+              <div className="flex items-center space-x-2 text-xs text-slate-300 font-medium">
+                <Truck className="w-4 h-4 text-amber-400 shrink-0" />
+                <span>Raw Materials Supply</span>
+              </div>
             </div>
           </div>
 
-          {/* Primary Action Buttons */}
-          <div className="pt-3 flex flex-wrap items-center gap-3">
-            <a
-              href={tankerWhatsApp}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-5 py-3 rounded-xl text-sm font-bold text-white bg-blue-600 hover:bg-blue-700 shadow-lg shadow-blue-900/30 transition transform hover:-translate-y-0.5 active:translate-y-0"
-            >
-              <Truck className="w-4 h-4 mr-2" />
-              Book Water Tanker (24x7)
-            </a>
-
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center px-5 py-3 rounded-xl text-sm font-bold text-white bg-construction-500 hover:bg-construction-600 shadow-lg shadow-construction-500/25 transition transform hover:-translate-y-0.5 active:translate-y-0"
-            >
-              Get Free Consultation
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
-
-            <Link
-              href="/estimate"
-              className="inline-flex items-center justify-center px-4 py-3 rounded-xl text-sm font-semibold text-construction-400 bg-navy-900 hover:bg-navy-850 border border-construction-500/30 transition"
-            >
-              <Calculator className="w-4 h-4 mr-2 text-construction-500" />
-              Cost Estimator (₹)
-            </Link>
-          </div>
-
-          {/* Key Trust Signals */}
-          <div className="pt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 border-t border-navy-800">
-            <div className="flex items-center space-x-2 text-xs text-gray-300">
-              <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
-              <span>Turnkey Execution</span>
-            </div>
-            <div className="flex items-center space-x-2 text-xs text-gray-300">
-              <Droplets className="w-4 h-4 text-blue-400 shrink-0" />
-              <span>Prompt Water Tankers</span>
-            </div>
-            <div className="flex items-center space-x-2 text-xs text-gray-300">
-              <CheckCircle2 className="w-4 h-4 text-construction-400 shrink-0" />
-              <span>Transparent Pricing</span>
-            </div>
-            <div className="flex items-center space-x-2 text-xs text-gray-300">
-              <Truck className="w-4 h-4 text-amber-400 shrink-0" />
-              <span>Industrial Supply</span>
-            </div>
+          {/* Right Column: Interactive Visiting Card Showcase (5 cols) */}
+          <div className="lg:col-span-5">
+            <VisitingCardShowcase />
           </div>
         </div>
       </div>

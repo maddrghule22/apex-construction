@@ -17,6 +17,7 @@ import {
   HardHat,
 } from "lucide-react";
 import { generateWhatsAppUrl } from "@/lib/whatsapp/url";
+import VisitingCardShowcase from "@/components/public/VisitingCardShowcase";
 
 function ContactFormContent() {
   const searchParams = useSearchParams();
@@ -133,93 +134,7 @@ function ContactFormContent() {
               </p>
             </div>
 
-            {/* Proprietor 1: Dnyaneshwar Pawale */}
-            <div className="p-4 rounded-xl bg-surface border border-gray-200 flex items-center justify-between">
-              <div>
-                <span className="text-[10px] font-bold text-gray-500 uppercase block">
-                  Senior Proprietor
-                </span>
-                <h4 className="text-sm font-bold text-navy-950">
-                  ज्ञानेश्वर पवळे (Dnyaneshwar Pawale)
-                </h4>
-                <a
-                  href="tel:+919850291262"
-                  className="text-xs font-semibold text-construction-600 hover:underline flex items-center mt-1"
-                >
-                  <Phone className="w-3.5 h-3.5 mr-1" />
-                  +91 98502 91262
-                </a>
-              </div>
-              <a
-                href={dnyaneshwarWhatsApp}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition flex items-center"
-              >
-                <MessageSquare className="w-3.5 h-3.5 mr-1" />
-                WhatsApp
-              </a>
-            </div>
-
-            {/* Proprietor 2: Shravan Pawale */}
-            <div className="p-4 rounded-xl bg-surface border border-gray-200 flex items-center justify-between">
-              <div>
-                <span className="text-[10px] font-bold text-blue-600 uppercase block">
-                  Managing Partner & Operations
-                </span>
-                <h4 className="text-sm font-bold text-navy-950">
-                  श्रवण पवळे (Shravan Pawale)
-                </h4>
-                <a
-                  href="tel:+917276484671"
-                  className="text-xs font-semibold text-blue-700 hover:underline flex items-center mt-1"
-                >
-                  <Phone className="w-3.5 h-3.5 mr-1" />
-                  +91 72764 84671
-                </a>
-              </div>
-              <a
-                href={shravanWhatsApp}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition flex items-center"
-              >
-                <MessageSquare className="w-3.5 h-3.5 mr-1" />
-                WhatsApp
-              </a>
-            </div>
-
-            {/* Water Tanker 24x7 Quick Order */}
-            <div className="p-4 rounded-xl bg-blue-50 border border-blue-200 space-y-2">
-              <div className="flex items-center space-x-2 text-blue-900 font-bold text-xs uppercase tracking-wide">
-                <Droplets className="w-4 h-4 text-blue-600" />
-                <span>24x7 Water Tanker Express Dispatch</span>
-              </div>
-              <p className="text-xs text-blue-900/80 leading-relaxed">
-                Need water tankers for concrete curing, slab casting, or drinking water supply? We dispatch immediately.
-              </p>
-              <a
-                href={tankerWhatsApp}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center w-full py-2 px-3 rounded-lg text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 transition"
-              >
-                <Truck className="w-3.5 h-3.5 mr-1.5" />
-                Book Water Tanker on WhatsApp
-              </a>
-            </div>
-
-            {/* Official Visiting Card Badge */}
-            <div className="p-3 bg-white rounded-xl border border-gray-200 shadow-sm">
-              <span className="text-[10px] text-gray-500 uppercase font-bold block mb-2">
-                Official Business Visiting Card
-              </span>
-              <img
-                src="/images/business-card.png"
-                alt="Sree Samarth Krupa Enterprises Business Card"
-                className="w-full h-auto rounded-lg border border-gray-100"
-              />
-            </div>
+            <VisitingCardShowcase />
           </div>
 
           {/* Right Column: Server-Validated Enquiry Form (7 cols) */}

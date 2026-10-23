@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { generateWhatsAppUrl } from "@/lib/whatsapp/url";
+import VisitingCardShowcase from "@/components/public/VisitingCardShowcase";
 
 export const metadata = {
   title: "About Us | Sree Samarth Krupa Enterprises",
@@ -65,13 +66,9 @@ export default function AboutPage() {
               </p>
             </div>
 
-            {/* Business Card Display */}
-            <div className="w-full lg:w-auto max-w-lg rounded-xl overflow-hidden shadow-md border-2 border-gray-200 group hover:shadow-xl transition">
-              <img
-                src="/images/business-card.png"
-                alt="Sree Samarth Krupa Enterprises Official Business Card"
-                className="w-full h-auto object-contain bg-white"
-              />
+            {/* Business Card Interactive Display */}
+            <div className="w-full lg:w-auto max-w-lg">
+              <VisitingCardShowcase />
             </div>
           </div>
         </div>

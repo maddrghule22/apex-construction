@@ -12,6 +12,7 @@ import {
   Truck,
 } from "lucide-react";
 import { generateWhatsAppUrl } from "@/lib/whatsapp/url";
+import BrandLogo from "./BrandLogo";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -34,20 +35,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-navy-800/80">
           {/* Company Bio */}
           <div className="space-y-4">
-            <Link href="/" className="flex items-center space-x-3">
-              <div className="w-11 h-11 rounded-xl bg-navy-900 flex items-center justify-center text-construction-500 border border-navy-700 shadow-sm relative">
-                <HardHat className="w-6 h-6 text-construction-500" />
-                <Droplets className="w-4 h-4 text-blue-400 absolute bottom-1 right-1" />
-              </div>
-              <div className="flex flex-col">
-                <span className="font-extrabold text-base tracking-tight text-white leading-tight">
-                  SREE SAMARTH KRUPA
-                </span>
-                <span className="text-[10px] uppercase text-construction-400 font-bold tracking-wider">
-                  ENTERPRISES
-                </span>
-              </div>
-            </Link>
+            <BrandLogo variant="light" />
 
             <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">
               Leading civil construction company and trusted industrial water tanker supplier. We deliver premium turnkey residential bungalows, commercial buildings, structural development, and reliable 24x7 water tanker logistics.
