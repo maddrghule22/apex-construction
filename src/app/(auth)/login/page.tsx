@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { HardHat, Lock, Mail, ArrowRight, ShieldCheck, AlertCircle } from "lucide-react";
 import Link from "next/link";
+import BrandLogo from "@/components/layout/BrandLogo";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -45,19 +46,12 @@ export default function LoginPage() {
 
       <div className="w-full max-w-md bg-white rounded-3xl shadow-2xl p-8 sm:p-10 relative z-10 border border-gray-100">
         <div className="text-center mb-8">
-          <Link href="/" className="inline-flex items-center space-x-2.5 mb-4 group">
-            <div className="w-12 h-12 rounded-xl bg-navy-800 flex items-center justify-center text-construction-500 shadow-md">
-              <HardHat className="w-7 h-7" />
-            </div>
-            <div className="text-left">
-              <span className="font-extrabold text-xl tracking-tight text-navy-900 block leading-none">
-                APEX <span className="text-construction-500">BUILD</span>
-              </span>
-              <span className="text-[10px] uppercase font-bold text-gray-400 tracking-wider">
-                Management Portal
-              </span>
-            </div>
-          </Link>
+          <div className="flex justify-center mb-4">
+            <BrandLogo variant="dark" />
+          </div>
+          <span className="inline-block text-[10px] uppercase font-bold text-construction-600 bg-construction-50 px-2.5 py-0.5 rounded-full border border-construction-200 mb-3 tracking-wider">
+            Management Portal
+          </span>
           <h1 className="text-2xl font-bold text-navy-900">Owner & Staff Login</h1>
           <p className="text-xs text-gray-500 mt-1">
             Access secure projects, financial expenses, and customer enquiries.
