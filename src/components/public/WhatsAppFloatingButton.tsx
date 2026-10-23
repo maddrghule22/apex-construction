@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { MessageSquare, Phone, Droplets, X } from "lucide-react";
+import { MessageSquare, Phone, X } from "lucide-react";
 import { generateWhatsAppUrl } from "@/lib/whatsapp/url";
 
 export default function WhatsAppFloatingButton() {
@@ -15,10 +15,6 @@ export default function WhatsAppFloatingButton() {
   const dnyaneshwarWhatsApp = generateWhatsAppUrl({
     phoneNumber: "919850291262",
     type: "GENERAL",
-  });
-  const tankerWhatsApp = generateWhatsAppUrl({
-    phoneNumber: "917276484671",
-    type: "TANKER",
   });
 
   return (
@@ -38,13 +34,14 @@ export default function WhatsAppFloatingButton() {
             <button
               onClick={() => setOpenModal(false)}
               className="text-gray-400 hover:text-gray-600 p-1"
+              aria-label="Close modal"
             >
               <X className="w-4 h-4" />
             </button>
           </div>
 
           <p className="text-[11px] text-gray-500">
-            Connect directly with the proprietors on WhatsApp or Call:
+            Connect directly with the proprietors on WhatsApp:
           </p>
 
           <div className="space-y-2">
@@ -52,7 +49,7 @@ export default function WhatsAppFloatingButton() {
               href={shravanWhatsApp}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-between p-2 rounded-xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 text-emerald-900 transition text-xs font-bold"
+              className="flex items-center justify-between p-2.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 text-emerald-900 transition text-xs font-bold"
             >
               <span className="flex items-center">
                 <MessageSquare className="w-4 h-4 mr-2 text-emerald-600" />
@@ -65,26 +62,13 @@ export default function WhatsAppFloatingButton() {
               href={dnyaneshwarWhatsApp}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-between p-2 rounded-xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 text-emerald-900 transition text-xs font-bold"
+              className="flex items-center justify-between p-2.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 text-emerald-900 transition text-xs font-bold"
             >
               <span className="flex items-center">
                 <MessageSquare className="w-4 h-4 mr-2 text-emerald-600" />
                 ज्ञानेश्वर पवळे (Dnyaneshwar)
               </span>
               <span className="text-[11px] text-emerald-700">98502 91262</span>
-            </a>
-
-            <a
-              href={tankerWhatsApp}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-between p-2 rounded-xl bg-blue-50 hover:bg-blue-100 border border-blue-200 text-blue-900 transition text-xs font-bold"
-            >
-              <span className="flex items-center">
-                <Droplets className="w-4 h-4 mr-2 text-blue-600" />
-                Book Water Tanker (24x7)
-              </span>
-              <span className="text-[10px] bg-blue-600 text-white px-1.5 py-0.5 rounded">FAST</span>
             </a>
           </div>
         </div>
@@ -95,8 +79,8 @@ export default function WhatsAppFloatingButton() {
         <div className="bg-white text-navy-900 shadow-xl rounded-xl p-3 border border-gray-100 flex items-center space-x-3 text-xs max-w-xs animate-fadeIn">
           <div className="w-2 h-2 rounded-full bg-emerald-500 animate-ping shrink-0" />
           <div className="flex-1 cursor-pointer" onClick={() => setOpenModal(true)}>
-            <p className="font-semibold text-charcoal-900">Contact Proprietors</p>
-            <p className="text-gray-500 text-[11px]">Chat on WhatsApp or Book Tanker</p>
+            <p className="font-semibold text-charcoal-900">Direct Consultation</p>
+            <p className="text-gray-500 text-[11px]">Chat on WhatsApp with Proprietors</p>
           </div>
           <button
             onClick={() => setShowTooltip(false)}

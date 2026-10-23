@@ -24,8 +24,8 @@ export default function WhyChooseUs() {
       icon: Eye,
     },
     {
-      title: "Integrated 24x7 Water Tanker & Material Logistics",
-      desc: "Unlike other contractors who face work-stops due to local water scarcity, we operate our own fleet of water tankers ensuring uninterrupted curing, concrete batching, and on-time raw material delivery.",
+      title: "Direct Proprietor Supervision & Daily Site Presence",
+      desc: "No inexperienced middle-men. Dnyaneshwar Pawale and Shravan Pawale oversee daily excavation, rebar tying, concrete pours, and finishing quality personally on every site.",
       icon: Users2,
     },
     {

@@ -1,4 +1,5 @@
 import React from "react";
+import type { Metadata } from "next";
 import Hero from "@/components/public/Hero";
 import StatsSection from "@/components/public/StatsSection";
 import ServicesGrid from "@/components/public/ServicesGrid";
@@ -8,6 +9,15 @@ import WhyChooseUs from "@/components/public/WhyChooseUs";
 import EstimateCalculator from "@/components/public/EstimateCalculator";
 import TestimonialsAndFaq from "@/components/public/TestimonialsAndFaq";
 import WhatsAppBanner from "@/components/public/WhatsAppBanner";
+
+export const metadata: Metadata = {
+  title: "Sree Samarth Krupa Enterprises | Builders & Developers | Turnkey Construction",
+  description:
+    "Turnkey residential bungalows, villas, independent row houses, and commercial complexes in Maharashtra. Directly supervised by Dnyaneshwar Pawale (+91 98502 91262) & Shravan Pawale (+91 72764 84671).",
+  alternates: {
+    canonical: "/",
+  },
+};
 
 export default function HomePage() {
   return (

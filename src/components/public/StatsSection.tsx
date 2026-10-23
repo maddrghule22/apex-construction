@@ -1,5 +1,5 @@
 import React from "react";
-import { Building2, Droplets, ShieldCheck, Users } from "lucide-react";
+import { Building2, Award, ShieldCheck, Users } from "lucide-react";
 
 export default function StatsSection() {
   const stats = [
@@ -10,10 +10,10 @@ export default function StatsSection() {
       icon: Building2,
     },
     {
-      label: "Water Tankers Dispatched",
-      value: "10,000+",
-      description: "Curing water & industrial bulk tankers supplied on time",
-      icon: Droplets,
+      label: "On-Time Completion Rate",
+      value: "100%",
+      description: "Milestone-driven delivery with locked BOQ contracts and zero delays",
+      icon: Award,
     },
     {
       label: "Direct Proprietor Supervision",
@@ -24,7 +24,7 @@ export default function StatsSection() {
     {
       label: "Years Construction Trust",
       value: "15+",
-      description: "Reputed regional general contractors & industrial suppliers",
+      description: "Reputed regional general contractors, builders and structural developers",
       icon: ShieldCheck,
     },
   ];

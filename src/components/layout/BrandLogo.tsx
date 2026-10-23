@@ -93,18 +93,12 @@ export default function BrandLogo({
 
           {/* Ground Foundation Slab with Construction Orange accent */}
           <rect x="8" y="72" width="84" height="6" rx="2" fill="#F97316" />
-
-          {/* Water drop accent on bottom right */}
-          <path
-            d="M 84 82 C 84 82 89 88 89 91 C 89 93.7 86.7 96 84 96 C 81.3 96 79 93.7 79 91 C 79 88 84 82 84 82 Z"
-            fill="#0EA5E9"
-          />
         </svg>
       </div>
 
       {/* Brand Typography */}
-      <div className="flex flex-col">
-        <div className="flex items-center gap-1.5">
+      <div className="flex flex-col text-left">
+        <div className="flex items-center gap-1.5 flex-wrap">
           <span className="text-[10px] sm:text-xs font-black text-red-600 bg-red-50 px-1.5 py-0.5 rounded border border-red-200 tracking-wider">
             ॥ श्री ॥
           </span>
@@ -118,15 +112,11 @@ export default function BrandLogo({
         </div>
 
         {showTagline && (
-          <div className="mt-1 flex items-center gap-1.5 text-[9px] sm:text-[10px] font-extrabold uppercase tracking-widest">
+          <div className="mt-1 flex items-center gap-1.5 text-[9px] sm:text-[10px] font-extrabold uppercase tracking-widest flex-wrap">
             <span className="text-construction-600 font-black">ENTERPRISES</span>
             <span className="text-slate-300">•</span>
-            <span className={`${isLight ? "text-slate-300" : "text-slate-600"}`}>
+            <span className={`${isLight ? "text-slate-300" : "text-slate-700"} font-bold`}>
               BUILDERS &amp; DEVELOPERS
-            </span>
-            <span className="text-slate-300 hidden md:inline">•</span>
-            <span className="text-blue-600 font-bold hidden md:inline">
-              WATER TANKERS
             </span>
           </div>
         )}

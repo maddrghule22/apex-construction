@@ -29,9 +29,9 @@ import { generateWhatsAppUrl } from "@/lib/whatsapp/url";
 
 const DEFAULT_ADDITIONAL_WORKS: AdditionalWorkOption[] = [
   {
-    id: "add-tanker",
-    name: "Site Curing Water Tanker Supply Package",
-    description: "Dedicated water tanker trips for RCC slab curing, brick soaking, and plaster hydration",
+    id: "add-waterproofing",
+    name: "Advanced Multi-Layer Waterproofing System",
+    description: "Fiber-mesh polymer terrace coating, sunken slab waterproofing membrane & 5-year leak guarantee",
     fixedCost: 45000,
     selected: true,
   },
@@ -260,7 +260,7 @@ export default function EstimateCalculator() {
                   type="text"
                   value={location}
                   onChange={(e) => setLocation(e.target.value)}
-                  placeholder="e.g. North Suburb, Metro"
+                  placeholder="e.g. Pune, PCMC, Talegaon, Chakan"
                   className="w-full px-3.5 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-construction-500"
                 />
               </div>

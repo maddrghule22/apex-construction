@@ -2,7 +2,7 @@ import { prisma } from "@/lib/db/prisma";
 
 const DEFAULT_SETTINGS = {
   companyName: process.env.NEXT_PUBLIC_COMPANY_NAME || "Sree Samarth Krupa Enterprises",
-  tagline: "Builders & Developers | Water Tanker & Industrial Suppliers",
+  tagline: "Builders & Developers | Turnkey Civil Construction",
   invocation: "॥ श्री ॥ ॥ श्रीराम समर्थ ॥ ॥ जय जय रघुवीर समर्थ ॥",
   primaryProprietor: "Shravan Pawale (श्रवण पवळे)",
   primaryPhone: process.env.NEXT_PUBLIC_COMPANY_PHONE || "+91 72764 84671",
@@ -10,11 +10,11 @@ const DEFAULT_SETTINGS = {
   secondaryPhone: process.env.NEXT_PUBLIC_COMPANY_SECONDARY_PHONE || "+91 98502 91262",
   companyPhone: "+91 72764 84671",
   companyEmail: process.env.NEXT_PUBLIC_COMPANY_EMAIL || "contact@sreesamarthkrupa.com",
-  officeAddress: "Main Office & Yard, Maharashtra, India",
-  businessHours: "Mon - Sun: 7:00 AM - 9:00 PM (24x7 Water Tanker Emergency Support)",
+  officeAddress: "Main Office & Operations, Maharashtra, India",
+  businessHours: "Mon - Sat: 8:00 AM - 8:00 PM | Sun: By Appointment",
   whatsAppNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "917276484671",
   currencySymbol: process.env.NEXT_PUBLIC_CURRENCY_SYMBOL || "₹",
-  serviceAreas: "Residential, Commercial, Industrial Belts & Construction Sites",
+  serviceAreas: "Residential Bungalows, Commercial Belts & Turnkey Construction Sites across Maharashtra",
 };
 
 let localSettings = { ...DEFAULT_SETTINGS };

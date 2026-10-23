@@ -12,8 +12,6 @@ import {
   CheckCircle2,
   ShieldCheck,
   AlertCircle,
-  Truck,
-  Droplets,
   HardHat,
 } from "lucide-react";
 import { generateWhatsAppUrl } from "@/lib/whatsapp/url";
@@ -55,11 +53,6 @@ function ContactFormContent() {
     phoneNumber: "919850291262",
     type: "GENERAL",
     projectCategory: category,
-  });
-
-  const tankerWhatsApp = generateWhatsAppUrl({
-    phoneNumber: "917276484671",
-    type: "TANKER",
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -111,7 +104,7 @@ function ContactFormContent() {
               Contact Sree Samarth Krupa Enterprises
             </h1>
             <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-              Connect directly with proprietors <strong>Dnyaneshwar Pawale</strong> & <strong>Shravan Pawale</strong> for turnkey building construction, site inspections, blueprints review, and 24x7 water tanker dispatch.
+              Connect directly with proprietors <strong>Dnyaneshwar Pawale</strong> &amp; <strong>Shravan Pawale</strong> for turnkey building construction, site inspections, blueprints review, and transparent cost estimates.
             </p>
           </div>
         </div>
@@ -121,7 +114,7 @@ function ContactFormContent() {
       <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Left Column: Direct Info, Card & Contacts (5 cols) */}
-          <div className="lg:col-span-5 space-y-6">
+          <div className="lg:col-span-5 space-y-6 text-left">
             <div>
               <span className="text-[11px] font-bold text-construction-600 uppercase tracking-wider block">
                 Direct Line to Proprietors
@@ -130,7 +123,7 @@ function ContactFormContent() {
                 Reach Us Anytime
               </h2>
               <p className="text-xs sm:text-sm text-gray-600 leading-relaxed mt-1">
-                Call or WhatsApp our team for prompt quote estimates, site visits, or urgent water tanker deliveries.
+                Call or WhatsApp our team for prompt quote estimates, architectural review, or free on-site plot inspections.
               </p>
             </div>
 
@@ -177,10 +170,10 @@ function ContactFormContent() {
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
                   <h3 className="text-xl font-extrabold text-navy-950">
-                    Request Site Inspection or Service Booking
+                    Request Site Inspection &amp; Consultation
                   </h3>
                   <p className="text-xs text-gray-500 mt-1">
-                    Fill out your project or tanker requirements and our proprietors will connect with you.
+                    Fill out your project details and our proprietors will connect with you directly.
                   </p>
                 </div>
 
@@ -248,7 +241,7 @@ function ContactFormContent() {
 
                   <div>
                     <label className="block text-xs font-bold text-charcoal-700 mb-1">
-                      Site / Delivery Location *
+                      Plot / Project Location *
                     </label>
                     <input
                       type="text"
@@ -264,27 +257,27 @@ function ContactFormContent() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs font-bold text-charcoal-700 mb-1">
-                      Service Category *
+                      Construction Category *
                     </label>
                     <select
                       value={category}
                       onChange={(e) => setCategory(e.target.value)}
                       className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-navy-900 focus:border-transparent transition"
                     >
-                      <option value="RESIDENTIAL">Bungalow / Residential Construction</option>
-                      <option value="COMMERCIAL">Commercial Complex / Showroom</option>
-                      <option value="INDUSTRIAL">Water Tanker Supply (Curing / Bulk)</option>
-                      <option value="RENOVATION">Industrial Materials & Supply</option>
+                      <option value="RESIDENTIAL">Bungalow / Villa / Residential Construction</option>
+                      <option value="COMMERCIAL">Commercial Complex / Showroom / Office</option>
+                      <option value="INDUSTRIAL">Industrial Warehouse / PEB Shed</option>
+                      <option value="RENOVATION">Civil Renovation &amp; Structural Works</option>
                     </select>
                   </div>
 
                   <div>
                     <label className="block text-xs font-bold text-charcoal-700 mb-1">
-                      Approx. Area or Tanker Litres
+                      Approx. Built-up Area (sq.ft)
                     </label>
                     <input
                       type="number"
-                      placeholder="e.g. 2400 sq.ft or 10000 L"
+                      placeholder="e.g. 2400 sq.ft"
                       value={approxArea}
                       onChange={(e) => setApproxArea(e.target.value)}
                       className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-navy-900 focus:border-transparent transition"
@@ -299,7 +292,7 @@ function ContactFormContent() {
                   <textarea
                     rows={4}
                     required
-                    placeholder="Describe your plot size, floors required, or water tanker schedule..."
+                    placeholder="Describe your plot size, floors required, timeline or design ideas..."
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-navy-900 focus:border-transparent transition"

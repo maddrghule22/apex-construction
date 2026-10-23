@@ -49,9 +49,9 @@ export function generateWhatsAppUrl(options: WhatsAppMessageOptions): string {
         break;
       case "GENERAL":
       default:
-        messageText = `॥ श्रीराम समर्थ ॥ Hello Shravan ji / Dnyaneshwar ji, I am interested in Sree Samarth Krupa Enterprises services (${
-          options.projectCategory ? options.projectCategory.toLowerCase() : "builders & developers / water tanker"
-        }). Please contact me.`;
+        messageText = `॥ श्रीराम समर्थ ॥ Hello Shravan ji / Dnyaneshwar ji, I am interested in your construction and development services (${
+          options.projectCategory ? options.projectCategory.toLowerCase() : "builders & developers"
+        }) with Sree Samarth Krupa Enterprises. Please contact me.`;
         break;
     }
   }

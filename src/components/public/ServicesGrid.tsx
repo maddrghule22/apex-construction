@@ -3,134 +3,133 @@ import Link from "next/link";
 import {
   Home,
   Building2,
-  Droplets,
-  Truck,
+  Wrench,
   ArrowRight,
   ShieldCheck,
   Check,
-  Sparkles,
+  Compass,
 } from "lucide-react";
 
 export default function ServicesGrid() {
   const serviceCategories = [
     {
-      category: "Builders & Developers",
-      tagline: "Turnkey Residential & Commercial Construction",
+      category: "Residential Construction",
+      tagline: "Turnkey Villas, Bungalows & Homes",
       icon: Home,
       accentColor: "border-construction-500",
       badgeColor: "bg-construction-50 text-construction-700 border-construction-200",
       items: [
         {
           title: "Custom Luxury Villas & Bungalows",
-          desc: "Complete turnkey structural casting from foundation to premium interior handover for plot owners.",
+          desc: "Complete turnkey structural casting from foundation to premium interior finishes for plot owners.",
         },
         {
-          title: "Individual Independent Houses & Row Houses",
+          title: "Independent Houses & Row Houses",
           desc: "High-grade RCC column-beam framing, precision brick masonry, and seismic-resistant standards.",
         },
         {
-          title: "Commercial Complexes & Showrooms",
-          desc: "Spacious column-free commercial architecture engineered for high footfall and retail longevity.",
+          title: "Architectural Planning & Blueprints",
+          desc: "3D elevations, structural analysis, Vaastu-compliant layouts, and municipal sanction documentation.",
         },
         {
-          title: "Structural Renovation & Extensions",
-          desc: "Floor additions, slab casting, waterproofing, and structural strengthening.",
+          title: "Turnkey Interior Finishing",
+          desc: "Flooring, premium electrical wiring, concealed plumbing, designer false ceilings, and paint.",
         },
       ],
       link: "/services#residential",
-      ctaText: "Explore Construction Services",
+      ctaText: "Explore Residential Services",
     },
     {
-      category: "Water Tanker Services",
-      tagline: "24x7 Reliable Fleet for Sites & Industry",
-      icon: Droplets,
-      accentColor: "border-blue-500",
-      badgeColor: "bg-blue-50 text-blue-700 border-blue-200",
+      category: "Commercial Construction",
+      tagline: "Corporate Complexes & Retail Spaces",
+      icon: Building2,
+      accentColor: "border-navy-600",
+      badgeColor: "bg-navy-50 text-navy-800 border-navy-200",
       items: [
         {
-          title: "Construction Site Curing Water Tankers",
-          desc: "Continuous scheduled bulk water supply for RCC slab curing, brickwork washing, and plaster hydration.",
+          title: "Commercial Complexes & Showrooms",
+          desc: "Spacious column-free commercial architecture engineered for maximum retail footfall and high longevity.",
         },
         {
-          title: "Concrete Mixing & Batching Supply",
-          desc: "Clean quality water delivered directly to on-site concrete mixers and RMC batches.",
+          title: "Corporate Offices & Business Parks",
+          desc: "Modern office towers with integrated elevator shafts, fire sprinkler grids, and HVAC ducting coordination.",
         },
         {
-          title: "Potable / Drinking Water Tankers",
-          desc: "Hygienic potable water tankers for residential societies, commercial facilities, and emergency requirements.",
+          title: "Industrial Warehouses & Sheds",
+          desc: "Heavy-duty laser-screed concrete industrial flooring, PEB structures, and administrative offices.",
         },
         {
-          title: "Industrial Bulk Water Supply Contracts",
-          desc: "Dedicated daily and monthly fleet agreements for factories, warehouses, and fabrication yards.",
+          title: "Turnkey Commercial Fit-Outs",
+          desc: "Facade structural glazing, exterior cladding, entrance foyers, and parking lot civil works.",
         },
       ],
-      link: "/services#tanker",
-      ctaText: "Book Water Tanker Now",
+      link: "/services#commercial",
+      ctaText: "Explore Commercial Projects",
     },
     {
-      category: "Industrial Suppliers & Logistics",
-      tagline: "Raw Building Materials & Industrial Equipment",
-      icon: Truck,
-      accentColor: "border-emerald-500",
-      badgeColor: "bg-emerald-50 text-emerald-700 border-emerald-200",
+      category: "Civil & Structural Engineering",
+      tagline: "Renovation, Structural Works & Retrofitting",
+      icon: Wrench,
+      accentColor: "border-amber-500",
+      badgeColor: "bg-amber-50 text-amber-800 border-amber-200",
       items: [
         {
-          title: "Construction Raw Materials Supply",
-          desc: "High-grade river sand, crushed stone sand (M-Sand), blue metal aggregates (10mm/20mm/40mm).",
+          title: "RCC Framework & Structural Casting",
+          desc: "Earthwork excavation, isolated and raft footings, plinth beams, columns, and slab pours.",
         },
         {
-          title: "TMT Steel & Cement Procurement",
-          desc: "Bulk certified Fe-550D TMT bars and 43/53 grade OPC/PPC cement direct from authorized manufacturers.",
+          title: "Building Renovation & Remodeling",
+          desc: "Floor additions, structural strengthening, wall dismantling, modern expansions, and facade upgrades.",
         },
         {
-          title: "Site Earthwork & Excavation Coordination",
-          desc: "JCB, excavators, dumper transport, and plot leveling for foundation groundwork.",
+          title: "Waterproofing & Anti-Termite Treatment",
+          desc: "Multi-layer terrace and sunken slab waterproofing warranties, chemical injection, and pest barriers.",
         },
         {
-          title: "Industrial Spares & Material Logistics",
-          desc: "Heavy material handling and industrial supplies for production plants and infrastructure projects.",
+          title: "MEP Coordination & Site Infrastructure",
+          desc: "Comprehensive civil stormwater drainage, septic tanks, underground sump tanks, and boundary walls.",
         },
       ],
-      link: "/services#materials",
-      ctaText: "Inquire Industrial Supply",
+      link: "/services#engineering",
+      ctaText: "Explore Civil Engineering",
     },
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-16 sm:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 space-y-3">
           <span className="text-xs font-bold text-navy-800 uppercase tracking-wider bg-surface px-3 py-1 rounded-full border border-gray-200">
-            End-To-End Infrastructure Capabilities
+            Professional Construction Capabilities
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-navy-950 tracking-tight">
-            Our Business Specializations
+            Our Construction Services
           </h2>
           <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-            Sree Samarth Krupa Enterprises bridges civil construction expertise with rapid on-demand water logistics and raw material supply across Maharashtra.
+            Sree Samarth Krupa Enterprises delivers turnkey construction excellence for residential bungalows, commercial landmarks, and structural civil projects across Maharashtra.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {serviceCategories.map((group, idx) => {
             const Icon = group.icon;
             return (
               <div
                 key={idx}
-                className={`bg-white rounded-2xl border-t-4 ${group.accentColor} border-x border-b border-gray-200/80 p-8 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group`}
+                className={`bg-white rounded-2xl border-t-4 ${group.accentColor} border-x border-b border-gray-200/80 p-6 sm:p-8 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group`}
               >
                 <div>
                   <div className="flex items-center space-x-3 mb-4">
                     <div className="w-12 h-12 rounded-xl bg-navy-50 text-navy-900 flex items-center justify-center group-hover:scale-105 transition shadow-xs">
                       <Icon className="w-6 h-6 text-construction-600" />
                     </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-navy-950">{group.category}</h3>
+                    <div className="text-left">
+                      <h3 className="text-lg sm:text-xl font-bold text-navy-950">{group.category}</h3>
                       <p className="text-xs text-gray-500 font-medium">{group.tagline}</p>
                     </div>
                   </div>
 
-                  <ul className="space-y-4 my-6">
+                  <ul className="space-y-3.5 my-6 text-left">
                     {group.items.map((item, itemIdx) => (
                       <li key={itemIdx} className="flex items-start space-x-3 text-xs sm:text-sm">
                         <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
@@ -147,7 +146,7 @@ export default function ServicesGrid() {
                   </ul>
                 </div>
 
-                <div className="pt-4 border-t border-gray-100">
+                <div className="pt-4 border-t border-gray-100 text-left">
                   <Link
                     href={group.link}
                     className="inline-flex items-center text-xs font-bold text-navy-900 hover:text-construction-600 transition"

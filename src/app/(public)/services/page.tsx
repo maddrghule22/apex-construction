@@ -3,8 +3,7 @@ import Link from "next/link";
 import {
   Home,
   Building2,
-  Droplets,
-  Truck,
+  Wrench,
   Layers,
   ShieldCheck,
   Check,
@@ -12,13 +11,14 @@ import {
   Calculator,
   Phone,
   MessageSquare,
+  Calendar,
 } from "lucide-react";
 import { generateWhatsAppUrl } from "@/lib/whatsapp/url";
 
 export const metadata = {
-  title: "Turnkey Construction & Water Tanker Services | Sree Samarth Krupa Enterprises",
+  title: "Turnkey Construction Services | Sree Samarth Krupa Enterprises",
   description:
-    "Explore our full capabilities: custom residential bungalows, commercial complexes, 24x7 water tanker supply for construction curing & drinking, and industrial materials supply.",
+    "Explore our civil construction services: turnkey residential bungalows, modern villas, independent row houses, commercial complexes, and structural engineering in Maharashtra.",
 };
 
 export default function ServicesPage() {
@@ -26,16 +26,16 @@ export default function ServicesPage() {
     phoneNumber: "917276484671",
     type: "GENERAL",
   });
-  const tankerWhatsApp = generateWhatsAppUrl({
-    phoneNumber: "917276484671",
-    type: "TANKER",
+  const dnyaneshwarWhatsApp = generateWhatsAppUrl({
+    phoneNumber: "919850291262",
+    type: "GENERAL",
   });
 
   const residentialServices = [
     {
       id: "villas",
       title: "Custom Luxury Villas & Bungalows",
-      desc: "Turnkey architectural construction tailored to private plots. We manage structural soil investigation, foundation footings, seismic-resistant RCC framing, double-height ceilings, and high-end finishing.",
+      desc: "Turnkey architectural construction tailored to private plots. We manage structural soil investigation, isolated foundation footings, seismic-resistant RCC framing, double-height ceilings, and premium interior finishing.",
       benefits: [
         "End-to-end turnkey delivery from foundation to final paint & electrification",
         "Seismic-resistant RCC frame with certified Fe-550D TMT reinforcement",
@@ -65,8 +65,8 @@ export default function ServicesPage() {
   const commercialServices = [
     {
       id: "commercial-complexes",
-      title: "Commercial Complexes & Showrooms",
-      desc: "Spacious column-free commercial architecture engineered for high footfall, retail shopfronts, and multi-tenant offices.",
+      title: "Commercial Complexes & Retail Showrooms",
+      desc: "Spacious column-free commercial architecture engineered for high footfall, retail shopfronts, and multi-tenant corporate offices.",
       benefits: [
         "Heavy-duty load-bearing structural design with reinforced beams",
         "Provision for wide glass display facades and roll-up shutters",
@@ -77,36 +77,50 @@ export default function ServicesPage() {
       image:
         "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
     },
+    {
+      id: "industrial-sheds",
+      title: "Industrial PEB Warehouses & Sheds",
+      desc: "Pre-engineered industrial steel buildings, heavy laser-screed concrete flooring, loading bays, and administrative annexes.",
+      benefits: [
+        "Heavy-load floor casting designed to withstand fork-truck movements",
+        "Fast-track structural steel assembly and weather-tight roofing",
+        "Integrated stormwater channels, rainwater sumps, and boundary walls",
+        "Approved industrial fire hydrant and ventilation clearances",
+      ],
+      suitable: "Logistics companies, manufacturing units, industrial park plots",
+      image:
+        "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80",
+    },
   ];
 
-  const tankerServices = [
+  const civilEngineeringServices = [
     {
-      id: "curing-water",
-      title: "Construction Site Curing & Concrete Mixing Water Tankers",
-      desc: "The strength of concrete relies entirely on timely curing. We provide scheduled, reliable bulk water tankers for RCC slab water ponding, column curing, brick soaking, and plaster hydration.",
+      id: "structural-casting",
+      title: "RCC Structural Framing & Civil Works",
+      desc: "Engineered foundation footings, plinth beams, column casting, and slab casting using grade 53 OPC cement and certified Fe-550D TMT steel.",
       benefits: [
-        "Guaranteed on-time morning and evening curing delivery to prevent shrinkage cracks",
-        "Clean water free from harmful salts, silt, or acids that corrode rebar",
-        "Daily, weekly, and monthly contract arrangements with priority dispatch",
-        "Fleet equipped with high-pressure booster pumps and discharge hoses",
+        "Strict cube-strength testing for every concrete pour",
+        "Proper cover blocks and shuttering alignment inspection",
+        "Adequate wet curing protocols for crack-free monolithic strength",
+        "Certified chartered structural engineer approvals",
       ],
-      suitable: "Active construction projects, general contractors, slab casting contractors",
-      image:
-        "https://images.unsplash.com/photo-1584463699039-44439c288f6f?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      id: "potable-water",
-      title: "Potable / Drinking Water & Industrial Bulk Tankers",
-      desc: "Hygienic, tested water tankers for industrial manufacturing plants, residential apartment societies, fabrication yards, and institutional facilities.",
-      benefits: [
-        "Food-grade and stainless steel / epoxy-coated tanker reservoirs",
-        "Available in 5,000 to 12,000+ Litre capacity vehicles",
-        "24x7 emergency delivery hotline for critical supply shortages",
-        "Competitive bulk rates with GST billing and log receipts",
-      ],
-      suitable: "Housing societies, factories, industrial plants, commercial parks",
+      suitable: "Plot owners seeking structural civil contractors",
       image:
         "https://images.unsplash.com/photo-1541888946425-d0fbb1861564?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      id: "renovation",
+      title: "Building Renovation & Structural Strengthening",
+      desc: "Vertical floor additions, structural beam underpinning, room remodeling, terrace waterproofing, and modern facade rejuvenation.",
+      benefits: [
+        "Load-bearing assessment before adding additional floors",
+        "Multi-layer polymer membrane waterproofing with 5-year guarantee",
+        "Clean demolition and debris disposal coordination",
+        "Modernization of concealed plumbing and electrical conduits",
+      ],
+      suitable: "Existing bungalow, row house, or commercial building owners",
+      image:
+        "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80",
     },
   ];
 
@@ -115,110 +129,32 @@ export default function ServicesPage() {
       {/* Header Banner */}
       <section className="bg-navy-950 text-white py-16 sm:py-20 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="max-w-3xl space-y-3">
+          <div className="max-w-3xl space-y-3 text-left">
             <span className="text-xs font-bold text-construction-400 uppercase tracking-wider bg-navy-900 px-3 py-1 rounded-full border border-navy-800">
               ॥ श्री ॥ ॥ श्रीराम समर्थ ॥
             </span>
             <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight">
-              Our Comprehensive Services
+              Our Construction Services
             </h1>
             <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-              Explore our dual strengths: Turnkey Building Development & Structural Civil Contracting paired with dedicated 24x7 Water Tanker & Industrial Material Logistics.
+              Comprehensive turnkey building development and structural civil contracting. Built with certified materials, transparent itemized BOQ contracts, and dedicated proprietor supervision.
             </p>
           </div>
         </div>
       </section>
 
-      {/* SECTION 1: WATER TANKER SERVICES (PROMINENT) */}
-      <section id="tanker" className="py-20 bg-blue-50/50 border-b border-blue-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-12 space-y-3">
-            <div className="inline-flex items-center space-x-2 text-xs font-bold text-blue-800 bg-blue-100 px-3 py-1 rounded-full border border-blue-200">
-              <Droplets className="w-4 h-4 text-blue-600" />
-              <span>Dedicated 24x7 Fleet</span>
-            </div>
-            <h2 className="text-3xl font-extrabold text-navy-950">
-              Water Tanker & Industrial Supply Division
-            </h2>
-            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-              Never let water shortages delay your construction schedule. We manage an independent fleet of water tankers operating around the clock for building sites, concrete curing, and bulk industrial needs.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {tankerServices.map((svc) => (
-              <div
-                key={svc.id}
-                className="bg-white rounded-2xl border border-blue-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
-              >
-                <div>
-                  <div className="h-56 w-full bg-navy-900 relative">
-                    <img
-                      src={svc.image}
-                      alt={svc.title}
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute top-4 left-4 bg-blue-600 text-white text-[11px] font-bold px-3 py-1 rounded-md shadow-md uppercase tracking-wide">
-                      24x7 Express Service
-                    </div>
-                  </div>
-
-                  <div className="p-6 sm:p-8 space-y-4">
-                    <h3 className="text-xl font-bold text-navy-950">{svc.title}</h3>
-                    <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{svc.desc}</p>
-
-                    <div>
-                      <h4 className="text-xs font-bold text-navy-900 uppercase tracking-wider mb-2">
-                        Key Service Advantages:
-                      </h4>
-                      <ul className="space-y-2">
-                        {svc.benefits.map((b, i) => (
-                          <li key={i} className="flex items-start text-xs text-charcoal-700">
-                            <Check className="w-4 h-4 text-blue-600 mr-2 shrink-0 mt-0.5" />
-                            <span>{b}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="p-6 bg-surface border-t border-gray-100 flex items-center justify-between">
-                  <a
-                    href={tankerWhatsApp}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center text-xs font-bold text-blue-700 hover:text-blue-900"
-                  >
-                    <Truck className="w-4 h-4 mr-1 text-blue-600" />
-                    Book Tanker on WhatsApp →
-                  </a>
-                  <a
-                    href="tel:+917276484671"
-                    className="inline-flex items-center text-xs font-bold text-navy-900 bg-white px-3 py-1.5 rounded-lg border border-gray-200 hover:bg-gray-50"
-                  >
-                    <Phone className="w-3.5 h-3.5 mr-1 text-construction-500" />
-                    Call 72764 84671
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 2: RESIDENTIAL CONSTRUCTION */}
-      <section id="residential" className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mb-12 space-y-3">
+      {/* SECTION 1: RESIDENTIAL CONSTRUCTION */}
+      <section id="residential" className="py-16 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mb-12 space-y-3 text-left">
           <div className="inline-flex items-center space-x-2 text-xs font-bold text-construction-700 bg-construction-50 px-3 py-1 rounded-full border border-construction-200">
             <Home className="w-4 h-4 text-construction-600" />
             <span>Turnkey Residential Division</span>
           </div>
-          <h2 className="text-3xl font-extrabold text-navy-950">
-            Bungalows, Villas & Residential Construction
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-950">
+            Bungalows, Villas &amp; Independent Houses
           </h2>
           <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-            From foundation excavation to architectural handover, we build private homes with unyielding structural integrity and transparent material billing.
+            From foundation excavation to architectural handover, we build private homes with unyielding structural integrity, quality materials, and transparent billing.
           </p>
         </div>
 
@@ -226,7 +162,7 @@ export default function ServicesPage() {
           {residentialServices.map((svc) => (
             <div
               key={svc.id}
-              className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+              className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between text-left"
             >
               <div>
                 <div className="h-56 w-full bg-navy-900 relative">
@@ -260,17 +196,17 @@ export default function ServicesPage() {
                 </div>
               </div>
 
-              <div className="p-6 bg-surface border-t border-gray-100 flex items-center justify-between">
+              <div className="p-6 bg-surface border-t border-gray-100 flex flex-wrap items-center justify-between gap-3">
                 <Link
                   href="/estimate"
                   className="inline-flex items-center text-xs font-bold text-construction-700 hover:text-construction-800"
                 >
                   <Calculator className="w-4 h-4 mr-1 text-construction-600" />
-                  Calculate Construction Cost (₹) →
+                  Estimate Cost (₹) →
                 </Link>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center text-xs font-bold text-white bg-navy-900 px-3 py-1.5 rounded-lg hover:bg-navy-800"
+                  className="inline-flex items-center text-xs font-bold text-white bg-navy-900 px-3.5 py-2 rounded-xl hover:bg-navy-800 transition"
                 >
                   Request Consultation
                 </Link>
@@ -280,19 +216,19 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* SECTION 3: COMMERCIAL & INDUSTRIAL MATERIAL SUPPLY */}
-      <section id="commercial" className="py-20 bg-surface border-t border-gray-200">
+      {/* SECTION 2: COMMERCIAL CONSTRUCTION */}
+      <section id="commercial" className="py-16 sm:py-20 bg-surface border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-12 space-y-3">
+          <div className="max-w-3xl mb-12 space-y-3 text-left">
             <div className="inline-flex items-center space-x-2 text-xs font-bold text-navy-800 bg-white px-3 py-1 rounded-full border border-gray-200">
               <Building2 className="w-4 h-4 text-construction-600" />
-              <span>Commercial & Industrial</span>
+              <span>Commercial Division</span>
             </div>
-            <h2 className="text-3xl font-extrabold text-navy-950">
-              Commercial Structures & Building Materials
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-950">
+              Commercial Complexes &amp; Showrooms
             </h2>
             <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-              We construct retail showrooms and commercial centers, along with procuring certified aggregates, sand, and steel.
+              Engineered for high footfall, retail shopfronts, and multi-tenant corporate offices with punctual commercial handover.
             </p>
           </div>
 
@@ -300,7 +236,7 @@ export default function ServicesPage() {
             {commercialServices.map((svc) => (
               <div
                 key={svc.id}
-                className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl transition flex flex-col justify-between"
+                className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between text-left"
               >
                 <div>
                   <div className="h-56 w-full bg-navy-900 relative">
@@ -334,59 +270,64 @@ export default function ServicesPage() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
 
-            {/* Industrial Materials Card */}
-            <div
-              id="materials"
-              className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl transition flex flex-col justify-between"
-            >
-              <div>
-                <div className="h-56 w-full bg-navy-900 relative">
-                  <img
-                    src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80"
-                    alt="Industrial Materials Supply"
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute top-4 left-4 bg-emerald-600 text-white text-[11px] font-bold px-3 py-1 rounded-md shadow-md uppercase tracking-wide">
-                    Material Logistics
+      {/* SECTION 3: CIVIL & STRUCTURAL ENGINEERING */}
+      <section id="engineering" className="py-16 sm:py-20 bg-white border-t border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mb-12 space-y-3 text-left">
+            <div className="inline-flex items-center space-x-2 text-xs font-bold text-amber-800 bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
+              <Wrench className="w-4 h-4 text-amber-600" />
+              <span>Civil &amp; Structural Engineering</span>
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-950">
+              RCC Structural Works, Renovation &amp; Waterproofing
+            </h2>
+            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+              Precision structural casting, building extensions, floor additions, and guaranteed terrace/basement waterproofing systems.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {civilEngineeringServices.map((svc) => (
+              <div
+                key={svc.id}
+                className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between text-left"
+              >
+                <div>
+                  <div className="h-56 w-full bg-navy-900 relative">
+                    <img
+                      src={svc.image}
+                      alt={svc.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="p-6 sm:p-8 space-y-4">
+                    <h3 className="text-xl font-bold text-navy-950">{svc.title}</h3>
+                    <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{svc.desc}</p>
+                    <ul className="space-y-2">
+                      {svc.benefits.map((b, i) => (
+                        <li key={i} className="flex items-start text-xs text-charcoal-700">
+                          <Check className="w-4 h-4 text-emerald-600 mr-2 shrink-0 mt-0.5" />
+                          <span>{b}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
-                <div className="p-6 sm:p-8 space-y-4">
-                  <h3 className="text-xl font-bold text-navy-950">
-                    Industrial Suppliers & Material Logistics
-                  </h3>
-                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-                    Direct bulk supply of building materials and site preparation equipment: river sand, M-sand, crushed metal aggregates, and excavation machinery.
-                  </p>
-                  <ul className="space-y-2 text-xs text-charcoal-700">
-                    <li className="flex items-center">
-                      <Check className="w-4 h-4 text-emerald-600 mr-2 shrink-0" />
-                      Crushed stone aggregate (10mm, 20mm, 40mm) and plaster sand
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="w-4 h-4 text-emerald-600 mr-2 shrink-0" />
-                      Bulk cement and Fe-550D TMT reinforcement logistics
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="w-4 h-4 text-emerald-600 mr-2 shrink-0" />
-                      JCB and dumper earthwork coordination for plot leveling
-                    </li>
-                  </ul>
+
+                <div className="p-6 bg-surface border-t border-gray-100 flex items-center justify-between">
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center text-xs font-bold text-navy-950 hover:text-construction-600"
+                  >
+                    Inquire Structural Engineering →
+                  </Link>
                 </div>
               </div>
-
-              <div className="p-6 bg-surface border-t border-gray-100 flex items-center justify-between">
-                <a
-                  href={shravanWhatsApp}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-xs font-bold text-emerald-700 hover:text-emerald-900"
-                >
-                  <MessageSquare className="w-4 h-4 mr-1 text-emerald-600" />
-                  Inquire Material Rates on WhatsApp →
-                </a>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>

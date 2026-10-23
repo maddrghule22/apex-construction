@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import { Phone, MessageSquare, Check, Copy, ExternalLink, ShieldCheck, Truck, HardHat } from "lucide-react";
+import Link from "next/link";
+import { Phone, MessageSquare, Check, Copy, ExternalLink, ShieldCheck, HardHat, Calendar } from "lucide-react";
 import { generateWhatsAppUrl } from "@/lib/whatsapp/url";
 
 export default function VisitingCardShowcase() {
@@ -15,10 +16,6 @@ export default function VisitingCardShowcase() {
     phoneNumber: "919850291262",
     type: "GENERAL",
   });
-  const tankerWhatsApp = generateWhatsAppUrl({
-    phoneNumber: "917276484671",
-    type: "TANKER",
-  });
 
   const handleCopy = (phone: string) => {
     navigator.clipboard.writeText(phone);
@@ -27,17 +24,17 @@ export default function VisitingCardShowcase() {
   };
 
   return (
-    <div className="relative group">
+    <div className="relative group w-full max-w-lg mx-auto">
       {/* Ambient background glow */}
-      <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-construction-500/30 via-red-500/20 to-blue-500/30 blur-xl opacity-75 group-hover:opacity-100 transition duration-500" />
+      <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-construction-500/25 via-amber-500/20 to-red-500/25 blur-xl opacity-75 group-hover:opacity-100 transition duration-500" />
 
       {/* Main Container */}
-      <div className="relative rounded-2xl bg-white p-3 sm:p-4 shadow-2xl border border-slate-200/90 overflow-hidden">
+      <div className="relative rounded-2xl bg-white p-3.5 sm:p-5 shadow-2xl border border-slate-200/90 overflow-hidden">
         {/* Verification Pill Header */}
         <div className="flex items-center justify-between pb-2.5 px-1 border-b border-slate-100 text-xs">
           <div className="flex items-center space-x-1.5 text-emerald-700 font-bold">
             <ShieldCheck className="w-4 h-4 text-emerald-600" />
-            <span className="text-[11px] uppercase tracking-wider">Official Registered Firm</span>
+            <span className="text-[11px] uppercase tracking-wider">Registered Builders &amp; Developers</span>
           </div>
           <span className="text-[10px] font-bold text-red-600 bg-red-50 px-2 py-0.5 rounded-full border border-red-200">
             ॥ श्रीराम समर्थ ॥
@@ -45,7 +42,7 @@ export default function VisitingCardShowcase() {
         </div>
 
         {/* Card Image with soft shadow */}
-        <div className="mt-2.5 rounded-xl overflow-hidden border border-slate-200 bg-slate-50 relative group/img">
+        <div className="mt-3 rounded-xl overflow-hidden border border-slate-200 bg-slate-50 relative group/img">
           <img
             src="/images/business-card.png"
             alt="Sree Samarth Krupa Enterprises Official Business Card"
@@ -54,7 +51,7 @@ export default function VisitingCardShowcase() {
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity flex items-end p-3">
             <span className="text-white text-xs font-semibold flex items-center">
               <ExternalLink className="w-3.5 h-3.5 mr-1 text-construction-400" />
-              Sree Samarth Krupa Enterprises Business Card
+              Sree Samarth Krupa Enterprises
             </span>
           </div>
         </div>
@@ -67,7 +64,7 @@ export default function VisitingCardShowcase() {
               <div className="w-8 h-8 rounded-lg bg-navy-900 text-construction-400 font-bold text-xs flex items-center justify-center shrink-0">
                 DP
               </div>
-              <div>
+              <div className="text-left">
                 <p className="text-[11px] font-bold text-slate-900 leading-tight">
                   ज्ञानेश्वर पवळे (Dnyaneshwar)
                 </p>
@@ -75,7 +72,7 @@ export default function VisitingCardShowcase() {
                   href="tel:+919850291262"
                   className="text-xs font-extrabold text-construction-600 hover:text-construction-700"
                 >
-                  98502 91262
+                  +91 98502 91262
                 </a>
               </div>
             </div>
@@ -115,18 +112,18 @@ export default function VisitingCardShowcase() {
           {/* Shravan Pawale Contact Row */}
           <div className="p-2.5 rounded-xl bg-slate-50 hover:bg-slate-100/80 border border-slate-200/80 flex items-center justify-between transition">
             <div className="flex items-center space-x-2.5">
-              <div className="w-8 h-8 rounded-lg bg-blue-950 text-blue-300 font-bold text-xs flex items-center justify-center shrink-0">
+              <div className="w-8 h-8 rounded-lg bg-navy-900 text-amber-300 font-bold text-xs flex items-center justify-center shrink-0">
                 SP
               </div>
-              <div>
+              <div className="text-left">
                 <p className="text-[11px] font-bold text-slate-900 leading-tight">
                   श्रवण पवळे (Shravan)
                 </p>
                 <a
                   href="tel:+917276484671"
-                  className="text-xs font-extrabold text-blue-700 hover:text-blue-800"
+                  className="text-xs font-extrabold text-construction-600 hover:text-construction-700"
                 >
-                  72764 84671
+                  +91 72764 84671
                 </a>
               </div>
             </div>
@@ -164,17 +161,15 @@ export default function VisitingCardShowcase() {
           </div>
         </div>
 
-        {/* Instant Tanker Booking CTA Strip */}
+        {/* Free Site Visit / Consultation CTA Strip */}
         <div className="mt-3 pt-3 border-t border-slate-100">
-          <a
-            href={tankerWhatsApp}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full flex items-center justify-center space-x-2 py-2 px-3 rounded-xl text-xs font-extrabold text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 shadow-md shadow-blue-500/20 transition active:scale-98"
+          <Link
+            href="/contact"
+            className="w-full flex items-center justify-center space-x-2 py-2.5 px-3 rounded-xl text-xs font-extrabold text-white bg-construction-500 hover:bg-construction-600 shadow-md shadow-construction-500/20 transition active:scale-98"
           >
-            <Truck className="w-3.5 h-3.5" />
-            <span>Book 24x7 Water Tanker on WhatsApp</span>
-          </a>
+            <Calendar className="w-3.5 h-3.5" />
+            <span>Book Free Plot Inspection / Site Consultation</span>
+          </Link>
         </div>
       </div>
     </div>

@@ -2,14 +2,13 @@ import React from "react";
 import Link from "next/link";
 import {
   HardHat,
-  Droplets,
   Phone,
   Mail,
   MapPin,
   Clock,
   MessageSquare,
   ShieldCheck,
-  Truck,
+  Building2,
 } from "lucide-react";
 import { generateWhatsAppUrl } from "@/lib/whatsapp/url";
 import BrandLogo from "./BrandLogo";
@@ -17,7 +16,6 @@ import BrandLogo from "./BrandLogo";
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   const whatsappUrl = generateWhatsAppUrl({ type: "GENERAL" });
-  const tankerWhatsApp = generateWhatsAppUrl({ type: "TANKER" });
 
   return (
     <footer className="bg-navy-950 text-gray-300 pt-16 pb-8 border-t border-navy-800">
@@ -28,7 +26,7 @@ export default function Footer() {
             ॥ श्री ॥ ॥ श्रीराम समर्थ ॥ ॥ जय जय रघुवीर समर्थ ॥
           </div>
           <div className="text-xs text-gray-400">
-            Registered General Contractors, Builders, Developers & Industrial Water Tanker Suppliers
+            Registered General Contractors, Builders &amp; Developers
           </div>
         </div>
 
@@ -38,28 +36,18 @@ export default function Footer() {
             <BrandLogo variant="light" />
 
             <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">
-              Leading civil construction company and trusted industrial water tanker supplier. We deliver premium turnkey residential bungalows, commercial buildings, structural development, and reliable 24x7 water tanker logistics.
+              Premier civil construction firm delivering turnkey residential bungalows, modern villas, independent row houses, and commercial complexes with 15+ years of engineering rigor and transparent fixed BOQ contracts.
             </p>
 
-            <div className="pt-2 space-y-2">
+            <div className="pt-2">
               <a
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center space-x-2 text-xs font-semibold text-emerald-400 hover:text-emerald-300 bg-navy-900 px-3 py-2 rounded-lg border border-navy-800 transition w-full"
+                className="inline-flex items-center space-x-2 text-xs font-semibold text-emerald-400 hover:text-emerald-300 bg-navy-900 px-3.5 py-2.5 rounded-xl border border-navy-800 transition w-full justify-center"
               >
                 <MessageSquare className="w-4 h-4 text-emerald-400 shrink-0" />
-                <span>Chat on WhatsApp: +91 72764 84671</span>
-              </a>
-
-              <a
-                href={tankerWhatsApp}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center space-x-2 text-xs font-semibold text-blue-400 hover:text-blue-300 bg-navy-900 px-3 py-2 rounded-lg border border-navy-800 transition w-full"
-              >
-                <Truck className="w-4 h-4 text-blue-400 shrink-0" />
-                <span>Book Water Tanker (24x7 Fleet)</span>
+                <span>Chat with Us on WhatsApp</span>
               </a>
             </div>
           </div>
@@ -69,37 +57,30 @@ export default function Footer() {
             <h4 className="text-white font-bold text-sm mb-4 tracking-wide uppercase">
               Our Core Services
             </h4>
-            <ul className="space-y-2 text-xs sm:text-sm text-gray-400">
+            <ul className="space-y-2.5 text-xs sm:text-sm text-gray-400">
               <li>
                 <Link href="/services#residential" className="hover:text-construction-400 transition">
-                  Turnkey Bungalows & Villa Construction
+                  Turnkey Bungalows &amp; Villa Construction
                 </Link>
               </li>
               <li>
                 <Link href="/services#residential" className="hover:text-construction-400 transition">
-                  Independent Houses & Row Houses
+                  Independent Houses &amp; Row Houses
                 </Link>
               </li>
               <li>
                 <Link href="/services#commercial" className="hover:text-construction-400 transition">
-                  Commercial Complexes & Retail Spaces
+                  Commercial Complexes &amp; Showrooms
                 </Link>
               </li>
               <li>
-                <Link href="/services#tanker" className="hover:text-blue-400 transition font-medium text-blue-300 flex items-center">
-                  <Droplets className="w-3.5 h-3.5 mr-1 text-blue-400" />
-                  Construction Site Curing Water Tankers
+                <Link href="/services#engineering" className="hover:text-construction-400 transition">
+                  RCC Structural Framing &amp; Casting
                 </Link>
               </li>
               <li>
-                <Link href="/services#tanker" className="hover:text-blue-400 transition font-medium text-blue-300 flex items-center">
-                  <Truck className="w-3.5 h-3.5 mr-1 text-blue-400" />
-                  Potable & Industrial Bulk Water Tankers
-                </Link>
-              </li>
-              <li>
-                <Link href="/services#materials" className="hover:text-construction-400 transition">
-                  Industrial Materials, Sand & Aggregate Supply
+                <Link href="/services#engineering" className="hover:text-construction-400 transition">
+                  Civil Renovation &amp; Floor Additions
                 </Link>
               </li>
               <li>
@@ -113,27 +94,27 @@ export default function Footer() {
           {/* Quick Links */}
           <div>
             <h4 className="text-white font-bold text-sm mb-4 tracking-wide uppercase">
-              Company & Projects
+              Company &amp; Projects
             </h4>
-            <ul className="space-y-2 text-xs sm:text-sm text-gray-400">
+            <ul className="space-y-2.5 text-xs sm:text-sm text-gray-400">
               <li>
                 <Link href="/about" className="hover:text-white transition">
-                  About Founders & Proprietary Leadership
+                  About Founders &amp; Leadership
                 </Link>
               </li>
               <li>
                 <Link href="/projects" className="hover:text-white transition">
-                  Delivered & Ongoing Projects
+                  Delivered &amp; Ongoing Projects
                 </Link>
               </li>
               <li>
                 <Link href="/about#safety" className="hover:text-white transition">
-                  Quality Assurance & On-Site Safety
+                  Quality Assurance &amp; Site Safety
                 </Link>
               </li>
               <li>
                 <Link href="/contact" className="hover:text-white transition">
-                  Request Site Visit & Blueprints Review
+                  Request Free Site Consultation
                 </Link>
               </li>
               <li>
@@ -147,12 +128,12 @@ export default function Footer() {
           {/* Direct Contact Info */}
           <div className="space-y-3.5">
             <h4 className="text-white font-bold text-sm mb-4 tracking-wide uppercase">
-              Proprietors & Contact
+              Proprietors &amp; Contact
             </h4>
             
             <div className="p-3 rounded-xl bg-navy-900 border border-navy-800 space-y-1.5">
               <span className="text-[11px] font-bold text-construction-400 block uppercase">
-                Senior Proprietor
+                Proprietor
               </span>
               <p className="text-xs font-bold text-white">ज्ञानेश्वर पवळे (Dnyaneshwar Pawale)</p>
               <a
@@ -166,7 +147,7 @@ export default function Footer() {
 
             <div className="p-3 rounded-xl bg-navy-900 border border-navy-800 space-y-1.5">
               <span className="text-[11px] font-bold text-construction-400 block uppercase">
-                Managing Partner
+                Proprietor
               </span>
               <p className="text-xs font-bold text-white">श्रवण पवळे (Shravan Pawale)</p>
               <a
@@ -191,9 +172,9 @@ export default function Footer() {
         <div className="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500 gap-4">
           <p>© {currentYear} Sree Samarth Krupa Enterprises. All rights reserved.</p>
           <p className="flex items-center space-x-2">
-            <span>Builders & Developers</span>
+            <span>Builders &amp; Developers</span>
             <span>•</span>
-            <span>Water Tanker & Industrial Suppliers</span>
+            <span>Turnkey Civil Construction</span>
           </p>
         </div>
       </div>
