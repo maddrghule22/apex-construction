@@ -20,7 +20,7 @@ export default function DashboardHeader({ user }: DashboardHeaderProps) {
         </span>
         <span className="text-xs text-gray-400 hidden sm:inline">|</span>
         <span className="text-xs text-gray-500 hidden sm:inline">
-          Apex Build & Infrastructure Management System
+          Sree Samarth Krupa Enterprises Management System
         </span>
       </div>
 

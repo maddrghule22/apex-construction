@@ -24,8 +24,8 @@ export default function WhyChooseUs() {
       icon: Eye,
     },
     {
-      title: "Dedicated Project Managers & Safety Engineers",
-      desc: "A full-time site engineer supervises every pour, curing cycle, and MEP rough-in to maintain workplace safety and architectural fidelity.",
+      title: "Integrated 24x7 Water Tanker & Material Logistics",
+      desc: "Unlike other contractors who face work-stops due to local water scarcity, we operate our own fleet of water tankers ensuring uninterrupted curing, concrete batching, and on-time raw material delivery.",
       icon: Users2,
     },
     {

@@ -12,6 +12,9 @@ import {
   CheckCircle2,
   ShieldCheck,
   AlertCircle,
+  Truck,
+  Droplets,
+  HardHat,
 } from "lucide-react";
 import { generateWhatsAppUrl } from "@/lib/whatsapp/url";
 
@@ -30,9 +33,9 @@ function ContactFormContent() {
   const [preferredContact, setPreferredContact] = useState("PHONE");
   const [message, setMessage] = useState(
     prefillProject
-      ? `Hello, I am interested in inquiring about the "${prefillProject}" project design and specifications.`
+      ? `॥ श्रीराम समर्थ ॥ Hello, I am interested in inquiring about the "${prefillProject}" project design and specifications.`
       : prefillService
-      ? `Hello, I would like to schedule a consultation regarding your "${prefillService}" services.`
+      ? `॥ श्रीराम समर्थ ॥ Hello, I would like to schedule a consultation regarding your "${prefillService}" services.`
       : ""
   );
   const [honeypot, setHoneypot] = useState("");
@@ -41,9 +44,21 @@ function ContactFormContent() {
   const [successResponse, setSuccessResponse] = useState<any>(null);
   const [errorMessage, setErrorMessage] = useState("");
 
-  const whatsappUrl = generateWhatsAppUrl({
+  const shravanWhatsApp = generateWhatsAppUrl({
+    phoneNumber: "917276484671",
     type: "GENERAL",
     projectCategory: category,
+  });
+
+  const dnyaneshwarWhatsApp = generateWhatsAppUrl({
+    phoneNumber: "919850291262",
+    type: "GENERAL",
+    projectCategory: category,
+  });
+
+  const tankerWhatsApp = generateWhatsAppUrl({
+    phoneNumber: "917276484671",
+    type: "TANKER",
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -85,17 +100,17 @@ function ContactFormContent() {
   return (
     <div className="bg-white min-h-screen">
       {/* Top Banner */}
-      <section className="bg-navy-900 text-white py-16 sm:py-20 relative overflow-hidden">
+      <section className="bg-navy-950 text-white py-16 sm:py-20 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-3xl space-y-3">
-            <span className="text-xs font-bold text-construction-400 uppercase tracking-wider bg-navy-800 px-3 py-1 rounded-full border border-navy-700">
-              Direct Technical Consultation
+            <span className="text-xs font-bold text-construction-400 uppercase tracking-wider bg-navy-900 px-3 py-1 rounded-full border border-navy-800">
+              ॥ श्री ॥ ॥ श्रीराम समर्थ ॥ ॥ जय जय रघुवीर समर्थ ॥
             </span>
-            <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">
-              Connect With Our Engineering Team
+            <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight">
+              Contact Sree Samarth Krupa Enterprises
             </h1>
-            <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
-              Whether you possess finalized architectural blueprints or are evaluating initial plot feasibility, our senior engineers are ready to assist.
+            <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
+              Connect directly with proprietors <strong>Dnyaneshwar Pawale</strong> & <strong>Shravan Pawale</strong> for turnkey building construction, site inspections, blueprints review, and 24x7 water tanker dispatch.
             </p>
           </div>
         </div>
@@ -104,321 +119,292 @@ function ContactFormContent() {
       {/* Main Content: Info & Form */}
       <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          {/* Left Column: Direct Info & Map (5 cols) */}
-          <div className="lg:col-span-5 space-y-8">
+          {/* Left Column: Direct Info, Card & Contacts (5 cols) */}
+          <div className="lg:col-span-5 space-y-6">
             <div>
-              <h2 className="text-2xl font-bold text-navy-900 mb-2">Corporate Office & Studio</h2>
-              <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-                Visit our headquarters for blueprint reviews, material sample inspections, and contract discussions.
+              <span className="text-[11px] font-bold text-construction-600 uppercase tracking-wider block">
+                Direct Line to Proprietors
+              </span>
+              <h2 className="text-2xl font-extrabold text-navy-950 mt-0.5">
+                Reach Us Anytime
+              </h2>
+              <p className="text-xs sm:text-sm text-gray-600 leading-relaxed mt-1">
+                Call or WhatsApp our team for prompt quote estimates, site visits, or urgent water tanker deliveries.
               </p>
             </div>
 
-            <div className="space-y-4">
-              <div className="flex items-start space-x-4 p-4 rounded-xl bg-surface border border-gray-100">
-                <MapPin className="w-5 h-5 text-construction-500 shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="text-xs font-bold text-navy-900 uppercase">Office Address</h4>
-                  <p className="text-xs sm:text-sm text-charcoal-700 mt-0.5">
-                    452 Milestone Boulevard, Commercial District, Suite 500
-                  </p>
-                </div>
+            {/* Proprietor 1: Dnyaneshwar Pawale */}
+            <div className="p-4 rounded-xl bg-surface border border-gray-200 flex items-center justify-between">
+              <div>
+                <span className="text-[10px] font-bold text-gray-500 uppercase block">
+                  Senior Proprietor
+                </span>
+                <h4 className="text-sm font-bold text-navy-950">
+                  ज्ञानेश्वर पवळे (Dnyaneshwar Pawale)
+                </h4>
+                <a
+                  href="tel:+919850291262"
+                  className="text-xs font-semibold text-construction-600 hover:underline flex items-center mt-1"
+                >
+                  <Phone className="w-3.5 h-3.5 mr-1" />
+                  +91 98502 91262
+                </a>
               </div>
-
-              <div className="flex items-start space-x-4 p-4 rounded-xl bg-surface border border-gray-100">
-                <Phone className="w-5 h-5 text-construction-500 shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="text-xs font-bold text-navy-900 uppercase">Direct Phone Line</h4>
-                  <a
-                    href="tel:+15552345678"
-                    className="text-xs sm:text-sm font-semibold text-navy-900 hover:text-construction-600 transition"
-                  >
-                    +1 (555) 234-5678
-                  </a>
-                  <p className="text-[11px] text-gray-500">Mon - Sat: 8:00 AM - 6:30 PM</p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4 p-4 rounded-xl bg-surface border border-gray-100">
-                <Mail className="w-5 h-5 text-construction-500 shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="text-xs font-bold text-navy-900 uppercase">Electronic Mail</h4>
-                  <a
-                    href="mailto:contact@apexbuildinfra.com"
-                    className="text-xs sm:text-sm text-navy-900 hover:text-construction-600 transition"
-                  >
-                    contact@apexbuildinfra.com
-                  </a>
-                  <p className="text-[11px] text-gray-500">Engineering tenders & inquiries</p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4 p-4 rounded-xl bg-surface border border-gray-100">
-                <Clock className="w-5 h-5 text-construction-500 shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="text-xs font-bold text-navy-900 uppercase">Operational Hours</h4>
-                  <p className="text-xs sm:text-sm text-charcoal-700">Monday – Saturday: 8:00 AM – 6:30 PM</p>
-                  <p className="text-[11px] text-gray-500">Sunday: Closed for site maintenance</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Direct WhatsApp Callout */}
-            <div className="p-5 rounded-2xl bg-emerald-50 border border-emerald-200 space-y-3">
-              <div className="flex items-center space-x-2 text-emerald-800 font-bold text-sm">
-                <MessageSquare className="w-5 h-5 text-emerald-600" />
-                <span>Immediate WhatsApp Channel</span>
-              </div>
-              <p className="text-xs text-emerald-900/80 leading-relaxed">
-                Need a rapid feasibility check or want to send CAD sketches? Connect directly with our on-duty engineer.
-              </p>
               <a
-                href={whatsappUrl}
+                href={dnyaneshwarWhatsApp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center w-full py-2.5 px-4 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 transition shadow-sm"
+                className="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition flex items-center"
               >
-                Chat on WhatsApp (+1 555-234-5678)
+                <MessageSquare className="w-3.5 h-3.5 mr-1" />
+                WhatsApp
               </a>
             </div>
 
-            {/* Configured Map Embed Visual Placeholder */}
-            <div className="rounded-2xl overflow-hidden border border-gray-200 h-48 bg-gray-100 relative shadow-inner">
-              <div
-                className="w-full h-full bg-cover bg-center opacity-85"
-                style={{
-                  backgroundImage:
-                    "url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=800&q=80')",
-                }}
-              />
-              <div className="absolute inset-0 bg-navy-900/40 flex items-center justify-center p-4">
-                <div className="bg-white/95 backdrop-blur-sm px-4 py-2.5 rounded-xl shadow-md text-center">
-                  <p className="text-xs font-bold text-navy-900 flex items-center justify-center">
-                    <MapPin className="w-3.5 h-3.5 text-construction-500 mr-1" />
-                    452 Milestone Boulevard, Commercial District
-                  </p>
-                  <span className="text-[10px] text-gray-500">Google Maps Verified Office Location</span>
-                </div>
+            {/* Proprietor 2: Shravan Pawale */}
+            <div className="p-4 rounded-xl bg-surface border border-gray-200 flex items-center justify-between">
+              <div>
+                <span className="text-[10px] font-bold text-blue-600 uppercase block">
+                  Managing Partner & Operations
+                </span>
+                <h4 className="text-sm font-bold text-navy-950">
+                  श्रवण पवळे (Shravan Pawale)
+                </h4>
+                <a
+                  href="tel:+917276484671"
+                  className="text-xs font-semibold text-blue-700 hover:underline flex items-center mt-1"
+                >
+                  <Phone className="w-3.5 h-3.5 mr-1" />
+                  +91 72764 84671
+                </a>
               </div>
+              <a
+                href={shravanWhatsApp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition flex items-center"
+              >
+                <MessageSquare className="w-3.5 h-3.5 mr-1" />
+                WhatsApp
+              </a>
+            </div>
+
+            {/* Water Tanker 24x7 Quick Order */}
+            <div className="p-4 rounded-xl bg-blue-50 border border-blue-200 space-y-2">
+              <div className="flex items-center space-x-2 text-blue-900 font-bold text-xs uppercase tracking-wide">
+                <Droplets className="w-4 h-4 text-blue-600" />
+                <span>24x7 Water Tanker Express Dispatch</span>
+              </div>
+              <p className="text-xs text-blue-900/80 leading-relaxed">
+                Need water tankers for concrete curing, slab casting, or drinking water supply? We dispatch immediately.
+              </p>
+              <a
+                href={tankerWhatsApp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-full py-2 px-3 rounded-lg text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 transition"
+              >
+                <Truck className="w-3.5 h-3.5 mr-1.5" />
+                Book Water Tanker on WhatsApp
+              </a>
+            </div>
+
+            {/* Official Visiting Card Badge */}
+            <div className="p-3 bg-white rounded-xl border border-gray-200 shadow-sm">
+              <span className="text-[10px] text-gray-500 uppercase font-bold block mb-2">
+                Official Business Visiting Card
+              </span>
+              <img
+                src="/images/business-card.png"
+                alt="Sree Samarth Krupa Enterprises Business Card"
+                className="w-full h-auto rounded-lg border border-gray-100"
+              />
             </div>
           </div>
 
           {/* Right Column: Server-Validated Enquiry Form (7 cols) */}
-          <div className="lg:col-span-7 bg-white p-8 sm:p-10 rounded-2xl border border-gray-200 shadow-md">
+          <div className="lg:col-span-7 bg-white p-6 sm:p-10 rounded-2xl border border-gray-200 shadow-md">
             {successResponse ? (
               <div className="py-12 text-center space-y-4">
                 <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
                   <CheckCircle2 className="w-10 h-10" />
                 </div>
-                <h3 className="text-2xl font-bold text-navy-900">Enquiry Successfully Received!</h3>
+                <h3 className="text-2xl font-bold text-navy-950">Enquiry Received!</h3>
                 <p className="text-sm text-gray-600 max-w-md mx-auto leading-relaxed">
-                  Your reference ID is{" "}
-                  <strong className="text-navy-900 font-mono">{successResponse.enquiryNumber}</strong>. Your project requirements have been safely stored in our central engineering management database.
+                  Reference ID:{" "}
+                  <strong className="text-navy-950 font-mono">{successResponse.enquiryNumber}</strong>. Your requirement has been routed directly to Shravan & Dnyaneshwar Pawale.
                 </p>
                 <p className="text-xs text-gray-500">
-                  Our chief project engineer will review your plot parameters and reach out within 24 hours.
+                  Our team will call you back to discuss plot parameters or delivery schedule.
                 </p>
                 <div className="pt-6 flex flex-col sm:flex-row gap-3 justify-center">
                   <a
-                    href={whatsappUrl}
+                    href={shravanWhatsApp}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 transition"
                   >
                     <MessageSquare className="w-4 h-4 mr-1.5" />
-                    Connect via WhatsApp Now
+                    Chat with Shravan Pawale
                   </a>
                   <button
-                    type="button"
                     onClick={() => {
                       setSuccessResponse(null);
                       setMessage("");
                     }}
-                    className="px-5 py-2.5 rounded-xl text-xs font-semibold text-charcoal-700 bg-gray-100 hover:bg-gray-200 transition"
+                    className="px-4 py-2.5 rounded-xl text-xs font-semibold text-gray-600 hover:bg-gray-100 border border-gray-200 transition"
                   >
-                    Submit Another Enquiry
+                    Submit Another Request
                   </button>
                 </div>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
-                  <h3 className="text-2xl font-bold text-navy-900 tracking-tight">
-                    Request a Construction Proposal
+                  <h3 className="text-xl font-extrabold text-navy-950">
+                    Request Site Inspection or Service Booking
                   </h3>
                   <p className="text-xs text-gray-500 mt-1">
-                    Fill in your project parameters. Every submission is reviewed directly by our chartered engineering staff.
+                    Fill out your project or tanker requirements and our proprietors will connect with you.
                   </p>
                 </div>
 
                 {errorMessage && (
-                  <div className="p-3.5 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs flex items-center space-x-2">
-                    <AlertCircle className="w-4 h-4 shrink-0" />
+                  <div className="p-3.5 rounded-xl bg-red-50 border border-red-200 flex items-start space-x-2.5 text-xs text-red-700">
+                    <AlertCircle className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
                     <span>{errorMessage}</span>
                   </div>
                 )}
 
-                {/* Honeypot field (hidden from real users to prevent spam bot submissions) */}
+                {/* Honeypot anti-spam field */}
                 <input
                   type="text"
                   name="websiteUrlHoneypot"
-                  tabIndex={-1}
-                  autoComplete="off"
                   value={honeypot}
                   onChange={(e) => setHoneypot(e.target.value)}
-                  className="hidden"
-                  aria-hidden="true"
+                  style={{ display: "none" }}
+                  tabIndex={-1}
+                  autoComplete="off"
                 />
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-semibold text-charcoal-700 mb-1">
-                      Full Name*
+                    <label className="block text-xs font-bold text-charcoal-700 mb-1">
+                      Full Name *
                     </label>
                     <input
                       type="text"
                       required
+                      placeholder="e.g. Ramesh Patil"
                       value={customerName}
                       onChange={(e) => setCustomerName(e.target.value)}
-                      placeholder="e.g. Robert Sterling"
-                      className="w-full px-3.5 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-construction-500"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-navy-900 focus:border-transparent transition"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-charcoal-700 mb-1">
-                      Phone Number*
+                    <label className="block text-xs font-bold text-charcoal-700 mb-1">
+                      Phone Number (Call / WhatsApp) *
                     </label>
                     <input
                       type="tel"
                       required
+                      placeholder="e.g. 98502 91262"
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
-                      placeholder="+1 (555) 000-0000"
-                      className="w-full px-3.5 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-construction-500"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-navy-900 focus:border-transparent transition"
                     />
                   </div>
+                </div>
 
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-semibold text-charcoal-700 mb-1">
+                    <label className="block text-xs font-bold text-charcoal-700 mb-1">
                       Email Address (Optional)
                     </label>
                     <input
                       type="email"
+                      placeholder="e.g. ramesh@gmail.com"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      placeholder="robert@example.com"
-                      className="w-full px-3.5 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-construction-500"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-navy-900 focus:border-transparent transition"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-charcoal-700 mb-1">
-                      Project Location / City*
+                    <label className="block text-xs font-bold text-charcoal-700 mb-1">
+                      Site / Delivery Location *
                     </label>
                     <input
                       type="text"
                       required
+                      placeholder="e.g. Plot No 12, Sector 4, Talegaon / Pune"
                       value={location}
                       onChange={(e) => setLocation(e.target.value)}
-                      placeholder="e.g. Metro North Corridor"
-                      className="w-full px-3.5 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-construction-500"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-navy-900 focus:border-transparent transition"
                     />
                   </div>
+                </div>
 
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-semibold text-charcoal-700 mb-1">
-                      Project Category*
+                    <label className="block text-xs font-bold text-charcoal-700 mb-1">
+                      Service Category *
                     </label>
                     <select
                       value={category}
                       onChange={(e) => setCategory(e.target.value)}
-                      className="w-full px-3.5 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-construction-500 bg-white"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-navy-900 focus:border-transparent transition"
                     >
-                      <option value="RESIDENTIAL">Residential (Villas & Houses)</option>
-                      <option value="COMMERCIAL">Commercial (Offices & Showrooms)</option>
-                      <option value="INDUSTRIAL">Industrial (Warehouses & PEB)</option>
-                      <option value="RENOVATION">Structural Renovation & Remodeling</option>
+                      <option value="RESIDENTIAL">Bungalow / Residential Construction</option>
+                      <option value="COMMERCIAL">Commercial Complex / Showroom</option>
+                      <option value="INDUSTRIAL">Water Tanker Supply (Curing / Bulk)</option>
+                      <option value="RENOVATION">Industrial Materials & Supply</option>
                     </select>
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-charcoal-700 mb-1">
-                      Approximate Built-up Area (Sq.Ft)
+                    <label className="block text-xs font-bold text-charcoal-700 mb-1">
+                      Approx. Area or Tanker Litres
                     </label>
                     <input
                       type="number"
-                      min={50}
-                      step={50}
+                      placeholder="e.g. 2400 sq.ft or 10000 L"
                       value={approxArea}
                       onChange={(e) => setApproxArea(e.target.value)}
-                      placeholder="e.g. 3500"
-                      className="w-full px-3.5 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-construction-500"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-navy-900 focus:border-transparent transition"
                     />
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-semibold text-charcoal-700 mb-1">
-                      Estimated Budget Range (Optional)
-                    </label>
-                    <select
-                      value={budgetRange}
-                      onChange={(e) => setBudgetRange(e.target.value)}
-                      className="w-full px-3.5 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-construction-500 bg-white"
-                    >
-                      <option value="">Select an approximate range</option>
-                      <option value="Under $500,000">Under $500,000</option>
-                      <option value="$500,000 - $1,500,000">$500,000 - $1,500,000</option>
-                      <option value="$1,500,000 - $3,000,000">$1,500,000 - $3,000,000</option>
-                      <option value="$3,000,000 - $10,000,000">$3,000,000 - $10,000,000</option>
-                      <option value="$10,000,000+">$10,000,000+</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-semibold text-charcoal-700 mb-1">
-                      Preferred Contact Channel
-                    </label>
-                    <select
-                      value={preferredContact}
-                      onChange={(e) => setPreferredContact(e.target.value)}
-                      className="w-full px-3.5 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-construction-500 bg-white"
-                    >
-                      <option value="PHONE">Phone Call</option>
-                      <option value="WHATSAPP">WhatsApp Message</option>
-                      <option value="EMAIL">Email</option>
-                      <option value="OFFICE_VISIT">Office Consultation Visit</option>
-                    </select>
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-charcoal-700 mb-1">
-                    Project Scope & Requirements*
+                  <label className="block text-xs font-bold text-charcoal-700 mb-1">
+                    Requirements / Project Details *
                   </label>
                   <textarea
-                    required
                     rows={4}
+                    required
+                    placeholder="Describe your plot size, floors required, or water tanker schedule..."
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    placeholder="Describe your plot size, number of planned floors, target start date, or any drawings you already possess..."
-                    className="w-full px-3.5 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-construction-500"
-                  ></textarea>
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-navy-900 focus:border-transparent transition"
+                  />
                 </div>
 
-                <div className="pt-2">
-                  <button
-                    type="submit"
-                    disabled={loading}
-                    className="w-full flex items-center justify-center space-x-2 py-3.5 px-6 rounded-xl font-bold text-sm text-white bg-construction-500 hover:bg-construction-600 transition shadow-md active:scale-98 disabled:opacity-50"
-                  >
-                    <Send className="w-4 h-4" />
-                    <span>{loading ? "Transmitting Requirements..." : "Submit Enquiry to Engineering Team"}</span>
-                  </button>
-                </div>
-
-                <p className="text-[11px] text-gray-400 text-center">
-                  Your information is kept strictly confidential and used solely for estimating and consulting on your construction project.
-                </p>
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="w-full py-3.5 px-6 rounded-xl font-bold text-sm text-white bg-construction-500 hover:bg-construction-600 disabled:opacity-50 transition shadow-md flex items-center justify-center cursor-pointer"
+                >
+                  {loading ? (
+                    <span>Submitting Enquiry...</span>
+                  ) : (
+                    <>
+                      <Send className="w-4 h-4 mr-2" />
+                      Submit Consultation Request
+                    </>
+                  )}
+                </button>
               </form>
             )}
           </div>
@@ -430,7 +416,7 @@ function ContactFormContent() {
 
 export default function ContactPage() {
   return (
-    <Suspense fallback={<div className="py-20 text-center text-gray-400 text-xs">Loading contact information...</div>}>
+    <Suspense fallback={<div className="p-12 text-center text-gray-500">Loading Contact Form...</div>}>
       <ContactFormContent />
     </Suspense>
   );

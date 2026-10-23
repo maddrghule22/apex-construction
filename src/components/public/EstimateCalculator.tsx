@@ -29,24 +29,31 @@ import { generateWhatsAppUrl } from "@/lib/whatsapp/url";
 
 const DEFAULT_ADDITIONAL_WORKS: AdditionalWorkOption[] = [
   {
+    id: "add-tanker",
+    name: "Site Curing Water Tanker Supply Package",
+    description: "Dedicated water tanker trips for RCC slab curing, brick soaking, and plaster hydration",
+    fixedCost: 45000,
+    selected: true,
+  },
+  {
     id: "add-solar",
     name: "Rooftop Solar PV Installation",
-    description: "5kW Grid-Tied Solar Generation Array with Bi-directional Inverter",
-    fixedCost: 350000,
+    description: "3kW - 5kW Grid-Tied Solar Generation Array with Bi-directional Inverter",
+    fixedCost: 220000,
+    selected: false,
+  },
+  {
+    id: "add-sump",
+    name: "Underground Water Sump & Rainwater Harvesting",
+    description: "10,000 Litre RCC underground water storage tank with filtration grid",
+    fixedCost: 85000,
     selected: false,
   },
   {
     id: "add-landscaping",
-    name: "Landscape & Outdoor Paving",
-    description: "Perimeter grass lawn, perimeter paving stones, exterior lighting",
-    ratePerSqFt: 60,
-    selected: false,
-  },
-  {
-    id: "add-hvac",
-    name: "HVAC / Ducting Provision",
-    description: "Concealed copper line piping, drainage, and cassette AC points",
-    ratePerSqFt: 110,
+    name: "Compound Wall & Exterior Paving",
+    description: "6ft perimeter boundary brick wall, heavy-duty paving tiles, exterior gates",
+    ratePerSqFt: 75,
     selected: false,
   },
   {
@@ -516,7 +523,7 @@ export default function EstimateCalculator() {
                     </div>
                   </div>
                   <div className="text-right text-xs font-semibold text-navy-800">
-                    {work.ratePerSqFt ? `$${work.ratePerSqFt}/sq.ft` : `$${work.fixedCost?.toLocaleString()}`}
+                    {work.ratePerSqFt ? `₹${work.ratePerSqFt}/sq.ft` : `₹${work.fixedCost?.toLocaleString("en-IN")}`}
                   </div>
                 </label>
               ))}
@@ -534,12 +541,12 @@ export default function EstimateCalculator() {
                 </span>
                 <div className="flex items-baseline space-x-2 mt-1">
                   <span className="text-3xl sm:text-4xl font-extrabold text-navy-900">
-                    ${Math.round(calculationResult.totalEstimatedCost).toLocaleString()}
+                    ₹{Math.round(calculationResult.totalEstimatedCost).toLocaleString("en-IN")}
                   </span>
                 </div>
                 <div className="flex items-center space-x-4 mt-2 text-xs text-gray-600 font-medium">
                   <span className="bg-white px-2.5 py-1 rounded border border-gray-200">
-                    Rate: <strong>${calculationResult.costPerSqFt.toFixed(2)}</strong> / sq.ft
+                    Rate: <strong>₹{calculationResult.costPerSqFt.toFixed(0)}</strong> / sq.ft
                   </span>
                   <span className="flex items-center bg-white px-2.5 py-1 rounded border border-gray-200">
                     <Calendar className="w-3.5 h-3.5 mr-1 text-construction-500" />
@@ -557,35 +564,35 @@ export default function EstimateCalculator() {
                 <div className="flex justify-between text-xs py-1">
                   <span className="text-charcoal-700">Civil & Structural Works</span>
                   <span className="font-semibold text-navy-900">
-                    ${Math.round(calculationResult.civilCost).toLocaleString()}
+                    ₹{Math.round(calculationResult.civilCost).toLocaleString("en-IN")}
                   </span>
                 </div>
 
                 <div className="flex justify-between text-xs py-1">
                   <span className="text-charcoal-700">Architectural Finishing</span>
                   <span className="font-semibold text-navy-900">
-                    ${Math.round(calculationResult.finishingCost).toLocaleString()}
+                    ₹{Math.round(calculationResult.finishingCost).toLocaleString("en-IN")}
                   </span>
                 </div>
 
                 <div className="flex justify-between text-xs py-1">
                   <span className="text-charcoal-700">Concealed Electrical</span>
                   <span className="font-semibold text-navy-900">
-                    ${Math.round(calculationResult.electricalCost).toLocaleString()}
+                    ₹{Math.round(calculationResult.electricalCost).toLocaleString("en-IN")}
                   </span>
                 </div>
 
                 <div className="flex justify-between text-xs py-1">
                   <span className="text-charcoal-700">Plumbing & Sanitation</span>
                   <span className="font-semibold text-navy-900">
-                    ${Math.round(calculationResult.plumbingCost).toLocaleString()}
+                    ₹{Math.round(calculationResult.plumbingCost).toLocaleString("en-IN")}
                   </span>
                 </div>
 
                 <div className="flex justify-between text-xs py-1">
                   <span className="text-charcoal-700">Waterproofing System</span>
                   <span className="font-semibold text-navy-900">
-                    ${Math.round(calculationResult.waterproofingCost).toLocaleString()}
+                    ₹{Math.round(calculationResult.waterproofingCost).toLocaleString("en-IN")}
                   </span>
                 </div>
 
@@ -593,7 +600,7 @@ export default function EstimateCalculator() {
                   <div className="flex justify-between text-xs py-1">
                     <span className="text-charcoal-700">Selected Specialized Works</span>
                     <span className="font-semibold text-navy-900">
-                      ${Math.round(calculationResult.additionalCost).toLocaleString()}
+                      ₹{Math.round(calculationResult.additionalCost).toLocaleString("en-IN")}
                     </span>
                   </div>
                 )}
@@ -601,14 +608,14 @@ export default function EstimateCalculator() {
                 <div className="flex justify-between text-xs py-1 text-gray-500 border-t border-gray-100 pt-2">
                   <span>Contingency Buffer ({calculationResult.contingencyPct}%)</span>
                   <span className="font-medium">
-                    ${Math.round(calculationResult.contingencyCost).toLocaleString()}
+                    ₹{Math.round(calculationResult.contingencyCost).toLocaleString("en-IN")}
                   </span>
                 </div>
 
                 <div className="flex justify-between text-sm font-bold text-navy-900 border-t border-gray-200 pt-2">
                   <span>Total Estimated Cost</span>
                   <span className="text-construction-600">
-                    ${Math.round(calculationResult.totalEstimatedCost).toLocaleString()}
+                    ₹{Math.round(calculationResult.totalEstimatedCost).toLocaleString("en-IN")}
                   </span>
                 </div>
               </div>
@@ -732,7 +739,7 @@ export default function EstimateCalculator() {
                     required
                     value={customerName}
                     onChange={(e) => setCustomerName(e.target.value)}
-                    placeholder="e.g. Johnathan Davis"
+                    placeholder="e.g. Ramesh Patil"
                     className="w-full px-3.5 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-construction-500"
                   />
                 </div>

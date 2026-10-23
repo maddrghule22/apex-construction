@@ -1,31 +1,31 @@
 import React from "react";
-import { Building2, CheckCircle2, ShieldCheck, HardHat } from "lucide-react";
+import { Building2, Droplets, ShieldCheck, Users } from "lucide-react";
 
 export default function StatsSection() {
   const stats = [
     {
       label: "Turnkey Projects Delivered",
-      value: "45+",
-      description: "Residential & commercial developments successfully completed",
+      value: "50+",
+      description: "Residential bungalows, independent houses & commercial units",
       icon: Building2,
     },
     {
-      label: "Built-up Area Constructed",
-      value: "250K+",
-      description: "Square feet of precision engineering and masonry executed",
-      icon: CheckCircle2,
+      label: "Water Tankers Dispatched",
+      value: "10,000+",
+      description: "Curing water & industrial bulk tankers supplied on time",
+      icon: Droplets,
     },
     {
-      label: "Zero Lost-Time Incidents",
+      label: "Direct Proprietor Supervision",
       value: "100%",
-      description: "Strict on-site safety gear and OSHA-compliant protocols",
-      icon: ShieldCheck,
+      description: "Direct on-site quality control by Dnyaneshwar & Shravan Pawale",
+      icon: Users,
     },
     {
-      label: "Years Engineering Experience",
-      value: "14+",
-      description: "Leadership team with senior structural and civil background",
-      icon: HardHat,
+      label: "Years Construction Trust",
+      value: "15+",
+      description: "Reputed regional general contractors & industrial suppliers",
+      icon: ShieldCheck,
     },
   ];
 
@@ -44,11 +44,13 @@ export default function StatsSection() {
                   <Icon className="w-6 h-6 text-construction-500" />
                 </div>
                 <div>
-                  <div className="text-3xl font-extrabold text-navy-900 tracking-tight">
+                  <div className="text-3xl font-extrabold text-navy-950 tracking-tight">
                     {stat.value}
                   </div>
                   <div className="text-xs font-bold text-charcoal-700 mt-0.5">{stat.label}</div>
-                  <p className="text-[11px] text-gray-500 mt-1 leading-snug">{stat.description}</p>
+                  <p className="text-[11px] text-gray-500 mt-1 leading-relaxed">
+                    {stat.description}
+                  </p>
                 </div>
               </div>
             );

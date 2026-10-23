@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { SEED_PROJECTS } from "@/server/data/seedData";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "https://apexbuildinfra.com";
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "https://apex-construction-21h.pages.dev";
 
   const staticRoutes = [
     "",

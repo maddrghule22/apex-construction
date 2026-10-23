@@ -15,7 +15,17 @@ describe("WhatsApp URL Integration", () => {
     });
 
     expect(url.startsWith("https://wa.me/15552345678?text=")).toBe(true);
-    expect(url).toContain(encodeURIComponent("residential construction project"));
+    expect(url).toContain(encodeURIComponent("Sree Samarth Krupa Enterprises"));
+  });
+
+  it("constructs compliant wa.me URL for water tanker order", () => {
+    const url = generateWhatsAppUrl({
+      phoneNumber: "+91 72764 84671",
+      type: "TANKER",
+    });
+
+    expect(url.startsWith("https://wa.me/917276484671?text=")).toBe(true);
+    expect(url).toContain(encodeURIComponent("Water Tanker"));
   });
 
   it("constructs compliant wa.me URL for specific project context", () => {

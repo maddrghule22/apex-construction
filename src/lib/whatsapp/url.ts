@@ -1,6 +1,6 @@
 export interface WhatsAppMessageOptions {
   phoneNumber?: string;
-  type?: "GENERAL" | "PROJECT" | "ESTIMATE" | "ENQUIRY_FOLLOWUP";
+  type?: "GENERAL" | "PROJECT" | "ESTIMATE" | "ENQUIRY_FOLLOWUP" | "TANKER" | "INDUSTRIAL";
   projectTitle?: string;
   projectCategory?: string;
   customerName?: string;
@@ -15,7 +15,7 @@ export function cleanPhoneNumber(rawPhone: string): string {
 
 export function generateWhatsAppUrl(options: WhatsAppMessageOptions): string {
   const phone = cleanPhoneNumber(
-    options.phoneNumber || process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "15552345678"
+    options.phoneNumber || process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "917276484671"
   );
 
   let messageText = "";
@@ -24,22 +24,34 @@ export function generateWhatsAppUrl(options: WhatsAppMessageOptions): string {
     messageText = options.customMessage;
   } else {
     switch (options.type) {
+      case "TANKER":
+        messageText =
+          "॥ श्रीराम समर्थ ॥ नमस्ते Shravan ji / Dnyaneshwar ji, I need to book a Water Tanker (Potable/Construction site curing water supply) from Sree Samarth Krupa Enterprises. Please share rates and availability.";
+        break;
+      case "INDUSTRIAL":
+        messageText =
+          "॥ श्रीराम समर्थ ॥ Hello, I am inquiring about industrial supplies & construction raw materials from Sree Samarth Krupa Enterprises. Please share details.";
+        break;
       case "PROJECT":
-        messageText = `Hello! I am interested in your project "${options.projectTitle || "Construction Project"}". I would like more details and consultation.`;
+        messageText = `॥ श्रीराम समर्थ ॥ Hello! I am interested in your construction project "${
+          options.projectTitle || "Construction Project"
+        }". I would like to schedule a site consultation.`;
         break;
       case "ESTIMATE":
-        messageText = `Hello, I generated a construction cost estimate${
+        messageText = `॥ श्रीराम समर्थ ॥ Hello, I generated a construction cost estimate${
           options.estimateNumber ? ` (#${options.estimateNumber})` : ""
         } on your website. I would like to review the drawings and get a formal quotation.`;
         break;
       case "ENQUIRY_FOLLOWUP":
-        messageText = `Hello ${options.customerName || "there"}, thank you for reaching out to us regarding your construction project. How can we assist you today?`;
+        messageText = `॥ श्रीराम समर्थ ॥ Hello ${
+          options.customerName || "there"
+        }, thank you for reaching out to Sree Samarth Krupa Enterprises regarding your construction and supply requirements. How can we assist you today?`;
         break;
       case "GENERAL":
       default:
-        messageText = `Hello, I am interested in your construction services. I would like to discuss a ${
-          options.projectCategory ? options.projectCategory.toLowerCase() : "residential/commercial"
-        } construction project. Please contact me.`;
+        messageText = `॥ श्रीराम समर्थ ॥ Hello Shravan ji / Dnyaneshwar ji, I am interested in Sree Samarth Krupa Enterprises services (${
+          options.projectCategory ? options.projectCategory.toLowerCase() : "builders & developers / water tanker"
+        }). Please contact me.`;
         break;
     }
   }

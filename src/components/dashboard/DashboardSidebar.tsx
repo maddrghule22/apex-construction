@@ -63,7 +63,7 @@ export default function DashboardSidebar({ user }: DashboardSidebarProps) {
       <div className="md:hidden bg-navy-900 text-white p-4 flex justify-between items-center sticky top-0 z-40 border-b border-navy-800">
         <Link href="/dashboard" className="flex items-center space-x-2">
           <HardHat className="w-6 h-6 text-construction-500" />
-          <span className="font-bold text-base tracking-tight">Apex Management</span>
+          <span className="font-bold text-base tracking-tight">Samarth Krupa OS</span>
         </Link>
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -88,11 +88,11 @@ export default function DashboardSidebar({ user }: DashboardSidebarProps) {
                 <HardHat className="w-5 h-5" />
               </div>
               <div>
-                <span className="font-bold text-base tracking-tight text-white block">
-                  APEX <span className="text-construction-500">BUILD</span>
+                <span className="font-extrabold text-xs tracking-tight text-white block">
+                  SAMARTH KRUPA
                 </span>
-                <span className="text-[10px] uppercase font-semibold text-gray-400">
-                  Operations Suite
+                <span className="text-[10px] uppercase font-bold text-construction-400">
+                  ENTERPRISES
                 </span>
               </div>
             </Link>

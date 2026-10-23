@@ -8,21 +8,26 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Apex Build & Infrastructure",
-    default: "Apex Build & Infrastructure | Premium Residential & Commercial Construction",
+    template: "%s | Sree Samarth Krupa Enterprises",
+    default:
+      "Sree Samarth Krupa Enterprises | Builders & Developers | Water Tanker & Industrial Suppliers",
   },
   description:
-    "Turnkey residential and commercial construction services, architectural planning, civil engineering, and cost-effective project execution.",
+    "Sree Samarth Krupa Enterprises — Premier Builders & Developers and Water Tanker & Industrial Suppliers. Turnkey civil construction, bungalows, commercial buildings, 24x7 water tankers, and industrial materials supply. Contact Shravan Pawale (7276484671) & Dnyaneshwar Pawale (9850291262).",
   keywords: [
+    "Sree Samarth Krupa Enterprises",
+    "Samarth Krupa Builders and Developers",
+    "Water Tanker Suppliers",
+    "Industrial Suppliers",
+    "Shravan Pawale",
+    "Dnyaneshwar Pawale",
     "Construction Company",
-    "Residential Construction",
-    "Commercial Contractors",
-    "Turnkey Building",
-    "Civil Engineering",
-    "Building Contractor",
-    "Construction Cost Estimator",
+    "Turnkey Building Contractor",
+    "Bungalow Construction",
+    "Construction Water Tanker",
+    "Maharashtra Civil Contractor",
   ],
-  authors: [{ name: "Apex Build & Infrastructure" }],
+  authors: [{ name: "Sree Samarth Krupa Enterprises" }],
 };
 
 export default function RootLayout({

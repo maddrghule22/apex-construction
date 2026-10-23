@@ -1,56 +1,98 @@
 import React from "react";
 import Link from "next/link";
-import { Home, Building2, Factory, Hammer, ArrowRight, ShieldCheck, Check } from "lucide-react";
+import {
+  Home,
+  Building2,
+  Droplets,
+  Truck,
+  ArrowRight,
+  ShieldCheck,
+  Check,
+  Sparkles,
+} from "lucide-react";
 
 export default function ServicesGrid() {
   const serviceCategories = [
     {
-      category: "Residential Construction",
-      tagline: "Custom Living Spaces Built for Longevity",
+      category: "Builders & Developers",
+      tagline: "Turnkey Residential & Commercial Construction",
       icon: Home,
+      accentColor: "border-construction-500",
+      badgeColor: "bg-construction-50 text-construction-700 border-construction-200",
       items: [
         {
           title: "Custom Luxury Villas & Bungalows",
-          desc: "Bespoke contemporary residential villas with double-height atriums and high-end materials.",
+          desc: "Complete turnkey structural casting from foundation to premium interior handover for plot owners.",
         },
         {
-          title: "Individual Independent Houses",
-          desc: "Complete turnkey structural execution from foundation footing to handover for plot owners.",
+          title: "Individual Independent Houses & Row Houses",
+          desc: "High-grade RCC column-beam framing, precision brick masonry, and seismic-resistant standards.",
         },
         {
-          title: "Multi-Storey Residential Apartments",
-          desc: "Multi-unit apartment buildings with structural lift shafts and basement car parking.",
+          title: "Commercial Complexes & Showrooms",
+          desc: "Spacious column-free commercial architecture engineered for high footfall and retail longevity.",
         },
         {
-          title: "Complete Home Remodeling & Extensions",
-          desc: "Floor additions, structural remodeling, modern architectural facade upgrades.",
+          title: "Structural Renovation & Extensions",
+          desc: "Floor additions, slab casting, waterproofing, and structural strengthening.",
         },
       ],
       link: "/services#residential",
+      ctaText: "Explore Construction Services",
     },
     {
-      category: "Commercial Infrastructure",
-      tagline: "Grade-A Workspaces & High-Traffic Retail",
-      icon: Building2,
+      category: "Water Tanker Services",
+      tagline: "24x7 Reliable Fleet for Sites & Industry",
+      icon: Droplets,
+      accentColor: "border-blue-500",
+      badgeColor: "bg-blue-50 text-blue-700 border-blue-200",
       items: [
         {
-          title: "Corporate Offices & Business Towers",
-          desc: "Post-tensioned RCC framing, curtain wall glass facades, and modern MEP integrations.",
+          title: "Construction Site Curing Water Tankers",
+          desc: "Continuous scheduled bulk water supply for RCC slab curing, brickwork washing, and plaster hydration.",
         },
         {
-          title: "Showrooms & Retail Complexes",
-          desc: "Spacious column-free commercial spaces engineered for high footfall and retail aesthetics.",
+          title: "Concrete Mixing & Batching Supply",
+          desc: "Clean quality water delivered directly to on-site concrete mixers and RMC batches.",
         },
         {
-          title: "Turnkey Commercial Fit-Outs",
-          desc: "End-to-end electrical grids, acoustic ceilings, fire suppression systems, and HVAC.",
+          title: "Potable / Drinking Water Tankers",
+          desc: "Hygienic potable water tankers for residential societies, commercial facilities, and emergency requirements.",
         },
         {
-          title: "Industrial Warehouses & PEB Sheds",
-          desc: "Heavy-duty laser-screed concrete floors, pre-engineered steel frames, and loading docks.",
+          title: "Industrial Bulk Water Supply Contracts",
+          desc: "Dedicated daily and monthly fleet agreements for factories, warehouses, and fabrication yards.",
         },
       ],
-      link: "/services#commercial",
+      link: "/services#tanker",
+      ctaText: "Book Water Tanker Now",
+    },
+    {
+      category: "Industrial Suppliers & Logistics",
+      tagline: "Raw Building Materials & Industrial Equipment",
+      icon: Truck,
+      accentColor: "border-emerald-500",
+      badgeColor: "bg-emerald-50 text-emerald-700 border-emerald-200",
+      items: [
+        {
+          title: "Construction Raw Materials Supply",
+          desc: "High-grade river sand, crushed stone sand (M-Sand), blue metal aggregates (10mm/20mm/40mm).",
+        },
+        {
+          title: "TMT Steel & Cement Procurement",
+          desc: "Bulk certified Fe-550D TMT bars and 43/53 grade OPC/PPC cement direct from authorized manufacturers.",
+        },
+        {
+          title: "Site Earthwork & Excavation Coordination",
+          desc: "JCB, excavators, dumper transport, and plot leveling for foundation groundwork.",
+        },
+        {
+          title: "Industrial Spares & Material Logistics",
+          desc: "Heavy material handling and industrial supplies for production plants and infrastructure projects.",
+        },
+      ],
+      link: "/services#materials",
+      ctaText: "Inquire Industrial Supply",
     },
   ];
 
@@ -58,68 +100,60 @@ export default function ServicesGrid() {
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <span className="text-xs font-bold text-construction-600 uppercase tracking-wider bg-construction-50 px-3 py-1 rounded-full border border-construction-200">
-            Comprehensive Building Solutions
+          <span className="text-xs font-bold text-navy-800 uppercase tracking-wider bg-surface px-3 py-1 rounded-full border border-gray-200">
+            End-To-End Infrastructure Capabilities
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight">
-            Engineered Construction Services
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-navy-950 tracking-tight">
+            Our Business Specializations
           </h2>
           <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-            From single-family estate villas to multi-storey corporate towers, our engineering methodology guarantees strict adherence to building codes, material grades, and contractual timelines.
+            Sree Samarth Krupa Enterprises bridges civil construction expertise with rapid on-demand water logistics and raw material supply across Maharashtra.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {serviceCategories.map((group, idx) => {
             const Icon = group.icon;
             return (
               <div
                 key={idx}
-                className="bg-surface rounded-2xl p-8 border border-gray-200 shadow-sm flex flex-col justify-between hover:shadow-md transition"
+                className={`bg-white rounded-2xl border-t-4 ${group.accentColor} border-x border-b border-gray-200/80 p-8 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group`}
               >
                 <div>
                   <div className="flex items-center space-x-3 mb-4">
-                    <div className="w-12 h-12 rounded-xl bg-navy-800 text-construction-500 flex items-center justify-center shadow-sm">
-                      <Icon className="w-6 h-6" />
+                    <div className="w-12 h-12 rounded-xl bg-navy-50 text-navy-900 flex items-center justify-center group-hover:scale-105 transition shadow-xs">
+                      <Icon className="w-6 h-6 text-construction-600" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-navy-900">{group.category}</h3>
-                      <p className="text-xs text-gray-500">{group.tagline}</p>
+                      <h3 className="text-xl font-bold text-navy-950">{group.category}</h3>
+                      <p className="text-xs text-gray-500 font-medium">{group.tagline}</p>
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+                  <ul className="space-y-4 my-6">
                     {group.items.map((item, itemIdx) => (
-                      <div
-                        key={itemIdx}
-                        className="bg-white p-4 rounded-xl border border-gray-100 shadow-xs"
-                      >
-                        <h4 className="text-sm font-bold text-navy-800 flex items-start">
-                          <Check className="w-4 h-4 text-emerald-500 mr-1.5 shrink-0 mt-0.5" />
-                          {item.title}
-                        </h4>
-                        <p className="text-xs text-gray-500 mt-1 pl-5.5 leading-relaxed">
-                          {item.desc}
-                        </p>
-                      </div>
+                      <li key={itemIdx} className="flex items-start space-x-3 text-xs sm:text-sm">
+                        <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                        <div>
+                          <strong className="text-charcoal-900 block font-semibold">
+                            {item.title}
+                          </strong>
+                          <span className="text-gray-500 text-xs leading-relaxed">
+                            {item.desc}
+                          </span>
+                        </div>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </div>
 
-                <div className="pt-6 mt-6 border-t border-gray-200/60 flex items-center justify-between">
+                <div className="pt-4 border-t border-gray-100">
                   <Link
                     href={group.link}
-                    className="inline-flex items-center text-sm font-bold text-navy-800 hover:text-construction-600 transition"
+                    className="inline-flex items-center text-xs font-bold text-navy-900 hover:text-construction-600 transition"
                   >
-                    Explore detailed specifications & scope
-                    <ArrowRight className="w-4 h-4 ml-1.5 text-construction-500" />
-                  </Link>
-
-                  <Link
-                    href="/contact"
-                    className="text-xs font-semibold px-3 py-1.5 rounded-lg bg-navy-800 text-white hover:bg-navy-900 transition"
-                  >
-                    Enquire Now
+                    <span>{group.ctaText}</span>
+                    <ArrowRight className="w-3.5 h-3.5 ml-1 text-construction-500" />
                   </Link>
                 </div>
               </div>

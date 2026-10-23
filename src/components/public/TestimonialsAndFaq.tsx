@@ -44,6 +44,10 @@ export default function TestimonialsAndFaq() {
       a: "Yes. Our turnkey service includes full architectural drafting, 3D elevations, chartered structural engineering certifications, soil geotechnical reports, and submission for municipal sanction approvals.",
     },
     {
+      q: "Do you provide water tankers for construction curing and bulk supply?",
+      a: "Yes! Sree Samarth Krupa Enterprises operates our own fleet of 24x7 water tankers. We supply high-purity water for RCC slab ponding, column curing, and brick soaking to ensure concrete reaches its maximum rated strength without shrinkage cracks. We also supply drinking water for societies and factories.",
+    },
+    {
       q: "Can I inspect the construction materials used on site?",
       a: "Absolutely. We maintain a transparent site registry. Batch test certificates for cement, ultrasonic tests for steel rebars, and cube compressive strength reports for all concrete pours are shared with clients weekly.",
     },

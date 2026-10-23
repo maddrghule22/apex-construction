@@ -1,14 +1,20 @@
 import { prisma } from "@/lib/db/prisma";
 
 const DEFAULT_SETTINGS = {
-  companyName: process.env.NEXT_PUBLIC_COMPANY_NAME || "Apex Build & Infrastructure",
-  companyPhone: process.env.NEXT_PUBLIC_COMPANY_PHONE || "+1 (555) 234-5678",
-  companyEmail: process.env.NEXT_PUBLIC_COMPANY_EMAIL || "contact@apexbuildinfra.com",
-  officeAddress: "452 Milestone Boulevard, Commercial District, Suite 500",
-  businessHours: "Mon - Sat: 8:00 AM - 6:30 PM",
-  whatsAppNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "15552345678",
-  currencySymbol: process.env.NEXT_PUBLIC_CURRENCY_SYMBOL || "$",
-  serviceAreas: "Metropolitan Region, North Suburbs, Industrial Valley",
+  companyName: process.env.NEXT_PUBLIC_COMPANY_NAME || "Sree Samarth Krupa Enterprises",
+  tagline: "Builders & Developers | Water Tanker & Industrial Suppliers",
+  invocation: "॥ श्री ॥ ॥ श्रीराम समर्थ ॥ ॥ जय जय रघुवीर समर्थ ॥",
+  primaryProprietor: "Shravan Pawale (श्रवण पवळे)",
+  primaryPhone: process.env.NEXT_PUBLIC_COMPANY_PHONE || "+91 72764 84671",
+  secondaryProprietor: "Dnyaneshwar Pawale (ज्ञानेश्वर पवळे)",
+  secondaryPhone: process.env.NEXT_PUBLIC_COMPANY_SECONDARY_PHONE || "+91 98502 91262",
+  companyPhone: "+91 72764 84671",
+  companyEmail: process.env.NEXT_PUBLIC_COMPANY_EMAIL || "contact@sreesamarthkrupa.com",
+  officeAddress: "Main Office & Yard, Maharashtra, India",
+  businessHours: "Mon - Sun: 7:00 AM - 9:00 PM (24x7 Water Tanker Emergency Support)",
+  whatsAppNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "917276484671",
+  currencySymbol: process.env.NEXT_PUBLIC_CURRENCY_SYMBOL || "₹",
+  serviceAreas: "Residential, Commercial, Industrial Belts & Construction Sites",
 };
 
 let localSettings = { ...DEFAULT_SETTINGS };
