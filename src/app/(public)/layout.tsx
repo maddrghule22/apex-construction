@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import WhatsAppFloatingButton from "@/components/public/WhatsAppFloatingButton";
+import QuickContactWidget from "@/components/public/QuickContactWidget";
 
 export default function PublicLayout({
   children,
@@ -13,7 +13,7 @@ export default function PublicLayout({
       <Navbar />
       <main className="flex-1">{children}</main>
       <Footer />
-      <WhatsAppFloatingButton />
+      <QuickContactWidget />
     </>
   );
 }
