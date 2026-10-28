@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     "Commercial Building Contractors",
     "Civil Structural Contractors",
     "RCC Slab Casting & Framing",
-    "Construction Cost Estimator",
+    "Civil Engineering & Contracting",
   ],
   authors: [{ name: "Sree Samarth Krupa Enterprises" }],
   creator: "Sree Samarth Krupa Enterprises",
@@ -68,7 +68,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "GeneralContractor",
   "name": "Sree Samarth Krupa Enterprises",
-  "alternateName": "श्री समर्थ कृपा एंटरप्रायझेस",
+  "alternateName": "Sree Samarth Krupa Builders & Developers",
   "description":
     "Premier Builders & Developers providing turnkey residential bungalow construction, luxury villas, independent row houses, and commercial complexes.",
   "url": baseUrl,

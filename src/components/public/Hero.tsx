@@ -6,7 +6,6 @@ import {
   ShieldCheck,
   CheckCircle2,
   ArrowRight,
-  Calculator,
   MessageSquare,
   Building2,
   Sparkles,
@@ -35,13 +34,11 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           {/* Left Column: Headline, Services & Actions (7 cols) */}
           <div className="lg:col-span-7 space-y-6 text-left">
-            {/* Top Auspicious Pill Badge */}
+            {/* Top Quality Badge */}
             <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-construction-500/40 text-construction-400 text-xs sm:text-sm font-extrabold shadow-lg shadow-black/40 backdrop-blur-md">
-              <span className="text-red-500 font-serif">॥ श्री ॥</span>
+              <span className="text-construction-400">Trusted General Contractors</span>
               <span className="text-slate-600">•</span>
-              <span>॥ श्रीराम समर्थ ॥</span>
-              <span className="text-slate-600">•</span>
-              <span className="hidden sm:inline">॥ जय जय रघुवीर समर्थ ॥</span>
+              <span className="text-slate-300 font-medium">15+ Years Construction Excellence</span>
             </div>
 
             {/* Main Headline */}
@@ -79,7 +76,7 @@ export default function Hero() {
                     Proprietor
                   </span>
                   <span className="text-xs font-bold text-white block">
-                    ज्ञानेश्वर पवळे (Dnyaneshwar)
+                    Dnyaneshwar Pawale
                   </span>
                   <a
                     href="tel:+919850291262"
@@ -104,7 +101,7 @@ export default function Hero() {
                     Proprietor
                   </span>
                   <span className="text-xs font-bold text-white block">
-                    श्रवण पवळे (Shravan)
+                    Shravan Pawale
                   </span>
                   <a
                     href="tel:+917276484671"
@@ -145,11 +142,11 @@ export default function Hero() {
               </a>
 
               <Link
-                href="/estimate"
-                className="inline-flex items-center justify-center px-4 py-3 rounded-xl text-xs sm:text-sm font-bold text-construction-400 bg-slate-900/90 hover:bg-slate-800 border border-construction-500/40 transition"
+                href="/projects"
+                className="inline-flex items-center justify-center px-4 py-3 rounded-xl text-xs sm:text-sm font-bold text-slate-200 bg-slate-900/90 hover:bg-slate-800 border border-slate-700 transition"
               >
-                <Calculator className="w-4 h-4 mr-2 text-construction-500" />
-                Cost Estimator (₹)
+                <Building2 className="w-4 h-4 mr-2 text-construction-500" />
+                Explore Projects
               </Link>
             </div>
 

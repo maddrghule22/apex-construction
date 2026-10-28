@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { HardHat, ArrowLeft, Home, Calculator } from "lucide-react";
+import { HardHat, ArrowLeft, Home, Building2 } from "lucide-react";
 
 export default function NotFound() {
   return (
@@ -30,11 +30,11 @@ export default function NotFound() {
           Return to Homepage
         </Link>
         <Link
-          href="/estimate"
+          href="/projects"
           className="inline-flex items-center justify-center px-5 py-3 rounded-xl text-xs font-semibold text-gray-200 bg-navy-800 hover:bg-navy-750 border border-navy-700 transition"
         >
-          <Calculator className="w-4 h-4 mr-2 text-construction-500" />
-          Open Cost Estimator
+          <Building2 className="w-4 h-4 mr-2 text-construction-500" />
+          Explore Project Portfolio
         </Link>
       </div>
     </div>

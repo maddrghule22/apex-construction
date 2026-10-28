@@ -32,9 +32,9 @@ function ContactFormContent() {
   const [preferredContact, setPreferredContact] = useState("PHONE");
   const [message, setMessage] = useState(
     prefillProject
-      ? `॥ श्रीराम समर्थ ॥ Hello, I am interested in inquiring about the "${prefillProject}" project design and specifications.`
+      ? `Hello, I am interested in inquiring about the "${prefillProject}" project design and specifications.`
       : prefillService
-      ? `॥ श्रीराम समर्थ ॥ Hello, I would like to schedule a consultation regarding your "${prefillService}" services.`
+      ? `Hello, I would like to schedule a consultation regarding your "${prefillService}" services.`
       : ""
   );
   const [honeypot, setHoneypot] = useState("");
@@ -98,7 +98,7 @@ function ContactFormContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-3xl space-y-3">
             <span className="text-xs font-bold text-construction-400 uppercase tracking-wider bg-navy-900 px-3 py-1 rounded-full border border-navy-800">
-              ॥ श्री ॥ ॥ श्रीराम समर्थ ॥ ॥ जय जय रघुवीर समर्थ ॥
+              Licensed Civil Contractors • Builders &amp; Developers
             </span>
             <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight">
               Contact Sree Samarth Krupa Enterprises

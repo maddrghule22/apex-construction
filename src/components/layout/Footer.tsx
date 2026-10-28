@@ -23,7 +23,7 @@ export default function Footer() {
         {/* Top Invocation Bar */}
         <div className="pb-8 mb-8 border-b border-navy-800 flex flex-wrap items-center justify-between gap-4 text-center sm:text-left">
           <div className="text-construction-400 font-bold text-sm tracking-wide">
-            ॥ श्री ॥ ॥ श्रीराम समर्थ ॥ ॥ जय जय रघुवीर समर्थ ॥
+            Sree Samarth Krupa Enterprises • Excellence in Engineering & Construction
           </div>
           <div className="text-xs text-gray-400">
             Registered General Contractors, Builders &amp; Developers
@@ -84,8 +84,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/estimate" className="hover:text-construction-400 transition font-bold text-construction-400 inline-block pt-1">
-                  Instant Construction Cost Estimator (₹) →
+                <Link href="/contact" className="hover:text-construction-400 transition font-bold text-construction-400 inline-block pt-1">
+                  Request Free Site Consultation & Quote →
                 </Link>
               </li>
             </ul>
@@ -135,7 +135,7 @@ export default function Footer() {
               <span className="text-[11px] font-bold text-construction-400 block uppercase">
                 Proprietor
               </span>
-              <p className="text-xs font-bold text-white">ज्ञानेश्वर पवळे (Dnyaneshwar Pawale)</p>
+              <p className="text-xs font-bold text-white">Dnyaneshwar Pawale</p>
               <a
                 href="tel:+919850291262"
                 className="text-xs text-gray-300 hover:text-construction-400 flex items-center font-semibold"
@@ -149,7 +149,7 @@ export default function Footer() {
               <span className="text-[11px] font-bold text-construction-400 block uppercase">
                 Proprietor
               </span>
-              <p className="text-xs font-bold text-white">श्रवण पवळे (Shravan Pawale)</p>
+              <p className="text-xs font-bold text-white">Shravan Pawale</p>
               <a
                 href="tel:+917276484671"
                 className="text-xs text-gray-300 hover:text-construction-400 flex items-center font-semibold"

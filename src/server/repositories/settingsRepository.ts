@@ -3,10 +3,10 @@ import { prisma } from "@/lib/db/prisma";
 const DEFAULT_SETTINGS = {
   companyName: process.env.NEXT_PUBLIC_COMPANY_NAME || "Sree Samarth Krupa Enterprises",
   tagline: "Builders & Developers | Turnkey Civil Construction",
-  invocation: "॥ श्री ॥ ॥ श्रीराम समर्थ ॥ ॥ जय जय रघुवीर समर्थ ॥",
-  primaryProprietor: "Shravan Pawale (श्रवण पवळे)",
+  invocation: "Licensed Builders & Developers • General Civil Contractors",
+  primaryProprietor: "Shravan Pawale",
   primaryPhone: process.env.NEXT_PUBLIC_COMPANY_PHONE || "+91 72764 84671",
-  secondaryProprietor: "Dnyaneshwar Pawale (ज्ञानेश्वर पवळे)",
+  secondaryProprietor: "Dnyaneshwar Pawale",
   secondaryPhone: process.env.NEXT_PUBLIC_COMPANY_SECONDARY_PHONE || "+91 98502 91262",
   companyPhone: "+91 72764 84671",
   companyEmail: process.env.NEXT_PUBLIC_COMPANY_EMAIL || "contact@sreesamarthkrupa.com",

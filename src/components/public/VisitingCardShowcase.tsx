@@ -36,8 +36,8 @@ export default function VisitingCardShowcase() {
             <ShieldCheck className="w-4 h-4 text-emerald-600" />
             <span className="text-[11px] uppercase tracking-wider">Registered Builders &amp; Developers</span>
           </div>
-          <span className="text-[10px] font-bold text-red-600 bg-red-50 px-2 py-0.5 rounded-full border border-red-200">
-            ॥ श्रीराम समर्थ ॥
+          <span className="text-[10px] font-bold text-construction-700 bg-construction-50 px-2.5 py-0.5 rounded-full border border-construction-200 uppercase tracking-wide">
+            Verified Firm
           </span>
         </div>
 
@@ -66,7 +66,7 @@ export default function VisitingCardShowcase() {
               </div>
               <div className="text-left">
                 <p className="text-[11px] font-bold text-slate-900 leading-tight">
-                  ज्ञानेश्वर पवळे (Dnyaneshwar)
+                  Dnyaneshwar Pawale
                 </p>
                 <a
                   href="tel:+919850291262"
@@ -117,7 +117,7 @@ export default function VisitingCardShowcase() {
               </div>
               <div className="text-left">
                 <p className="text-[11px] font-bold text-slate-900 leading-tight">
-                  श्रवण पवळे (Shravan)
+                  Shravan Pawale
                 </p>
                 <a
                   href="tel:+917276484671"

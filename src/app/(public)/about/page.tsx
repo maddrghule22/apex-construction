@@ -38,7 +38,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-3xl space-y-4">
             <span className="text-xs font-bold text-construction-400 uppercase tracking-wider bg-navy-900 px-3 py-1 rounded-full border border-navy-800">
-              ॥ श्री ॥ ॥ श्रीराम समर्थ ॥ ॥ जय जय रघुवीर समर्थ ॥
+              Established General Contractors • Builders & Developers
             </span>
             <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight">
               About Sree Samarth Krupa Enterprises
@@ -62,7 +62,7 @@ export default function AboutPage() {
                 Official Business Credentials &amp; Visiting Card
               </h2>
               <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-                Operating under the auspicious banner of <strong>श्री SAMARTH KRUPA ENTERPRISES</strong>, our firm provides complete turnkey civil construction, residential bungalows, villas, row houses, and commercial complexes with structural precision and personal proprietor supervision.
+                Operating under the name of <strong>SREE SAMARTH KRUPA ENTERPRISES</strong>, our firm provides complete turnkey civil construction, residential bungalows, villas, row houses, and commercial complexes with structural precision and personal proprietor supervision.
               </p>
             </div>
 
@@ -144,7 +144,7 @@ export default function AboutPage() {
                       Proprietor
                     </span>
                     <h3 className="text-xl font-extrabold text-navy-950">
-                      ज्ञानेश्वर पवळे (Dnyaneshwar Pawale)
+                      Dnyaneshwar Pawale
                     </h3>
                     <p className="text-xs text-gray-500 font-medium">
                       Civil Contracts &amp; Operations Lead
@@ -189,7 +189,7 @@ export default function AboutPage() {
                       Proprietor
                     </span>
                     <h3 className="text-xl font-extrabold text-navy-950">
-                      श्रवण पवळे (Shravan Pawale)
+                      Shravan Pawale
                     </h3>
                     <p className="text-xs text-gray-500 font-medium">
                       Project Management &amp; Civil Site Operations

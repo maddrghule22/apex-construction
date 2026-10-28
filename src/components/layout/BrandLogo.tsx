@@ -29,16 +29,17 @@ export default function BrandLogo({
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          {/* Devanagari Shree Calligraphy Aura on top left */}
+          {/* Stylized Monogram on top left */}
           <text
-            x="14"
+            x="12"
             y="32"
             fill="#EF4444"
-            fontSize="22"
+            fontSize="18"
             fontWeight="900"
-            fontFamily="serif"
+            fontFamily="sans-serif"
+            letterSpacing="0.5"
           >
-            श्री
+            SK
           </text>
 
           {/* Arched Modern Bridge Cable */}
@@ -99,12 +100,9 @@ export default function BrandLogo({
       {/* Brand Typography */}
       <div className="flex flex-col text-left">
         <div className="flex items-center gap-1.5 flex-wrap">
-          <span className="text-[10px] sm:text-xs font-black text-red-600 bg-red-50 px-1.5 py-0.5 rounded border border-red-200 tracking-wider">
-            ॥ श्री ॥
-          </span>
           <span
             className={`font-black text-base sm:text-lg lg:text-xl tracking-tight leading-none ${
-              isLight ? "text-white" : "text-slate-900 group-hover:text-red-700"
+              isLight ? "text-white" : "text-slate-900 group-hover:text-construction-600"
             } transition-colors`}
           >
             SREE SAMARTH KRUPA

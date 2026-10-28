@@ -7,7 +7,6 @@ import {
   Menu,
   X,
   Phone,
-  Calculator,
   ChevronRight,
   HardHat,
   MessageSquare,
@@ -24,7 +23,6 @@ export default function Navbar() {
     { label: "About Us", href: "/about" },
     { label: "Services", href: "/services" },
     { label: "Projects", href: "/projects" },
-    { label: "Cost Estimator (₹)", href: "/estimate", highlight: true },
     { label: "Contact", href: "/contact" },
   ];
 
@@ -40,19 +38,19 @@ export default function Navbar() {
       {/* Top Auspicious & Contact Micro-Bar */}
       <div className="bg-slate-950 text-slate-200 text-xs py-2 px-4 border-b border-slate-800">
         <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
-          {/* Spiritual Invocation */}
+          {/* Company Slogan */}
           <div className="flex items-center space-x-2 text-construction-400 font-extrabold text-[11px] sm:text-xs tracking-wide">
-            <span>॥ श्री ॥</span>
-            <span className="text-slate-600">•</span>
-            <span>॥ श्रीराम समर्थ ॥</span>
+            <span>Sree Samarth Krupa Enterprises</span>
             <span className="text-slate-600 hidden sm:inline">•</span>
-            <span className="hidden sm:inline">॥ जय जय रघुवीर समर्थ ॥</span>
+            <span className="text-slate-300 font-medium hidden sm:inline">
+              Licensed Civil Builders &amp; General Contractors
+            </span>
           </div>
 
           {/* Direct Proprietor Hotline */}
           <div className="flex items-center space-x-3 sm:space-x-4 text-[11px] sm:text-xs">
             <div className="flex items-center space-x-1.5">
-              <span className="text-slate-400 hidden lg:inline">ज्ञानेश्वर पवळे:</span>
+              <span className="text-slate-400 hidden lg:inline">Dnyaneshwar Pawale:</span>
               <a
                 href="tel:+919850291262"
                 className="font-bold text-white hover:text-construction-400 transition flex items-center"
@@ -63,7 +61,7 @@ export default function Navbar() {
             </div>
             <span className="text-slate-700">|</span>
             <div className="flex items-center space-x-1.5">
-              <span className="text-slate-400 hidden lg:inline">श्रवण पवळे:</span>
+              <span className="text-slate-400 hidden lg:inline">Shravan Pawale:</span>
               <a
                 href="tel:+917276484671"
                 className="font-bold text-construction-400 hover:text-construction-300 transition flex items-center"
@@ -93,23 +91,11 @@ export default function Navbar() {
           <nav className="hidden lg:flex items-center space-x-1">
             {navLinks.map((link) => {
               const active = isActive(link.href);
-              if (link.highlight) {
-                return (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="flex items-center px-3.5 py-2 rounded-xl text-xs font-bold bg-construction-50 text-construction-700 hover:bg-construction-100 transition border border-construction-200 shadow-xs ml-1"
-                  >
-                    <Calculator className="w-3.5 h-3.5 mr-1.5 text-construction-600" />
-                    {link.label}
-                  </Link>
-                );
-              }
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`px-3 py-2 rounded-lg text-xs font-semibold transition flex items-center ${
+                  className={`px-3.5 py-2 rounded-lg text-xs font-semibold transition flex items-center ${
                     active
                       ? "text-construction-600 bg-construction-50/80 font-bold"
                       : "text-slate-700 hover:text-slate-900 hover:bg-slate-100/70"
@@ -146,7 +132,7 @@ export default function Navbar() {
           <div className="flex items-center lg:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2.5 rounded-xl text-slate-700 hover:text-slate-950 hover:bg-slate-100 transition"
+              className="p-2.5 rounded-xl text-slate-700 hover:text-slate-950 hover:bg-slate-100 transition cursor-pointer"
               aria-label="Toggle Navigation Menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -160,16 +146,16 @@ export default function Navbar() {
         <div className="lg:hidden bg-white border-b border-slate-200 px-4 pt-3 pb-6 space-y-3 shadow-2xl animate-fadeIn">
           <div className="pb-3 border-b border-slate-100 space-y-1.5">
             <p className="text-[10px] font-extrabold text-slate-400 uppercase tracking-wider">
-              Direct Contact
+              Direct Proprietor Contact
             </p>
             <div className="flex justify-between items-center text-xs font-bold">
-              <span className="text-slate-700">ज्ञानेश्वर पवळे:</span>
+              <span className="text-slate-700">Dnyaneshwar Pawale:</span>
               <a href="tel:+919850291262" className="text-construction-600 font-extrabold">
                 +91 98502 91262
               </a>
             </div>
             <div className="flex justify-between items-center text-xs font-bold">
-              <span className="text-slate-700">श्रवण पवळे:</span>
+              <span className="text-slate-700">Shravan Pawale:</span>
               <a href="tel:+917276484671" className="text-slate-900 font-extrabold">
                 +91 72764 84671
               </a>
@@ -182,7 +168,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`px-3 py-2.5 rounded-xl text-xs font-bold ${
+                className={`px-3 py-2.5 rounded-xl text-xs font-bold text-center ${
                   isActive(link.href)
                     ? "bg-navy-900 text-white"
                     : "bg-slate-50 text-slate-800 hover:bg-slate-100"
@@ -208,7 +194,7 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
               className="w-full text-center py-2.5 rounded-xl text-xs font-extrabold text-white bg-construction-500 hover:bg-construction-600 transition shadow-sm"
             >
-              Request Site Visit / Consultation
+              Request Free Consultation
             </Link>
           </div>
         </div>

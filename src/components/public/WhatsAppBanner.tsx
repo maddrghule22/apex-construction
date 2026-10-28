@@ -12,7 +12,7 @@ export default function WhatsAppBanner() {
         <div className="bg-white/5 backdrop-blur-md rounded-3xl p-6 sm:p-10 border border-white/10 flex flex-col lg:flex-row items-center justify-between gap-8 shadow-xl">
           <div className="space-y-3 text-center lg:text-left max-w-2xl">
             <span className="text-xs font-bold tracking-wider uppercase text-construction-400 bg-navy-900/90 px-3 py-1 rounded-full border border-navy-700 inline-block">
-              ॥ श्रीराम समर्थ ॥ Direct Proprietor Assistance
+              Direct Proprietor Consultation
             </span>
             <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
               Planning to Build a Bungalow, Villa, or Commercial Space?

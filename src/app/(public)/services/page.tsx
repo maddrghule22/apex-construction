@@ -8,7 +8,6 @@ import {
   ShieldCheck,
   Check,
   ArrowRight,
-  Calculator,
   Phone,
   MessageSquare,
   Calendar,
@@ -131,7 +130,7 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-3xl space-y-3 text-left">
             <span className="text-xs font-bold text-construction-400 uppercase tracking-wider bg-navy-900 px-3 py-1 rounded-full border border-navy-800">
-              ॥ श्री ॥ ॥ श्रीराम समर्थ ॥
+              Turnkey Civil Construction &amp; Contracting
             </span>
             <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight">
               Our Construction Services
@@ -198,11 +197,11 @@ export default function ServicesPage() {
 
               <div className="p-6 bg-surface border-t border-gray-100 flex flex-wrap items-center justify-between gap-3">
                 <Link
-                  href="/estimate"
+                  href={`/contact?service=${encodeURIComponent(svc.title)}`}
                   className="inline-flex items-center text-xs font-bold text-construction-700 hover:text-construction-800"
                 >
-                  <Calculator className="w-4 h-4 mr-1 text-construction-600" />
-                  Estimate Cost (₹) →
+                  <ArrowRight className="w-4 h-4 mr-1 text-construction-600" />
+                  Get Service Quote →
                 </Link>
                 <Link
                   href="/contact"

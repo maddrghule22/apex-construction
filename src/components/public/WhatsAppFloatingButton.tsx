@@ -25,7 +25,7 @@ export default function WhatsAppFloatingButton() {
           <div className="flex items-center justify-between pb-2 border-b border-gray-100">
             <div>
               <span className="text-[10px] font-bold text-construction-600 uppercase">
-                ॥ श्रीराम समर्थ ॥
+                Licensed Builders & Developers
               </span>
               <h4 className="text-xs font-extrabold text-navy-900">
                 Sree Samarth Krupa Enterprises
@@ -53,7 +53,7 @@ export default function WhatsAppFloatingButton() {
             >
               <span className="flex items-center">
                 <MessageSquare className="w-4 h-4 mr-2 text-emerald-600" />
-                श्रवण पवळे (Shravan)
+                Shravan Pawale
               </span>
               <span className="text-[11px] text-emerald-700">72764 84671</span>
             </a>
@@ -66,7 +66,7 @@ export default function WhatsAppFloatingButton() {
             >
               <span className="flex items-center">
                 <MessageSquare className="w-4 h-4 mr-2 text-emerald-600" />
-                ज्ञानेश्वर पवळे (Dnyaneshwar)
+                Dnyaneshwar Pawale
               </span>
               <span className="text-[11px] text-emerald-700">98502 91262</span>
             </a>
