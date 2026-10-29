@@ -97,11 +97,8 @@ function ContactFormContent() {
       <section className="bg-navy-950 text-white py-16 sm:py-20 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-3xl space-y-3">
-            <span className="text-xs font-bold text-construction-400 uppercase tracking-wider bg-navy-900 px-3 py-1 rounded-full border border-navy-800">
-              Licensed Civil Contractors • Builders &amp; Developers
-            </span>
             <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight">
-              Contact Sree Samarth Krupa Enterprises
+              Contact Shree Samarth Krupa Enterprises
             </h1>
             <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
               Connect directly with proprietors <strong>Dnyaneshwar Pawale</strong> &amp; <strong>Shravan Pawale</strong> for turnkey building construction, site inspections, blueprints review, and transparent cost estimates.

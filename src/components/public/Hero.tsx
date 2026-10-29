@@ -34,17 +34,10 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           {/* Left Column: Headline, Services & Actions (7 cols) */}
           <div className="lg:col-span-7 space-y-6 text-left">
-            {/* Top Quality Badge */}
-            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-construction-500/40 text-construction-400 text-xs sm:text-sm font-extrabold shadow-lg shadow-black/40 backdrop-blur-md">
-              <span className="text-construction-400">Trusted General Contractors</span>
-              <span className="text-slate-600">•</span>
-              <span className="text-slate-300 font-medium">15+ Years Construction Excellence</span>
-            </div>
-
             {/* Main Headline */}
             <div className="space-y-3">
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
-                SREE SAMARTH KRUPA <br />
+                SHREE SAMARTH KRUPA <br />
                 <span className="bg-gradient-to-r from-construction-400 via-orange-400 to-amber-300 bg-clip-text text-transparent font-black">
                   ENTERPRISES
                 </span>

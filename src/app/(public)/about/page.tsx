@@ -16,9 +16,9 @@ import { generateWhatsAppUrl } from "@/lib/whatsapp/url";
 import VisitingCardShowcase from "@/components/public/VisitingCardShowcase";
 
 export const metadata = {
-  title: "About Us | Sree Samarth Krupa Enterprises",
+  title: "About Us | Shree Samarth Krupa Enterprises",
   description:
-    "Learn about Sree Samarth Krupa Enterprises — founded and managed by Dnyaneshwar Pawale and Shravan Pawale. Premier builders, developers, and turnkey general contractors in Maharashtra.",
+    "Learn about Shree Samarth Krupa Enterprises — founded and managed by Dnyaneshwar Pawale and Shravan Pawale. Premier builders, developers, and turnkey general contractors in Maharashtra.",
 };
 
 export default function AboutPage() {
@@ -37,11 +37,8 @@ export default function AboutPage() {
       <section className="bg-navy-950 text-white py-16 sm:py-20 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-3xl space-y-4">
-            <span className="text-xs font-bold text-construction-400 uppercase tracking-wider bg-navy-900 px-3 py-1 rounded-full border border-navy-800">
-              Established General Contractors • Builders & Developers
-            </span>
             <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight">
-              About Sree Samarth Krupa Enterprises
+              About Shree Samarth Krupa Enterprises
             </h1>
             <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
               Founded on principles of structural honesty, relentless on-site supervision, and dedicated customer service. We build long-lasting residential bungalows, independent houses, and modern commercial landmarks across Maharashtra.
@@ -55,14 +52,11 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-2xl p-6 sm:p-8 border border-gray-200 shadow-sm flex flex-col lg:flex-row items-center gap-8 justify-between">
             <div className="space-y-3 max-w-xl text-left">
-              <span className="text-xs font-bold text-construction-600 uppercase tracking-wider bg-construction-50 px-3 py-1 rounded-full border border-construction-200">
-                Registered Firm Verification
-              </span>
               <h2 className="text-2xl font-extrabold text-navy-950">
                 Official Business Credentials &amp; Visiting Card
               </h2>
               <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-                Operating under the name of <strong>SREE SAMARTH KRUPA ENTERPRISES</strong>, our firm provides complete turnkey civil construction, residential bungalows, villas, row houses, and commercial complexes with structural precision and personal proprietor supervision.
+                Operating under the name of <strong>SHREE SAMARTH KRUPA ENTERPRISES</strong>, our firm provides complete turnkey civil construction, residential bungalows, villas, row houses, and commercial complexes with structural precision and personal proprietor supervision.
               </p>
             </div>
 
@@ -86,7 +80,7 @@ export default function AboutPage() {
               Honest Engineering With Direct Proprietor Accountability
             </h2>
             <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-              Founded by Dnyaneshwar Pawale and Shravan Pawale, <strong>Sree Samarth Krupa Enterprises</strong> provides complete turnkey civil construction services. We eliminate the frustration of dealing with unaccountable subcontractors by maintaining 100% direct proprietor oversight on every foundation, column, slab casting, and finishing stage.
+              Founded by Dnyaneshwar Pawale and Shravan Pawale, <strong>Shree Samarth Krupa Enterprises</strong> provides complete turnkey civil construction services. We eliminate the frustration of dealing with unaccountable subcontractors by maintaining 100% direct proprietor oversight on every foundation, column, slab casting, and finishing stage.
             </p>
             <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
               Whether building an independent family bungalow, row house, or commercial retail premises, our proprietors personally inspect the site daily, ensuring certified materials, transparent BOQ pricing, and punctual handover.

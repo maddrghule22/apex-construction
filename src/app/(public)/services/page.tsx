@@ -15,7 +15,7 @@ import {
 import { generateWhatsAppUrl } from "@/lib/whatsapp/url";
 
 export const metadata = {
-  title: "Turnkey Construction Services | Sree Samarth Krupa Enterprises",
+  title: "Turnkey Construction Services | Shree Samarth Krupa Enterprises",
   description:
     "Explore our civil construction services: turnkey residential bungalows, modern villas, independent row houses, commercial complexes, and structural engineering in Maharashtra.",
 };
@@ -129,9 +129,6 @@ export default function ServicesPage() {
       <section className="bg-navy-950 text-white py-16 sm:py-20 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-3xl space-y-3 text-left">
-            <span className="text-xs font-bold text-construction-400 uppercase tracking-wider bg-navy-900 px-3 py-1 rounded-full border border-navy-800">
-              Turnkey Civil Construction &amp; Contracting
-            </span>
             <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight">
               Our Construction Services
             </h1>

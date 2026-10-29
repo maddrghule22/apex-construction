@@ -105,7 +105,7 @@ export default function BrandLogo({
               isLight ? "text-white" : "text-slate-900 group-hover:text-construction-600"
             } transition-colors`}
           >
-            SREE SAMARTH KRUPA
+            SHREE SAMARTH KRUPA
           </span>
         </div>
 

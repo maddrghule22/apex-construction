@@ -99,14 +99,11 @@ export default function ServicesGrid() {
     <section className="py-16 sm:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 space-y-3">
-          <span className="text-xs font-bold text-navy-800 uppercase tracking-wider bg-surface px-3 py-1 rounded-full border border-gray-200">
-            Professional Construction Capabilities
-          </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-navy-950 tracking-tight">
             Our Construction Services
           </h2>
           <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-            Sree Samarth Krupa Enterprises delivers turnkey construction excellence for residential bungalows, commercial landmarks, and structural civil projects across Maharashtra.
+            Shree Samarth Krupa Enterprises delivers turnkey construction excellence for residential bungalows, commercial landmarks, and structural civil projects across Maharashtra.
           </p>
         </div>
 

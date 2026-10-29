@@ -40,7 +40,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
           {/* Company Slogan */}
           <div className="flex items-center space-x-2 text-construction-400 font-extrabold text-[11px] sm:text-xs tracking-wide">
-            <span>Sree Samarth Krupa Enterprises</span>
+            <span>Shree Samarth Krupa Enterprises</span>
             <span className="text-slate-600 hidden sm:inline">•</span>
             <span className="text-slate-300 font-medium hidden sm:inline">
               Licensed Civil Builders &amp; General Contractors

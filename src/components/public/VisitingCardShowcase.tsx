@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { Phone, MessageSquare, Check, Copy, ExternalLink, ShieldCheck, HardHat, Calendar } from "lucide-react";
+import { Phone, MessageSquare, Check, Copy, ExternalLink, HardHat, Calendar } from "lucide-react";
 import { generateWhatsAppUrl } from "@/lib/whatsapp/url";
 
 export default function VisitingCardShowcase() {
@@ -30,28 +30,17 @@ export default function VisitingCardShowcase() {
 
       {/* Main Container */}
       <div className="relative rounded-2xl bg-white p-3.5 sm:p-5 shadow-2xl border border-slate-200/90 overflow-hidden">
-        {/* Verification Pill Header */}
-        <div className="flex items-center justify-between pb-2.5 px-1 border-b border-slate-100 text-xs">
-          <div className="flex items-center space-x-1.5 text-emerald-700 font-bold">
-            <ShieldCheck className="w-4 h-4 text-emerald-600" />
-            <span className="text-[11px] uppercase tracking-wider">Registered Builders &amp; Developers</span>
-          </div>
-          <span className="text-[10px] font-bold text-construction-700 bg-construction-50 px-2.5 py-0.5 rounded-full border border-construction-200 uppercase tracking-wide">
-            Verified Firm
-          </span>
-        </div>
-
         {/* Card Image with soft shadow */}
-        <div className="mt-3 rounded-xl overflow-hidden border border-slate-200 bg-slate-50 relative group/img">
+        <div className="rounded-xl overflow-hidden border border-slate-200 bg-slate-50 relative group/img">
           <img
             src="/images/business-card.png"
-            alt="Sree Samarth Krupa Enterprises Official Business Card"
+            alt="Shree Samarth Krupa Enterprises Official Business Card"
             className="w-full h-auto object-cover transform transition-transform duration-500 group-hover/img:scale-[1.02]"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity flex items-end p-3">
             <span className="text-white text-xs font-semibold flex items-center">
               <ExternalLink className="w-3.5 h-3.5 mr-1 text-construction-400" />
-              Sree Samarth Krupa Enterprises
+              Shree Samarth Krupa Enterprises
             </span>
           </div>
         </div>

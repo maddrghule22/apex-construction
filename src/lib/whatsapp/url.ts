@@ -26,11 +26,11 @@ export function generateWhatsAppUrl(options: WhatsAppMessageOptions): string {
     switch (options.type) {
       case "TANKER":
         messageText =
-          "Hello Shravan ji / Dnyaneshwar ji, I am contacting Sree Samarth Krupa Enterprises regarding a Water Tanker for construction site water supply. Please share rates and availability.";
+          "Hello Shravan Pawale & Dnyaneshwar Pawale, I am contacting Shree Samarth Krupa Enterprises regarding a Water Tanker for construction site water supply. Please share rates and availability.";
         break;
       case "INDUSTRIAL":
         messageText =
-          "Hello, I am inquiring about civil contracting and construction services from Sree Samarth Krupa Enterprises. Please share details.";
+          "Hello, I am inquiring about civil contracting and construction services from Shree Samarth Krupa Enterprises. Please share details.";
         break;
       case "PROJECT":
         messageText = `Hello! I am interested in your construction project "${
@@ -45,13 +45,13 @@ export function generateWhatsAppUrl(options: WhatsAppMessageOptions): string {
       case "ENQUIRY_FOLLOWUP":
         messageText = `Hello ${
           options.customerName || "there"
-        }, thank you for reaching out to Sree Samarth Krupa Enterprises regarding your construction requirements. How can we assist you today?`;
+        }, thank you for reaching out to Shree Samarth Krupa Enterprises regarding your construction requirements. How can we assist you today?`;
         break;
       case "GENERAL":
       default:
-        messageText = `Hello Shravan ji / Dnyaneshwar ji, I am interested in your construction and development services (${
+        messageText = `Hello Shravan Pawale & Dnyaneshwar Pawale, I am interested in your construction and development services (${
           options.projectCategory ? options.projectCategory.toLowerCase() : "builders & developers"
-        }) with Sree Samarth Krupa Enterprises. Please contact me.`;
+        }) with Shree Samarth Krupa Enterprises. Please contact me.`;
         break;
     }
   }

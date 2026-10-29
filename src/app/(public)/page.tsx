@@ -10,7 +10,7 @@ import TestimonialsAndFaq from "@/components/public/TestimonialsAndFaq";
 import WhatsAppBanner from "@/components/public/WhatsAppBanner";
 
 export const metadata: Metadata = {
-  title: "Sree Samarth Krupa Enterprises | Builders & Developers | Turnkey Construction",
+  title: "Shree Samarth Krupa Enterprises | Builders & Developers | Turnkey Construction",
   description:
     "Turnkey residential bungalows, villas, independent row houses, and commercial complexes in Maharashtra. Directly supervised by Dnyaneshwar Pawale (+91 98502 91262) & Shravan Pawale (+91 72764 84671).",
   alternates: {

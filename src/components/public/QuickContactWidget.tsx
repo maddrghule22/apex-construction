@@ -32,7 +32,7 @@ export default function QuickContactWidget() {
   });
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText("contact@sreesamarthkrupa.com");
+    navigator.clipboard.writeText("contact@shreesamarthkrupa.com");
     setCopiedEmail(true);
     setTimeout(() => setCopiedEmail(false), 2500);
   };
@@ -138,11 +138,7 @@ export default function QuickContactWidget() {
           >
             {/* Modal Header */}
             <div className="bg-navy-950 text-white p-4 sm:p-5 flex items-center justify-between border-b border-navy-800">
-              <div className="space-y-0.5">
-                <span className="text-[10px] font-bold text-construction-400 uppercase tracking-wider block">
-                  Quick User Option
-                </span>
-                <h3 className="text-base font-bold text-white flex items-center gap-2">
+              <h3 className="text-base font-bold text-white flex items-center gap-2">
                   {activeModal === "CALL" && (
                     <>
                       <Phone className="w-4 h-4 text-construction-500" />
@@ -162,7 +158,6 @@ export default function QuickContactWidget() {
                     </>
                   )}
                 </h3>
-              </div>
               <button
                 onClick={() => setActiveModal(null)}
                 className="w-8 h-8 rounded-full bg-navy-900 hover:bg-navy-800 text-gray-300 hover:text-white flex items-center justify-center transition"
@@ -282,7 +277,7 @@ export default function QuickContactWidget() {
                   <div className="p-3 rounded-xl bg-gray-50 border border-gray-200 space-y-2">
                     <div className="flex items-center justify-between">
                       <span className="text-[11px] font-bold text-navy-950">
-                        contact@sreesamarthkrupa.com
+                        contact@shreesamarthkrupa.com
                       </span>
                       <button
                         onClick={handleCopyEmail}
@@ -304,7 +299,7 @@ export default function QuickContactWidget() {
                     </div>
 
                     <a
-                      href="mailto:contact@sreesamarthkrupa.com?subject=Construction%20Project%20Inquiry%20-%20Sree%20Samarth%20Krupa%20Enterprises"
+                      href="mailto:contact@shreesamarthkrupa.com?subject=Construction%20Project%20Inquiry%20-%20Shree%20Samarth%20Krupa%20Enterprises"
                       className="w-full inline-flex items-center justify-center px-4 py-2 rounded-lg bg-navy-950 hover:bg-navy-900 text-white text-xs font-bold transition shadow-sm"
                     >
                       <Mail className="w-3.5 h-3.5 mr-2 text-construction-400" />

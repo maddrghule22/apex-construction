@@ -28,7 +28,7 @@ export default function WhatsAppFloatingButton() {
                 Licensed Builders & Developers
               </span>
               <h4 className="text-xs font-extrabold text-navy-900">
-                Sree Samarth Krupa Enterprises
+                Shree Samarth Krupa Enterprises
               </h4>
             </div>
             <button

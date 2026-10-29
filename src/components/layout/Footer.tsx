@@ -20,16 +20,6 @@ export default function Footer() {
   return (
     <footer className="bg-navy-950 text-gray-300 pt-16 pb-8 border-t border-navy-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Top Invocation Bar */}
-        <div className="pb-8 mb-8 border-b border-navy-800 flex flex-wrap items-center justify-between gap-4 text-center sm:text-left">
-          <div className="text-construction-400 font-bold text-sm tracking-wide">
-            Sree Samarth Krupa Enterprises • Excellence in Engineering & Construction
-          </div>
-          <div className="text-xs text-gray-400">
-            Registered General Contractors, Builders &amp; Developers
-          </div>
-        </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-navy-800/80">
           {/* Company Bio */}
           <div className="space-y-4">
@@ -161,8 +151,8 @@ export default function Footer() {
 
             <div className="flex items-center space-x-2 text-xs text-gray-400 pt-1">
               <Mail className="w-3.5 h-3.5 text-construction-500 shrink-0" />
-              <a href="mailto:contact@sreesamarthkrupa.com" className="hover:text-white transition">
-                contact@sreesamarthkrupa.com
+              <a href="mailto:contact@shreesamarthkrupa.com" className="hover:text-white transition">
+                contact@shreesamarthkrupa.com
               </a>
             </div>
           </div>
@@ -170,7 +160,7 @@ export default function Footer() {
 
         {/* Bottom copyright */}
         <div className="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500 gap-4">
-          <p>© {currentYear} Sree Samarth Krupa Enterprises. All rights reserved.</p>
+          <p>© {currentYear} Shree Samarth Krupa Enterprises. All rights reserved.</p>
           <p className="flex items-center space-x-2">
             <span>Builders &amp; Developers</span>
             <span>•</span>
