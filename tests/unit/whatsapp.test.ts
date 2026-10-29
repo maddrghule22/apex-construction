@@ -18,14 +18,14 @@ describe("WhatsApp URL Integration", () => {
     expect(url).toContain(encodeURIComponent("Shree Samarth Krupa Enterprises"));
   });
 
-  it("constructs compliant wa.me URL for water tanker order", () => {
+  it("constructs compliant wa.me URL for on-site consultation", () => {
     const url = generateWhatsAppUrl({
       phoneNumber: "+91 72764 84671",
-      type: "TANKER",
+      type: "SITE_VISIT",
     });
 
     expect(url.startsWith("https://wa.me/917276484671?text=")).toBe(true);
-    expect(url).toContain(encodeURIComponent("Water Tanker"));
+    expect(url).toContain(encodeURIComponent("on-site consultation"));
   });
 
   it("constructs compliant wa.me URL for specific project context", () => {

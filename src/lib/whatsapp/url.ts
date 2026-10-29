@@ -1,6 +1,6 @@
 export interface WhatsAppMessageOptions {
   phoneNumber?: string;
-  type?: "GENERAL" | "PROJECT" | "ESTIMATE" | "ENQUIRY_FOLLOWUP" | "TANKER" | "INDUSTRIAL";
+  type?: "GENERAL" | "PROJECT" | "ESTIMATE" | "ENQUIRY_FOLLOWUP" | "SITE_VISIT" | "COMMERCIAL";
   projectTitle?: string;
   projectCategory?: string;
   customerName?: string;
@@ -24,13 +24,13 @@ export function generateWhatsAppUrl(options: WhatsAppMessageOptions): string {
     messageText = options.customMessage;
   } else {
     switch (options.type) {
-      case "TANKER":
+      case "SITE_VISIT":
         messageText =
-          "Hello Shravan Pawale & Dnyaneshwar Pawale, I am contacting Shree Samarth Krupa Enterprises regarding a Water Tanker for construction site water supply. Please share rates and availability.";
+          "Hello Shravan Pawale & Dnyaneshwar Pawale, I would like to schedule an on-site consultation with Shree Samarth Krupa Enterprises. Please share available dates.";
         break;
-      case "INDUSTRIAL":
+      case "COMMERCIAL":
         messageText =
-          "Hello, I am inquiring about civil contracting and construction services from Shree Samarth Krupa Enterprises. Please share details.";
+          "Hello, I am inquiring about commercial civil contracting and construction services from Shree Samarth Krupa Enterprises. Please share details.";
         break;
       case "PROJECT":
         messageText = `Hello! I am interested in your construction project "${
