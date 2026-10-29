@@ -55,8 +55,8 @@ export default function ServicesGrid() {
           desc: "Modern office towers with integrated elevator shafts, fire sprinkler grids, and HVAC ducting coordination.",
         },
         {
-          title: "Industrial Warehouses & Sheds",
-          desc: "Heavy-duty laser-screed concrete industrial flooring, PEB structures, and administrative offices.",
+          title: "Retail Shops & Commercial Buildings",
+          desc: "Durable RCC framing, high-visibility commercial layouts, and fire-safety compliant civil structures.",
         },
         {
           title: "Turnkey Commercial Fit-Outs",

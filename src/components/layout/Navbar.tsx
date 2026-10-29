@@ -8,7 +8,6 @@ import {
   X,
   Phone,
   ChevronRight,
-  HardHat,
   MessageSquare,
 } from "lucide-react";
 import { generateWhatsAppUrl } from "@/lib/whatsapp/url";
@@ -34,23 +33,23 @@ export default function Navbar() {
   const whatsappUrl = generateWhatsAppUrl({ type: "GENERAL" });
 
   return (
-    <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-xl border-b border-slate-200/80 shadow-xs transition-all">
-      {/* Top Auspicious & Contact Micro-Bar */}
-      <div className="bg-slate-950 text-slate-200 text-xs py-2 px-4 border-b border-slate-800">
+    <header className="sticky top-0 z-40 bg-white border-b border-gray-200 shadow-xs transition-all">
+      {/* Top Contact Micro-Bar */}
+      <div className="bg-navy-950 text-gray-300 text-xs py-2 px-4 border-b border-navy-900">
         <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
-          {/* Company Slogan */}
-          <div className="flex items-center space-x-2 text-construction-400 font-extrabold text-[11px] sm:text-xs tracking-wide">
+          {/* Company Identification */}
+          <div className="flex items-center space-x-2 text-construction-400 font-bold text-[11px] sm:text-xs tracking-wide">
             <span>Shree Samarth Krupa Enterprises</span>
-            <span className="text-slate-600 hidden sm:inline">•</span>
-            <span className="text-slate-300 font-medium hidden sm:inline">
-              Licensed Civil Builders &amp; General Contractors
+            <span className="text-gray-600 hidden sm:inline">•</span>
+            <span className="text-gray-300 font-normal hidden sm:inline">
+              General Contractors &amp; Builders
             </span>
           </div>
 
-          {/* Direct Proprietor Hotline */}
+          {/* Direct Proprietor Contact */}
           <div className="flex items-center space-x-3 sm:space-x-4 text-[11px] sm:text-xs">
             <div className="flex items-center space-x-1.5">
-              <span className="text-slate-400 hidden lg:inline">Dnyaneshwar Pawale:</span>
+              <span className="text-gray-400 hidden lg:inline">Dnyaneshwar Pawale:</span>
               <a
                 href="tel:+919850291262"
                 className="font-bold text-white hover:text-construction-400 transition flex items-center"
@@ -59,9 +58,9 @@ export default function Navbar() {
                 +91 98502 91262
               </a>
             </div>
-            <span className="text-slate-700">|</span>
+            <span className="text-gray-700">|</span>
             <div className="flex items-center space-x-1.5">
-              <span className="text-slate-400 hidden lg:inline">Shravan Pawale:</span>
+              <span className="text-gray-400 hidden lg:inline">Shravan Pawale:</span>
               <a
                 href="tel:+917276484671"
                 className="font-bold text-construction-400 hover:text-construction-300 transition flex items-center"
@@ -70,10 +69,10 @@ export default function Navbar() {
                 +91 72764 84671
               </a>
             </div>
-            <span className="text-slate-700 hidden md:inline">|</span>
+            <span className="text-gray-700 hidden md:inline">|</span>
             <Link
               href="/login"
-              className="text-slate-400 hover:text-white transition font-medium hidden md:inline text-[11px]"
+              className="text-gray-400 hover:text-white transition font-medium hidden md:inline text-[11px]"
             >
               Owner Portal
             </Link>
@@ -95,10 +94,10 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`px-3.5 py-2 rounded-lg text-xs font-semibold transition flex items-center ${
+                  className={`px-3.5 py-2 rounded-lg text-sm font-semibold transition flex items-center ${
                     active
-                      ? "text-construction-600 bg-construction-50/80 font-bold"
-                      : "text-slate-700 hover:text-slate-900 hover:bg-slate-100/70"
+                      ? "text-construction-600 bg-construction-50 font-bold"
+                      : "text-gray-700 hover:text-navy-950 hover:bg-gray-100"
                   }`}
                 >
                   {link.label}
@@ -121,9 +120,9 @@ export default function Navbar() {
 
             <Link
               href="/contact"
-              className="inline-flex items-center px-4 py-2 rounded-xl text-xs font-bold text-white bg-construction-500 hover:bg-construction-600 shadow-md shadow-construction-500/20 transition active:scale-95"
+              className="inline-flex items-center px-4 py-2 rounded-xl text-xs font-bold text-white bg-construction-500 hover:bg-construction-600 shadow-sm transition active:scale-95"
             >
-              Get Free Consultation
+              Contact Us
               <ChevronRight className="w-3.5 h-3.5 ml-0.5" />
             </Link>
           </div>
@@ -132,7 +131,7 @@ export default function Navbar() {
           <div className="flex items-center lg:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2.5 rounded-xl text-slate-700 hover:text-slate-950 hover:bg-slate-100 transition cursor-pointer"
+              className="p-2.5 rounded-xl text-gray-700 hover:text-navy-950 hover:bg-gray-100 transition cursor-pointer"
               aria-label="Toggle Navigation Menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -143,20 +142,20 @@ export default function Navbar() {
 
       {/* Mobile drop-down drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-b border-slate-200 px-4 pt-3 pb-6 space-y-3 shadow-2xl animate-fadeIn">
-          <div className="pb-3 border-b border-slate-100 space-y-1.5">
-            <p className="text-[10px] font-extrabold text-slate-400 uppercase tracking-wider">
+        <div className="lg:hidden bg-white border-b border-gray-200 px-4 pt-3 pb-6 space-y-3 shadow-2xl animate-fadeIn">
+          <div className="pb-3 border-b border-gray-100 space-y-1.5">
+            <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">
               Direct Proprietor Contact
             </p>
             <div className="flex justify-between items-center text-xs font-bold">
-              <span className="text-slate-700">Dnyaneshwar Pawale:</span>
-              <a href="tel:+919850291262" className="text-construction-600 font-extrabold">
+              <span className="text-gray-700">Dnyaneshwar Pawale:</span>
+              <a href="tel:+919850291262" className="text-construction-600 font-bold">
                 +91 98502 91262
               </a>
             </div>
             <div className="flex justify-between items-center text-xs font-bold">
-              <span className="text-slate-700">Shravan Pawale:</span>
-              <a href="tel:+917276484671" className="text-slate-900 font-extrabold">
+              <span className="text-gray-700">Shravan Pawale:</span>
+              <a href="tel:+917276484671" className="text-navy-950 font-bold">
                 +91 72764 84671
               </a>
             </div>
@@ -171,7 +170,7 @@ export default function Navbar() {
                 className={`px-3 py-2.5 rounded-xl text-xs font-bold text-center ${
                   isActive(link.href)
                     ? "bg-navy-900 text-white"
-                    : "bg-slate-50 text-slate-800 hover:bg-slate-100"
+                    : "bg-gray-50 text-gray-800 hover:bg-gray-100"
                 }`}
               >
                 {link.label}
@@ -184,7 +183,7 @@ export default function Navbar() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full text-center py-2.5 rounded-xl text-xs font-extrabold text-white bg-emerald-600 hover:bg-emerald-700 transition shadow-sm flex items-center justify-center"
+              className="w-full text-center py-2.5 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 transition shadow-sm flex items-center justify-center"
             >
               <MessageSquare className="w-4 h-4 mr-1.5" />
               Chat on WhatsApp
@@ -192,9 +191,9 @@ export default function Navbar() {
             <Link
               href="/contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full text-center py-2.5 rounded-xl text-xs font-extrabold text-white bg-construction-500 hover:bg-construction-600 transition shadow-sm"
+              className="w-full text-center py-2.5 rounded-xl text-xs font-bold text-white bg-construction-500 hover:bg-construction-600 transition shadow-sm"
             >
-              Request Free Consultation
+              Contact Us Directly
             </Link>
           </div>
         </div>

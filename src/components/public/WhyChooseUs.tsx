@@ -39,14 +39,11 @@ export default function WhyChooseUs() {
     <section className="py-20 bg-navy-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <span className="text-xs font-bold text-construction-400 uppercase tracking-wider bg-navy-800 px-3 py-1 rounded-full border border-navy-700">
-            Uncompromising Standards
-          </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            Why Discerning Clients Build With Us
+            Our Engineering &amp; Construction Standards
           </h2>
           <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-            Constructing a building is one of your greatest lifetime investments. We protect your capital through rigorous engineering rigor and total accountability.
+            Constructing a home or commercial building requires technical discipline. We protect your investment through rigorous material quality and direct proprietor oversight.
           </p>
         </div>
 

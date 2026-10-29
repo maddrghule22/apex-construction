@@ -25,8 +25,7 @@ function GalleryContent({ initialProjects }: ProjectsGalleryProps) {
     { label: "All Projects", value: "ALL" },
     { label: "Residential", value: "RESIDENTIAL" },
     { label: "Commercial", value: "COMMERCIAL" },
-    { label: "Industrial", value: "INDUSTRIAL" },
-    { label: "Renovation", value: "RENOVATION" },
+    { label: "Renovation & Civil", value: "RENOVATION" },
   ];
 
   const filteredProjects =

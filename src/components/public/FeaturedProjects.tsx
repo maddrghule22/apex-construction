@@ -11,23 +11,20 @@ export default async function FeaturedProjects() {
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
-          <div>
-            <span className="text-xs font-bold text-construction-600 uppercase tracking-wider bg-construction-50 px-3 py-1 rounded-full border border-construction-200">
-              Proven Track Record
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight mt-3">
+          <div className="space-y-2">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-navy-950 tracking-tight">
               Featured Construction Projects
             </h2>
-            <p className="text-gray-600 text-sm sm:text-base mt-2 max-w-xl">
-              Inspect our recent high-precision residential residences, commercial corporate hubs, and industrial facilities.
+            <p className="text-gray-600 text-sm sm:text-base max-w-xl leading-relaxed">
+              Explore our turnkey residential villas, independent houses, and modern commercial developments across Maharashtra.
             </p>
           </div>
 
           <Link
             href="/projects"
-            className="inline-flex items-center text-sm font-bold text-navy-800 hover:text-construction-600 transition mt-4 md:mt-0"
+            className="inline-flex items-center text-sm font-bold text-navy-900 hover:text-construction-600 transition mt-4 md:mt-0"
           >
-            View all projects & full portfolio
+            View all projects &amp; portfolio
             <ArrowRight className="w-4 h-4 ml-1.5 text-construction-500" />
           </Link>
         </div>

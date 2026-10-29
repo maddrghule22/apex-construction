@@ -86,14 +86,14 @@ export default function AboutPage() {
               Whether building an independent family bungalow, row house, or commercial retail premises, our proprietors personally inspect the site daily, ensuring certified materials, transparent BOQ pricing, and punctual handover.
             </p>
 
-            <div className="pt-2 grid grid-cols-2 gap-4">
-              <div className="p-4 rounded-xl bg-surface border border-gray-100">
-                <span className="text-2xl font-black text-navy-950">100%</span>
-                <p className="text-xs font-semibold text-gray-500 mt-0.5">Direct Site Supervision</p>
+            <div className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="p-4 rounded-xl bg-surface border border-gray-200">
+                <p className="text-xs font-bold text-navy-950 uppercase tracking-wide">Direct Site Supervision</p>
+                <p className="text-xs text-gray-600 mt-1">Daily on-site contractor coordination and quality checks by founders.</p>
               </div>
-              <div className="p-4 rounded-xl bg-surface border border-gray-100">
-                <span className="text-2xl font-black text-construction-600">50+</span>
-                <p className="text-xs font-semibold text-gray-500 mt-0.5">Projects Delivered</p>
+              <div className="p-4 rounded-xl bg-surface border border-gray-200">
+                <p className="text-xs font-bold text-navy-950 uppercase tracking-wide">Verified Material Standards</p>
+                <p className="text-xs text-gray-600 mt-1">Grade 53 OPC cement, Fe-550D TMT steel, and tested concrete mix ratios.</p>
               </div>
             </div>
           </div>
@@ -114,14 +114,11 @@ export default function AboutPage() {
       <section className="py-16 sm:py-20 bg-surface border-y border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16 space-y-2">
-            <span className="text-xs font-bold text-navy-800 uppercase tracking-wider bg-white px-3 py-1 rounded-full border border-gray-200">
-              Leadership
-            </span>
             <h2 className="text-3xl font-extrabold text-navy-950">
-              Proprietors &amp; Management Team
+              Proprietors &amp; Management
             </h2>
             <p className="text-gray-600 text-sm">
-              Accessible, hands-on founders directly overseeing execution on every project site.
+              Hands-on founders directly managing civil contracting and on-site construction quality.
             </p>
           </div>
 

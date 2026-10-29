@@ -1,14 +1,13 @@
 import React from "react";
 import Link from "next/link";
 import {
-  HardHat,
   Phone,
+  ArrowRight,
+  Building2,
   ShieldCheck,
   CheckCircle2,
-  ArrowRight,
+  HardHat,
   MessageSquare,
-  Building2,
-  Sparkles,
 } from "lucide-react";
 import { generateWhatsAppUrl } from "@/lib/whatsapp/url";
 import VisitingCardShowcase from "./VisitingCardShowcase";
@@ -17,110 +16,87 @@ export default function Hero() {
   const generalWhatsApp = generateWhatsAppUrl({ type: "GENERAL" });
 
   return (
-    <section className="relative bg-gradient-to-b from-slate-950 via-navy-950 to-slate-900 text-white overflow-hidden">
-      {/* High-res architectural background image with subtle blend */}
+    <section className="relative bg-navy-950 text-white overflow-hidden border-b border-navy-800">
+      {/* Background Architectural Photo with Dark Overlay for Maximum Contrast */}
       <div
-        className="absolute inset-0 bg-cover bg-center opacity-15 mix-blend-luminosity scale-105 transition-transform duration-1000"
+        className="absolute inset-0 bg-cover bg-center opacity-10"
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/photo-1541888946425-d0fbb1861564?auto=format&fit=crop&w=2000&q=80')",
         }}
       />
-      {/* Radial ambient lighting */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-construction-500/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
-          {/* Left Column: Headline, Services & Actions (7 cols) */}
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+          {/* Left Column: Clear Value Proposition (7 cols) */}
           <div className="lg:col-span-7 space-y-6 text-left">
-            {/* Main Headline */}
             <div className="space-y-3">
-              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
-                SHREE SAMARTH KRUPA <br />
-                <span className="bg-gradient-to-r from-construction-400 via-orange-400 to-amber-300 bg-clip-text text-transparent font-black">
-                  ENTERPRISES
-                </span>
+              <p className="text-xs sm:text-sm font-bold uppercase tracking-wider text-construction-400">
+                Shree Samarth Krupa Enterprises • General Contractors &amp; Developers
+              </p>
+              <h1 className="text-3xl sm:text-5xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+                Turnkey Residential &amp; Commercial Construction
               </h1>
-
-              {/* Subtitle Badge */}
-              <div className="pt-1 flex flex-wrap items-center gap-2 text-xs sm:text-sm font-black uppercase tracking-wider">
-                <span className="bg-construction-500 text-white px-3.5 py-1.5 rounded-xl inline-flex items-center shadow-md shadow-construction-500/20 border border-construction-400/40">
-                  <HardHat className="w-4 h-4 mr-1.5 text-construction-100" />
-                  Builders &amp; Developers
-                </span>
-                <span className="bg-slate-800 text-slate-200 px-3.5 py-1.5 rounded-xl inline-flex items-center border border-slate-700">
-                  <Building2 className="w-4 h-4 mr-1.5 text-construction-400" />
-                  Turnkey Civil Construction
-                </span>
-              </div>
             </div>
 
-            {/* Supporting description */}
-            <p className="text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl">
-              Turnkey residential bungalows, villas, independent row houses, and modern commercial complexes. Built with chartered structural engineering, certified ISI materials, transparent fixed BOQ pricing, and hands-on proprietor supervision from excavation to handover.
+            <p className="text-base sm:text-lg text-gray-300 leading-relaxed max-w-2xl">
+              From foundation excavation to final structural finishing. We build custom residential bungalows, modern villas, independent row houses, and commercial premises across Maharashtra with certified materials, itemized BOQ contracts, and daily proprietor supervision.
             </p>
 
-            {/* Proprietor Direct Hotline Cards */}
-            <div className="pt-1 grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-xl">
-              <div className="p-3.5 rounded-2xl bg-slate-900/90 border border-slate-700/80 shadow-md flex items-center justify-between">
-                <div className="text-left">
-                  <span className="text-[10px] text-slate-400 uppercase font-extrabold tracking-wider block">
-                    Proprietor
+            {/* Direct Proprietor Contact Hotline */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-lg pt-1">
+              <div className="p-3.5 rounded-xl bg-navy-900 border border-navy-800 flex items-center justify-between">
+                <div>
+                  <span className="text-[10px] text-gray-400 uppercase font-bold block">
+                    Proprietor • Contracts
                   </span>
                   <span className="text-xs font-bold text-white block">
                     Dnyaneshwar Pawale
                   </span>
                   <a
                     href="tel:+919850291262"
-                    className="text-xs font-black text-construction-400 hover:text-construction-300 flex items-center mt-0.5"
+                    className="text-xs font-bold text-construction-400 hover:text-construction-300 flex items-center mt-0.5"
                   >
                     <Phone className="w-3 h-3 mr-1 text-construction-500" />
                     +91 98502 91262
                   </a>
                 </div>
-                <a
-                  href="tel:+919850291262"
-                  className="p-2.5 rounded-xl bg-navy-800 hover:bg-navy-750 text-white transition border border-slate-700"
-                  title="Call Dnyaneshwar Pawale"
-                >
-                  <Phone className="w-4 h-4 text-construction-400" />
-                </a>
               </div>
 
-              <div className="p-3.5 rounded-2xl bg-slate-900/90 border border-slate-700/80 shadow-md flex items-center justify-between">
-                <div className="text-left">
-                  <span className="text-[10px] text-construction-400 uppercase font-extrabold tracking-wider block">
-                    Proprietor
+              <div className="p-3.5 rounded-xl bg-navy-900 border border-navy-800 flex items-center justify-between">
+                <div>
+                  <span className="text-[10px] text-gray-400 uppercase font-bold block">
+                    Proprietor • Site Operations
                   </span>
                   <span className="text-xs font-bold text-white block">
                     Shravan Pawale
                   </span>
                   <a
                     href="tel:+917276484671"
-                    className="text-xs font-black text-construction-400 hover:text-construction-300 flex items-center mt-0.5"
+                    className="text-xs font-bold text-construction-400 hover:text-construction-300 flex items-center mt-0.5"
                   >
-                    <Phone className="w-3 h-3 mr-1 text-construction-400" />
+                    <Phone className="w-3 h-3 mr-1 text-construction-500" />
                     +91 72764 84671
                   </a>
                 </div>
-                <a
-                  href="tel:+917276484671"
-                  className="p-2.5 rounded-xl bg-navy-800 hover:bg-navy-750 text-white transition border border-slate-700"
-                  title="Call Shravan Pawale"
-                >
-                  <Phone className="w-4 h-4 text-construction-400" />
-                </a>
               </div>
             </div>
 
-            {/* Action Buttons */}
+            {/* Two Clear Actions */}
             <div className="pt-2 flex flex-wrap items-center gap-3">
               <Link
-                href="/contact"
-                className="inline-flex items-center justify-center px-5 py-3 rounded-xl text-xs sm:text-sm font-black text-white bg-construction-500 hover:bg-construction-600 shadow-lg shadow-construction-500/25 transition transform hover:-translate-y-0.5 active:translate-y-0"
+                href="/projects"
+                className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl text-sm font-bold text-white bg-construction-500 hover:bg-construction-600 shadow-md shadow-construction-500/20 transition active:scale-95"
               >
-                Get Free Site Consultation
+                <Building2 className="w-4 h-4 mr-2" />
+                Explore Our Work
+              </Link>
+
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl text-sm font-bold text-gray-200 bg-navy-900 hover:bg-navy-850 hover:text-white border border-navy-700 transition active:scale-95"
+              >
+                Contact Us
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
 
@@ -128,43 +104,35 @@ export default function Hero() {
                 href={generalWhatsApp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-5 py-3 rounded-xl text-xs sm:text-sm font-black text-white bg-emerald-600 hover:bg-emerald-700 shadow-lg shadow-emerald-600/25 transition transform hover:-translate-y-0.5 active:translate-y-0"
+                className="inline-flex items-center justify-center px-4 py-3.5 rounded-xl text-sm font-bold text-emerald-400 bg-emerald-950/60 hover:bg-emerald-900/60 border border-emerald-800/80 transition"
               >
-                <MessageSquare className="w-4 h-4 mr-2" />
-                Chat on WhatsApp
+                <MessageSquare className="w-4 h-4 mr-1.5" />
+                WhatsApp
               </a>
-
-              <Link
-                href="/projects"
-                className="inline-flex items-center justify-center px-4 py-3 rounded-xl text-xs sm:text-sm font-bold text-slate-200 bg-slate-900/90 hover:bg-slate-800 border border-slate-700 transition"
-              >
-                <Building2 className="w-4 h-4 mr-2 text-construction-500" />
-                Explore Projects
-              </Link>
             </div>
 
-            {/* Trust Signals */}
-            <div className="pt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 border-t border-slate-800/80">
-              <div className="flex items-center space-x-2 text-xs text-slate-300 font-medium">
-                <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
-                <span>Turnkey Quality</span>
+            {/* Core Commitments */}
+            <div className="pt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 border-t border-navy-800/80 text-xs text-gray-300">
+              <div className="flex items-center space-x-2">
+                <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                <span>Turnkey Delivery</span>
               </div>
-              <div className="flex items-center space-x-2 text-xs text-slate-300 font-medium">
-                <Building2 className="w-4 h-4 text-construction-400 shrink-0" />
-                <span>Structural Warranty</span>
+              <div className="flex items-center space-x-2">
+                <ShieldCheck className="w-4 h-4 text-construction-400 shrink-0" />
+                <span>Structural Design</span>
               </div>
-              <div className="flex items-center space-x-2 text-xs text-slate-300 font-medium">
-                <CheckCircle2 className="w-4 h-4 text-construction-400 shrink-0" />
-                <span>Fixed BOQ Pricing</span>
-              </div>
-              <div className="flex items-center space-x-2 text-xs text-slate-300 font-medium">
+              <div className="flex items-center space-x-2">
                 <HardHat className="w-4 h-4 text-amber-400 shrink-0" />
-                <span>Direct Supervision</span>
+                <span>Daily Supervision</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Building2 className="w-4 h-4 text-blue-400 shrink-0" />
+                <span>Fixed BOQ Pricing</span>
               </div>
             </div>
           </div>
 
-          {/* Right Column: Interactive Visiting Card Showcase (5 cols) */}
+          {/* Right Column: Authentic Visiting Card & Verified Contact (5 cols) */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end">
             <VisitingCardShowcase />
           </div>

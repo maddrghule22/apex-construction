@@ -77,18 +77,18 @@ export default function ServicesPage() {
         "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
     },
     {
-      id: "industrial-sheds",
-      title: "Industrial PEB Warehouses & Sheds",
-      desc: "Pre-engineered industrial steel buildings, heavy laser-screed concrete flooring, loading bays, and administrative annexes.",
+      id: "commercial-offices",
+      title: "Commercial Office Spaces & Retail Centers",
+      desc: "Turnkey commercial civil construction featuring column-free layouts, elevator shaft civil works, high-load concrete slabs, and modern architectural facades.",
       benefits: [
-        "Heavy-load floor casting designed to withstand fork-truck movements",
-        "Fast-track structural steel assembly and weather-tight roofing",
-        "Integrated stormwater channels, rainwater sumps, and boundary walls",
-        "Approved industrial fire hydrant and ventilation clearances",
+        "Heavy-load structural floor slabs designed for flexible office configurations",
+        "Elevator core civil construction and fire escape staircases",
+        "Concealed electrical conduit and plumbing provisions for multi-tenancy",
+        "Punctual commercial handover to minimize rental vacancy",
       ],
-      suitable: "Logistics companies, manufacturing units, industrial park plots",
+      suitable: "Commercial property developers, office complexes, multi-shop retail hubs",
       image:
-        "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
     },
   ];
 

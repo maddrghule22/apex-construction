@@ -17,14 +17,11 @@ export default async function ProjectsPage() {
       <section className="bg-navy-900 text-white py-16 sm:py-20 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-3xl space-y-3">
-            <span className="text-xs font-bold text-construction-400 uppercase tracking-wider bg-navy-800 px-3 py-1 rounded-full border border-navy-700">
-              Verified Project Portfolio
-            </span>
             <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">
-              Our Construction Landmarks
+              Our Construction Projects
             </h1>
             <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
-              Explore our delivered and ongoing residential villas, corporate towers, and industrial facilities. Each project is engineered with high-precision structural standards.
+              Explore our delivered and ongoing residential villas, independent houses, and modern commercial developments across Maharashtra.
             </p>
           </div>
         </div>

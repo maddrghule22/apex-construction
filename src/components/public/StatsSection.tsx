@@ -1,55 +1,50 @@
 import React from "react";
-import { Building2, Award, ShieldCheck, Users } from "lucide-react";
+import { Building2, ShieldCheck, Users, FileCheck2 } from "lucide-react";
 
 export default function StatsSection() {
-  const stats = [
+  const highlights = [
     {
-      label: "Turnkey Projects Delivered",
-      value: "50+",
-      description: "Residential bungalows, independent houses & commercial units",
-      icon: Building2,
-    },
-    {
-      label: "On-Time Completion Rate",
-      value: "100%",
-      description: "Milestone-driven delivery with locked BOQ contracts and zero delays",
-      icon: Award,
-    },
-    {
-      label: "Direct Proprietor Supervision",
-      value: "100%",
-      description: "Direct on-site quality control by Dnyaneshwar & Shravan Pawale",
+      title: "Direct Proprietor Supervision",
+      description: "Hands-on daily site inspection and contractor coordination by Dnyaneshwar & Shravan Pawale.",
       icon: Users,
     },
     {
-      label: "Years Construction Trust",
-      value: "15+",
-      description: "Reputed regional general contractors, builders and structural developers",
+      title: "Fixed BOQ Contracts",
+      description: "Itemized material specifications and milestone billing with transparent, locked construction pricing.",
+      icon: FileCheck2,
+    },
+    {
+      title: "Certified Structural Materials",
+      description: "Grade 53 OPC cement, tested Fe-550D TMT reinforcement steel, and certified structural design.",
       icon: ShieldCheck,
+    },
+    {
+      title: "Turnkey Execution",
+      description: "Full-lifecycle management from land excavation and RCC framing to plastering and finishing handover.",
+      icon: Building2,
     },
   ];
 
   return (
-    <section className="bg-surface py-12 border-b border-gray-200/60">
+    <section className="bg-surface py-12 border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {stats.map((stat, idx) => {
-            const Icon = stat.icon;
+          {highlights.map((item, idx) => {
+            const Icon = item.icon;
             return (
               <div
                 key={idx}
-                className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-start space-x-4 hover:shadow-md transition"
+                className="bg-white p-6 rounded-2xl border border-gray-200/80 shadow-xs flex items-start space-x-4 hover:border-gray-300 transition"
               >
-                <div className="w-12 h-12 rounded-xl bg-navy-50 text-navy-800 flex items-center justify-center shrink-0 border border-navy-100">
-                  <Icon className="w-6 h-6 text-construction-500" />
+                <div className="w-11 h-11 rounded-xl bg-navy-50 text-navy-900 flex items-center justify-center shrink-0 border border-navy-100">
+                  <Icon className="w-5 h-5 text-construction-600" />
                 </div>
-                <div>
-                  <div className="text-3xl font-extrabold text-navy-950 tracking-tight">
-                    {stat.value}
-                  </div>
-                  <div className="text-xs font-bold text-charcoal-700 mt-0.5">{stat.label}</div>
-                  <p className="text-[11px] text-gray-500 mt-1 leading-relaxed">
-                    {stat.description}
+                <div className="space-y-1">
+                  <h3 className="text-sm font-bold text-navy-950">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs text-gray-600 leading-relaxed">
+                    {item.description}
                   </p>
                 </div>
               </div>
