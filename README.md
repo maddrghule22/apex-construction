@@ -1,27 +1,23 @@
-# Sree Samarth Krupa Enterprises — Web Platform & Management OS
+# Shree Samarth Krupa Enterprises — Web Platform & Management OS
 
-> **॥ श्री ॥ ॥ श्रीराम समर्थ ॥ ॥ जय जय रघुवीर समर्थ ॥**
-
-A production-grade, full-stack web application and operations management platform built for **Sree Samarth Krupa Enterprises**:
-- 🏗️ **Builders & Developers**: Turnkey residential bungalows, independent houses, commercial complexes, and civil contracting.
-- 💧 **Water Tanker & Industrial Suppliers**: Dedicated 24x7 water tanker fleet for construction site curing, concrete mixing, and industrial bulk water supply, alongside raw construction materials.
+A production-grade, full-stack web application and operations management platform built for **Shree Samarth Krupa Enterprises**:
+- 🏗️ **Builders & Developers**: Turnkey residential bungalows, villas, independent row houses, and commercial complexes across Maharashtra.
+- 📐 **Direct Proprietor Oversight**: Daily on-site quality control and structural execution by Dnyaneshwar Pawale and Shravan Pawale.
 
 ---
 
 ## 🌐 Live Production Links
 
 - **Live Website**: [https://apex-construction-21h.pages.dev](https://apex-construction-21h.pages.dev)
-- **Interactive Cost Estimator (₹)**: [https://apex-construction-21h.pages.dev/estimate](https://apex-construction-21h.pages.dev/estimate)
-- **Water Tanker Services**: [https://apex-construction-21h.pages.dev/services#tanker](https://apex-construction-21h.pages.dev/services#tanker)
 - **GitHub Repository**: [https://github.com/maddrghule22/apex-construction](https://github.com/maddrghule22/apex-construction)
 
 ---
 
 ## 👥 Proprietors & Direct Contact
 
-- **Senior Proprietor**: ज्ञानेश्वर पवळे (Dnyaneshwar Pawale) — `+91 98502 91262`
-- **Managing Partner**: श्रवण पवळे (Shravan Pawale) — `+91 72764 84671`
-- **WhatsApp Support**: Direct click-to-chat integration for site inspection bookings and water tanker orders.
+- **Senior Proprietor**: Dnyaneshwar Pawale — `+91 98502 91262`
+- **Managing Partner**: Shravan Pawale — `+91 72764 84671`
+- **WhatsApp Support**: Direct click-to-chat integration for site inspection bookings and project consultations.
 
 ---
 
@@ -98,16 +94,14 @@ Open **[http://localhost:3000](http://localhost:3000)** in your browser.
 ## 3. Key Application Features
 
 ### A. Public Website
-- **Homepage (`/`)**: Auspicious invocation `॥ श्रीराम समर्थ ॥`, dual business overview (Builders & Developers / Water Tanker & Industrial Suppliers), direct call badges to Shravan Pawale and Dnyaneshwar Pawale, interactive estimator, 24x7 tanker booking CTAs.
-- **About Us (`/about`)**: Verified business visiting card showcase, proprietor profiles, 15+ years regional experience, direct oversight guarantee.
+- **Homepage (`/`)**: High-contrast modern hero, direct proprietor contact hotlines, certified construction highlights, portfolio showcase, and responsive quick contact widget.
+- **About Us (`/about`)**: Verified business card showcase, proprietor profiles, regional experience, and direct oversight guarantee.
 - **Services (`/services`)**:
-  - Dedicated Water Tanker Division (RCC slab curing water, concrete mixing hydration, drinking water tankers, industrial bulk contracts).
-  - Residential Villas, Bungalows & Independent Houses.
+  - Turnkey Residential Villas, Bungalows & Independent Houses.
   - Commercial Complexes & Showrooms.
-  - Industrial Material Logistics (aggregates, sand, steel, earthwork).
-- **Projects Portfolio (`/projects`)**: Searchable and client-side filterable portfolio.
-- **Contact Us (`/contact`)**: Server-validated form with bot honeypot protection and direct WhatsApp dispatch to both proprietors.
-- **Interactive Cost Estimator (`/estimate`)**: Indian Rupee (`₹`) calculations with quality tiers (Basic, Standard, Premium, Luxury), scope checkboxes, curing water package option, and instant BOQ summary.
+  - Civil & Structural Engineering (RCC, waterproofing, renovation).
+- **Projects Portfolio (`/projects`)**: Filterable project gallery with verified case studies and detailed metrics.
+- **Contact Us (`/contact`)**: Form with direct WhatsApp dispatch to both proprietors and click-to-call hotlines.
 
 ### B. Secure Owner Portal
 - **Login (`/login`)**: Secure authentication for company management.

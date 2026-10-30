@@ -142,10 +142,6 @@ export default function ServicesPage() {
       {/* SECTION 1: RESIDENTIAL CONSTRUCTION */}
       <section id="residential" className="py-16 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mb-12 space-y-3 text-left">
-          <div className="inline-flex items-center space-x-2 text-xs font-bold text-construction-700 bg-construction-50 px-3 py-1 rounded-full border border-construction-200">
-            <Home className="w-4 h-4 text-construction-600" />
-            <span>Turnkey Residential Division</span>
-          </div>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-950">
             Bungalows, Villas &amp; Independent Houses
           </h2>
@@ -216,10 +212,6 @@ export default function ServicesPage() {
       <section id="commercial" className="py-16 sm:py-20 bg-surface border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-12 space-y-3 text-left">
-            <div className="inline-flex items-center space-x-2 text-xs font-bold text-navy-800 bg-white px-3 py-1 rounded-full border border-gray-200">
-              <Building2 className="w-4 h-4 text-construction-600" />
-              <span>Commercial Division</span>
-            </div>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-950">
               Commercial Complexes &amp; Showrooms
             </h2>
@@ -274,10 +266,6 @@ export default function ServicesPage() {
       <section id="engineering" className="py-16 sm:py-20 bg-white border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-12 space-y-3 text-left">
-            <div className="inline-flex items-center space-x-2 text-xs font-bold text-amber-800 bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
-              <Wrench className="w-4 h-4 text-amber-600" />
-              <span>Civil &amp; Structural Engineering</span>
-            </div>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-950">
               RCC Structural Works, Renovation &amp; Waterproofing
             </h2>

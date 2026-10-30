@@ -72,10 +72,6 @@ export default function AboutPage() {
       <section className="py-16 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 text-left">
-            <div className="inline-flex items-center space-x-2 text-xs font-bold text-construction-600 bg-construction-50 px-3 py-1 rounded-full border border-construction-200">
-              <HardHat className="w-4 h-4" />
-              <span>Our Vision &amp; Ground Realities</span>
-            </div>
             <h2 className="text-3xl font-extrabold text-navy-950 tracking-tight">
               Honest Engineering With Direct Proprietor Accountability
             </h2>

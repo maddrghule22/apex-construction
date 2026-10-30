@@ -45,9 +45,6 @@ export default function ProcessSection() {
     <section className="py-20 bg-surface border-y border-gray-200/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <span className="text-xs font-bold text-navy-800 uppercase tracking-wider bg-white px-3 py-1 rounded-full border border-gray-200 shadow-xs">
-            Systematic Methodology
-          </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight">
             Our 6-Step Construction Journey
           </h2>

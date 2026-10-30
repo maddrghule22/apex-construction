@@ -17,11 +17,11 @@ export default function BrandLogo({
   const isLight = variant === "light";
 
   return (
-    <Link href="/" className={`inline-flex items-center gap-3 group ${className}`}>
+    <Link href="/" className={`inline-flex items-center gap-2.5 sm:gap-3 group min-w-0 max-w-full ${className}`}>
       {/* Authentic High-Resolution SVG Architectural Emblem */}
-      <div className="relative w-12 h-12 sm:w-14 sm:h-14 shrink-0 rounded-2xl bg-gradient-to-br from-slate-900 via-navy-900 to-slate-950 p-2 shadow-lg shadow-navy-950/20 border border-slate-700/60 group-hover:scale-105 group-hover:border-construction-500/80 transition-all duration-300 flex items-center justify-center">
+      <div className="relative w-10 h-10 sm:w-12 sm:h-12 md:w-13 md:h-13 shrink-0 rounded-xl sm:rounded-2xl bg-gradient-to-br from-slate-900 via-navy-900 to-slate-950 p-1.5 sm:p-2 shadow-md sm:shadow-lg shadow-navy-950/20 border border-slate-700/60 group-hover:scale-105 group-hover:border-construction-500/80 transition-all duration-300 flex items-center justify-center">
         {/* Ambient Glow */}
-        <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-construction-500/10 via-transparent to-blue-500/15 opacity-0 group-hover:opacity-100 transition-opacity" />
+        <div className="absolute inset-0 rounded-xl sm:rounded-2xl bg-gradient-to-tr from-construction-500/10 via-transparent to-blue-500/15 opacity-0 group-hover:opacity-100 transition-opacity" />
 
         <svg
           viewBox="0 0 100 100"
@@ -98,22 +98,20 @@ export default function BrandLogo({
       </div>
 
       {/* Brand Typography */}
-      <div className="flex flex-col text-left">
-        <div className="flex items-center gap-1.5 flex-wrap">
-          <span
-            className={`font-black text-base sm:text-lg lg:text-xl tracking-tight leading-none ${
-              isLight ? "text-white" : "text-slate-900 group-hover:text-construction-600"
-            } transition-colors`}
-          >
-            SHREE SAMARTH KRUPA
-          </span>
-        </div>
+      <div className="flex flex-col text-left min-w-0">
+        <span
+          className={`font-black text-xs sm:text-base lg:text-lg tracking-tight leading-tight truncate ${
+            isLight ? "text-white" : "text-slate-900 group-hover:text-construction-600"
+          } transition-colors`}
+        >
+          SHREE SAMARTH KRUPA
+        </span>
 
         {showTagline && (
-          <div className="mt-1 flex items-center gap-1.5 text-[9px] sm:text-[10px] font-extrabold uppercase tracking-widest flex-wrap">
+          <div className="mt-0.5 flex items-center gap-1 sm:gap-1.5 text-[8px] sm:text-[9.5px] font-extrabold uppercase tracking-wider sm:tracking-widest flex-wrap leading-tight">
             <span className="text-construction-600 font-black">ENTERPRISES</span>
-            <span className="text-slate-300">•</span>
-            <span className={`${isLight ? "text-slate-300" : "text-slate-700"} font-bold`}>
+            <span className="text-slate-300 hidden xs:inline">•</span>
+            <span className={`${isLight ? "text-slate-300" : "text-slate-600"} font-bold hidden xs:inline`}>
               BUILDERS &amp; DEVELOPERS
             </span>
           </div>

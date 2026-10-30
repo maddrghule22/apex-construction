@@ -9,12 +9,8 @@ export default function NotFound() {
         <HardHat className="w-8 h-8" />
       </div>
 
-      <span className="text-xs font-bold text-construction-400 uppercase tracking-wider bg-navy-800 px-3 py-1 rounded-full border border-navy-700 mb-3">
-        404 - Blueprint Missing
-      </span>
-
       <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight mb-3">
-        Page Under Construction or Relocated
+        404 - Page Under Construction or Relocated
       </h1>
 
       <p className="text-sm text-gray-300 max-w-md mx-auto mb-8 leading-relaxed">

@@ -198,10 +198,6 @@ export default function EstimateCalculator() {
       {/* Top Banner */}
       <div className="bg-navy-800 text-white p-6 sm:p-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>
-          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-construction-500/20 text-construction-400 text-xs font-semibold mb-2 border border-construction-500/30">
-            <Calculator className="w-3.5 h-3.5" />
-            <span>Interactive Cost Calculator</span>
-          </div>
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white">
             Transparent Construction Cost Estimator
           </h2>

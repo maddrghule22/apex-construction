@@ -49,9 +49,6 @@ export default function LoginPage() {
           <div className="flex justify-center mb-4">
             <BrandLogo variant="dark" />
           </div>
-          <span className="inline-block text-[10px] uppercase font-bold text-construction-600 bg-construction-50 px-2.5 py-0.5 rounded-full border border-construction-200 mb-3 tracking-wider">
-            Management Portal
-          </span>
           <h1 className="text-2xl font-bold text-navy-900">Owner & Staff Login</h1>
           <p className="text-xs text-gray-500 mt-1">
             Access secure projects, financial expenses, and customer enquiries.

@@ -59,17 +59,17 @@ export default function QuickContactWidget() {
           isCollapsed ? "translate-x-full" : "translate-x-0"
         }`}
       >
-        <div className="relative flex flex-col items-center bg-navy-950/95 backdrop-blur-md rounded-l-2xl border-l-2 border-y-2 border-navy-800 shadow-2xl p-2 sm:p-2.5 space-y-3">
+        <div className="relative flex flex-col items-center bg-navy-950/95 backdrop-blur-md rounded-l-2xl border-l-2 border-y-2 border-navy-800 shadow-2xl p-1.5 sm:p-2.5 space-y-2.5 sm:space-y-3">
           {/* Collapse / Expand Toggle Tab */}
           <button
             onClick={() => setIsCollapsed(!isCollapsed)}
             aria-label={isCollapsed ? "Open contact options" : "Hide contact options"}
-            className="absolute -left-7 top-1/2 -translate-y-1/2 w-7 h-12 bg-navy-900/95 border-y-2 border-l-2 border-navy-700 rounded-l-xl flex items-center justify-center text-gray-300 hover:text-white shadow-lg cursor-pointer focus:outline-none focus:ring-2 focus:ring-construction-400"
+            className="absolute -left-6 sm:-left-7 top-1/2 -translate-y-1/2 w-6 sm:w-7 h-10 sm:h-12 bg-navy-900/95 border-y-2 border-l-2 border-navy-700 rounded-l-xl flex items-center justify-center text-gray-300 hover:text-white shadow-lg cursor-pointer focus:outline-none focus:ring-2 focus:ring-construction-400"
           >
             {isCollapsed ? (
-              <ChevronLeft className="w-4 h-4 text-construction-400" />
+              <ChevronLeft className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-construction-400" />
             ) : (
-              <ChevronRight className="w-4 h-4" />
+              <ChevronRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             )}
           </button>
 
@@ -82,10 +82,10 @@ export default function QuickContactWidget() {
             <button
               onClick={() => setActiveModal("WHATSAPP")}
               aria-label="Open WhatsApp contact options"
-              className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center shadow-lg transition-transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-emerald-400 cursor-pointer"
+              className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center shadow-lg transition-transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-emerald-400 cursor-pointer"
             >
               <MessageSquare className="w-5 h-5 sm:w-6 sm:h-6" />
-              <span className="absolute -top-1 -right-1 w-3 h-3 bg-emerald-400 rounded-full border-2 border-navy-950 animate-pulse" />
+              <span className="absolute -top-1 -right-1 w-2.5 h-2.5 sm:w-3 sm:h-3 bg-emerald-400 rounded-full border-2 border-navy-950 animate-pulse" />
             </button>
             <div className="absolute right-14 top-1/2 -translate-y-1/2 hidden group-hover:block bg-navy-900 text-white text-[11px] font-semibold py-1 px-2.5 rounded-lg whitespace-nowrap shadow-md border border-navy-700 pointer-events-none">
               WhatsApp Us
@@ -97,7 +97,7 @@ export default function QuickContactWidget() {
             <button
               onClick={() => setActiveModal("CALL")}
               aria-label="Open phone call options"
-              className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-construction-500 hover:bg-construction-600 text-white flex items-center justify-center shadow-lg transition-transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-construction-300 cursor-pointer"
+              className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-construction-500 hover:bg-construction-600 text-white flex items-center justify-center shadow-lg transition-transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-construction-300 cursor-pointer"
             >
               <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
             </button>
@@ -111,7 +111,7 @@ export default function QuickContactWidget() {
             <button
               onClick={() => setActiveModal("EMAIL")}
               aria-label="Open email contact options"
-              className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-navy-800 hover:bg-navy-700 text-white border border-navy-700 flex items-center justify-center shadow-lg transition-transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-gray-400 cursor-pointer"
+              className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-navy-800 hover:bg-navy-700 text-white border border-navy-700 flex items-center justify-center shadow-lg transition-transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-gray-400 cursor-pointer"
             >
               <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-construction-400" />
             </button>
@@ -129,38 +129,38 @@ export default function QuickContactWidget() {
         <div
           role="dialog"
           aria-modal="true"
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-navy-950/70 backdrop-blur-xs animate-fadeIn no-print"
+          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-navy-950/70 backdrop-blur-xs animate-fadeIn no-print"
           onClick={() => setActiveModal(null)}
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="bg-white rounded-2xl shadow-2xl border border-gray-200 w-full max-w-sm overflow-hidden animate-scaleUp"
+            className="bg-white rounded-2xl shadow-2xl border border-gray-200 w-full max-w-sm max-h-[85vh] overflow-y-auto animate-scaleUp"
           >
             {/* Modal Header */}
-            <div className="bg-navy-950 text-white p-4 sm:p-5 flex items-center justify-between border-b border-navy-800">
-              <h3 className="text-base font-bold text-white flex items-center gap-2">
-                  {activeModal === "CALL" && (
-                    <>
-                      <Phone className="w-4 h-4 text-construction-500" />
-                      Direct Phone Call
-                    </>
-                  )}
-                  {activeModal === "WHATSAPP" && (
-                    <>
-                      <MessageSquare className="w-4 h-4 text-emerald-400" />
-                      WhatsApp Consultation
-                    </>
-                  )}
-                  {activeModal === "EMAIL" && (
-                    <>
-                      <Mail className="w-4 h-4 text-construction-400" />
-                      Official Business Email
-                    </>
-                  )}
-                </h3>
+            <div className="sticky top-0 z-10 bg-navy-950 text-white p-4 sm:p-5 flex items-center justify-between border-b border-navy-800">
+              <h3 className="text-sm sm:text-base font-bold text-white flex items-center gap-2">
+                {activeModal === "CALL" && (
+                  <>
+                    <Phone className="w-4 h-4 text-construction-500" />
+                    Direct Phone Call
+                  </>
+                )}
+                {activeModal === "WHATSAPP" && (
+                  <>
+                    <MessageSquare className="w-4 h-4 text-emerald-400" />
+                    WhatsApp Consultation
+                  </>
+                )}
+                {activeModal === "EMAIL" && (
+                  <>
+                    <Mail className="w-4 h-4 text-construction-400" />
+                    Official Business Email
+                  </>
+                )}
+              </h3>
               <button
                 onClick={() => setActiveModal(null)}
-                className="w-8 h-8 rounded-full bg-navy-900 hover:bg-navy-800 text-gray-300 hover:text-white flex items-center justify-center transition"
+                className="w-8 h-8 rounded-full bg-navy-900 hover:bg-navy-800 text-gray-300 hover:text-white flex items-center justify-center transition cursor-pointer"
                 aria-label="Close dialog"
               >
                 <X className="w-4 h-4" />
@@ -178,12 +178,12 @@ export default function QuickContactWidget() {
 
                   <a
                     href="tel:+917276484671"
-                    className="flex items-center justify-between p-3 rounded-xl bg-gray-50 hover:bg-construction-50 border border-gray-200 hover:border-construction-300 transition group"
+                    className="flex flex-col xs:flex-row xs:items-center justify-between p-3 rounded-xl bg-gray-50 hover:bg-construction-50 border border-gray-200 hover:border-construction-300 transition group gap-2"
                   >
-                    <div className="space-y-0.5">
+                    <div className="space-y-0.5 min-w-0">
                       <div className="flex items-center space-x-1.5">
-                        <User className="w-3.5 h-3.5 text-navy-600" />
-                        <span className="text-xs font-bold text-navy-950 group-hover:text-construction-700">
+                        <User className="w-3.5 h-3.5 text-navy-600 shrink-0" />
+                        <span className="text-xs font-bold text-navy-950 group-hover:text-construction-700 truncate">
                           Shravan Pawale
                         </span>
                       </div>
@@ -191,19 +191,19 @@ export default function QuickContactWidget() {
                         Project Management &amp; Site Execution
                       </p>
                     </div>
-                    <span className="text-xs font-bold text-construction-600 bg-white px-2.5 py-1.5 rounded-lg border border-gray-200 group-hover:bg-construction-500 group-hover:text-white transition">
+                    <span className="text-xs font-bold text-construction-600 bg-white px-2.5 py-1.5 rounded-lg border border-gray-200 group-hover:bg-construction-500 group-hover:text-white transition shrink-0 self-start xs:self-auto">
                       +91 72764 84671
                     </span>
                   </a>
 
                   <a
                     href="tel:+919850291262"
-                    className="flex items-center justify-between p-3 rounded-xl bg-gray-50 hover:bg-construction-50 border border-gray-200 hover:border-construction-300 transition group"
+                    className="flex flex-col xs:flex-row xs:items-center justify-between p-3 rounded-xl bg-gray-50 hover:bg-construction-50 border border-gray-200 hover:border-construction-300 transition group gap-2"
                   >
-                    <div className="space-y-0.5">
+                    <div className="space-y-0.5 min-w-0">
                       <div className="flex items-center space-x-1.5">
-                        <User className="w-3.5 h-3.5 text-navy-600" />
-                        <span className="text-xs font-bold text-navy-950 group-hover:text-construction-700">
+                        <User className="w-3.5 h-3.5 text-navy-600 shrink-0" />
+                        <span className="text-xs font-bold text-navy-950 group-hover:text-construction-700 truncate">
                           Dnyaneshwar Pawale
                         </span>
                       </div>
@@ -211,7 +211,7 @@ export default function QuickContactWidget() {
                         Contracts &amp; Structural Engineering
                       </p>
                     </div>
-                    <span className="text-xs font-bold text-construction-600 bg-white px-2.5 py-1.5 rounded-lg border border-gray-200 group-hover:bg-construction-500 group-hover:text-white transition">
+                    <span className="text-xs font-bold text-construction-600 bg-white px-2.5 py-1.5 rounded-lg border border-gray-200 group-hover:bg-construction-500 group-hover:text-white transition shrink-0 self-start xs:self-auto">
                       +91 98502 91262
                     </span>
                   </a>
@@ -229,17 +229,17 @@ export default function QuickContactWidget() {
                     href={shravanWhatsApp}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-between p-3 rounded-xl bg-emerald-50 hover:bg-emerald-100/80 border border-emerald-200 text-emerald-950 transition group"
+                    className="flex items-center justify-between p-3 rounded-xl bg-emerald-50 hover:bg-emerald-100/80 border border-emerald-200 text-emerald-950 transition group gap-2"
                   >
-                    <div className="space-y-0.5">
-                      <span className="text-xs font-bold text-emerald-950 block">
+                    <div className="space-y-0.5 min-w-0">
+                      <span className="text-xs font-bold text-emerald-950 block truncate">
                         Shravan Pawale
                       </span>
-                      <span className="text-[11px] text-emerald-700">
-                        Chat regarding plot and site execution
+                      <span className="text-[11px] text-emerald-700 block">
+                        Site consultation &amp; plot inspection
                       </span>
                     </div>
-                    <span className="text-xs font-bold bg-emerald-600 text-white px-3 py-1.5 rounded-lg group-hover:bg-emerald-700 transition flex items-center gap-1">
+                    <span className="text-xs font-bold bg-emerald-600 text-white px-3 py-1.5 rounded-lg group-hover:bg-emerald-700 transition flex items-center gap-1 shrink-0">
                       <MessageSquare className="w-3.5 h-3.5" />
                       Chat
                     </span>
@@ -249,17 +249,17 @@ export default function QuickContactWidget() {
                     href={dnyaneshwarWhatsApp}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-between p-3 rounded-xl bg-emerald-50 hover:bg-emerald-100/80 border border-emerald-200 text-emerald-950 transition group"
+                    className="flex items-center justify-between p-3 rounded-xl bg-emerald-50 hover:bg-emerald-100/80 border border-emerald-200 text-emerald-950 transition group gap-2"
                   >
-                    <div className="space-y-0.5">
-                      <span className="text-xs font-bold text-emerald-950 block">
+                    <div className="space-y-0.5 min-w-0">
+                      <span className="text-xs font-bold text-emerald-950 block truncate">
                         Dnyaneshwar Pawale
                       </span>
-                      <span className="text-[11px] text-emerald-700">
-                        Chat regarding BOQ contracts and rates
+                      <span className="text-[11px] text-emerald-700 block">
+                        BOQ contracts &amp; civil rates
                       </span>
                     </div>
-                    <span className="text-xs font-bold bg-emerald-600 text-white px-3 py-1.5 rounded-lg group-hover:bg-emerald-700 transition flex items-center gap-1">
+                    <span className="text-xs font-bold bg-emerald-600 text-white px-3 py-1.5 rounded-lg group-hover:bg-emerald-700 transition flex items-center gap-1 shrink-0">
                       <MessageSquare className="w-3.5 h-3.5" />
                       Chat
                     </span>
@@ -275,13 +275,13 @@ export default function QuickContactWidget() {
                   </p>
 
                   <div className="p-3 rounded-xl bg-gray-50 border border-gray-200 space-y-2">
-                    <div className="flex items-center justify-between">
-                      <span className="text-[11px] font-bold text-navy-950">
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="text-[11px] sm:text-xs font-bold text-navy-950 truncate">
                         contact@shreesamarthkrupa.com
                       </span>
                       <button
                         onClick={handleCopyEmail}
-                        className="inline-flex items-center text-[11px] font-bold text-construction-600 hover:text-construction-700 p-1"
+                        className="inline-flex items-center text-[11px] font-bold text-construction-600 hover:text-construction-700 p-1 shrink-0"
                         aria-label="Copy email address"
                       >
                         {copiedEmail ? (
@@ -300,7 +300,7 @@ export default function QuickContactWidget() {
 
                     <a
                       href="mailto:contact@shreesamarthkrupa.com?subject=Construction%20Project%20Inquiry%20-%20Shree%20Samarth%20Krupa%20Enterprises"
-                      className="w-full inline-flex items-center justify-center px-4 py-2 rounded-lg bg-navy-950 hover:bg-navy-900 text-white text-xs font-bold transition shadow-sm"
+                      className="w-full inline-flex items-center justify-center px-4 py-2.5 rounded-lg bg-navy-950 hover:bg-navy-900 text-white text-xs font-bold transition shadow-sm text-center"
                     >
                       <Mail className="w-3.5 h-3.5 mr-2 text-construction-400" />
                       Open in Mail App
@@ -311,8 +311,8 @@ export default function QuickContactWidget() {
               )}
 
               {/* Footer reassurance */}
-              <div className="pt-2 border-t border-gray-100 flex items-center justify-between text-[11px] text-gray-400">
-                <span>Direct Proprietor Contact</span>
+              <div className="pt-2 border-t border-gray-100 flex items-center justify-between text-[10.5px] sm:text-[11px] text-gray-400">
+                <span>Direct Contact</span>
                 <span>Mon – Sat: 8 AM – 8 PM</span>
               </div>
             </div>
