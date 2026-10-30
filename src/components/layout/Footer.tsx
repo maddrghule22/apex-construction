@@ -6,12 +6,12 @@ import {
   Mail,
   MapPin,
   Clock,
-  MessageSquare,
   ShieldCheck,
   Building2,
 } from "lucide-react";
 import { generateWhatsAppUrl } from "@/lib/whatsapp/url";
 import BrandLogo from "./BrandLogo";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -34,9 +34,9 @@ export default function Footer() {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center space-x-2 text-xs font-semibold text-emerald-400 hover:text-emerald-300 bg-navy-900 px-3.5 py-2.5 rounded-xl border border-navy-800 transition w-full justify-center"
+                className="inline-flex items-center space-x-2 text-xs font-semibold text-white bg-emerald-600 hover:bg-emerald-700 px-3.5 py-2.5 rounded-xl transition w-full justify-center shadow-xs gap-1.5"
               >
-                <MessageSquare className="w-4 h-4 text-emerald-400 shrink-0" />
+                <WhatsAppIcon className="w-4 h-4 text-white shrink-0" />
                 <span>Chat with Us on WhatsApp</span>
               </a>
             </div>

@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import { MessageSquare, X, Phone } from "lucide-react";
+import { X } from "lucide-react";
 import { generateWhatsAppUrl } from "@/lib/whatsapp/url";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 
 export default function WhatsAppFloatingButton() {
   const [showTooltip, setShowTooltip] = useState(true);
@@ -29,7 +30,7 @@ export default function WhatsAppFloatingButton() {
           </a>
           <button
             onClick={() => setShowTooltip(false)}
-            className="text-gray-400 hover:text-gray-600 p-0.5"
+            className="text-gray-400 hover:text-gray-600 p-0.5 cursor-pointer"
             aria-label="Close tooltip"
           >
             <X className="w-3.5 h-3.5" />
@@ -43,9 +44,9 @@ export default function WhatsAppFloatingButton() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat with Dnyaneshwar Pawale on WhatsApp"
-        className="w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 active:scale-95 group focus:outline-none focus:ring-4 focus:ring-emerald-300 cursor-pointer"
+        className="w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 active:scale-95 group focus:outline-none focus:ring-4 focus:ring-emerald-300 cursor-pointer"
       >
-        <MessageSquare className="w-7 h-7" />
+        <WhatsAppIcon className="w-7 h-7" />
         <span className="sr-only">Chat on WhatsApp</span>
       </a>
     </div>

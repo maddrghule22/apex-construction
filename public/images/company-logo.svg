@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B132B" />
+      <stop offset="50%" stop-color="#1C2541" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+
+    <!-- Gold / Amber Luxury Construction Gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D" />
+      <stop offset="30%" stop-color="#F59E0B" />
+      <stop offset="70%" stop-color="#D97706" />
+      <stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+
+    <!-- Cyan / Structural Blue Gradient -->
+    <linearGradient id="steelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </linearGradient>
+
+    <!-- Subtle Drop Shadow -->
+    <filter id="logoShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <!-- Rounded Base Emblem Container -->
+  <rect x="8" y="8" width="184" height="184" rx="42" fill="url(#bgGrad)" stroke="url(#goldGrad)" stroke-width="2.5" />
+
+  <g filter="url(#logoShadow)">
+    <!-- Architectural Hexagonal Framework Base -->
+    <!-- Tower Left (Residential Villa / Duplex Gable) -->
+    <path d="M 44 146 L 44 88 L 74 62 L 74 146 Z" fill="url(#steelGrad)" opacity="0.95" />
+    
+    <!-- Tower Center (Corporate High-Rise Spire) -->
+    <path d="M 80 146 L 80 44 L 116 26 L 116 146 Z" fill="url(#goldGrad)" />
+    
+    <!-- Tower Right (Commercial Wing) -->
+    <path d="M 122 146 L 122 72 L 156 86 L 156 146 Z" fill="url(#steelGrad)" opacity="0.9" />
+
+    <!-- Sleek Diagonal Cantilever Beam / Bridge Accent -->
+    <path d="M 36 128 L 164 64" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity="0.8" />
+    <circle cx="164" cy="64" r="3.5" fill="#FCD34D" />
+
+    <!-- Architectural Window Lines (Modern Facade Rhythm) -->
+    <line x1="88" y1="58" x2="108" y2="58" stroke="#0B132B" stroke-width="2.5" stroke-linecap="round" />
+    <line x1="88" y1="72" x2="108" y2="72" stroke="#0B132B" stroke-width="2.5" stroke-linecap="round" />
+    <line x1="88" y1="86" x2="108" y2="86" stroke="#0B132B" stroke-width="2.5" stroke-linecap="round" />
+    <line x1="88" y1="100" x2="108" y2="100" stroke="#0B132B" stroke-width="2.5" stroke-linecap="round" />
+    <line x1="88" y1="114" x2="108" y2="114" stroke="#0B132B" stroke-width="2.5" stroke-linecap="round" />
+
+    <line x1="52" y1="96" x2="66" y2="96" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.7" />
+    <line x1="52" y1="110" x2="66" y2="110" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.7" />
+    <line x1="52" y1="124" x2="66" y2="124" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.7" />
+
+    <line x1="130" y1="102" x2="148" y2="102" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.7" />
+    <line x1="130" y1="116" x2="148" y2="116" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.7" />
+    <line x1="130" y1="130" x2="148" y2="130" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.7" />
+
+    <!-- Heavy Reinforced Foundation Plinth Slab -->
+    <rect x="36" y="146" width="128" height="9" rx="3" fill="url(#goldGrad)" />
+    <rect x="46" y="157" width="108" height="4" rx="2" fill="#F8FAFC" opacity="0.85" />
+  </g>
+</svg>

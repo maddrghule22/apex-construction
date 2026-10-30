@@ -8,10 +8,10 @@ import {
   X,
   Phone,
   ChevronRight,
-  MessageSquare,
 } from "lucide-react";
 import { generateWhatsAppUrl } from "@/lib/whatsapp/url";
 import BrandLogo from "./BrandLogo";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -120,18 +120,18 @@ export default function Navbar() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-3.5 py-2 rounded-xl text-xs font-bold text-emerald-700 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 shadow-2xs transition"
+              className="inline-flex items-center px-4 py-2.5 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 shadow-sm transition-all duration-200 active:scale-95 gap-1.5"
             >
-              <MessageSquare className="w-3.5 h-3.5 mr-1.5 text-emerald-600" />
-              WhatsApp
+              <WhatsAppIcon className="w-3.5 h-3.5" />
+              <span>WhatsApp</span>
             </a>
 
             <Link
               href="/contact"
-              className="inline-flex items-center px-4 py-2 rounded-xl text-xs font-bold text-white bg-construction-500 hover:bg-construction-600 shadow-sm transition active:scale-95"
+              className="inline-flex items-center px-4 py-2.5 rounded-xl text-xs font-bold text-white bg-navy-950 hover:bg-navy-900 border border-navy-800 shadow-sm transition-all duration-200 active:scale-95 gap-1"
             >
-              Contact Us
-              <ChevronRight className="w-3.5 h-3.5 ml-0.5" />
+              <span>Contact Us</span>
+              <ChevronRight className="w-3.5 h-3.5 text-construction-400" />
             </Link>
           </div>
 
@@ -186,15 +186,15 @@ export default function Navbar() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full text-center py-3 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 transition shadow-sm flex items-center justify-center gap-2"
+              className="w-full text-center py-3.5 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 transition shadow-sm flex items-center justify-center gap-2"
             >
-              <MessageSquare className="w-4 h-4" />
-              Chat on WhatsApp
+              <WhatsAppIcon className="w-4 h-4" />
+              <span>Chat on WhatsApp</span>
             </a>
             <Link
               href="/contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full text-center py-3 rounded-xl text-xs font-bold text-white bg-construction-500 hover:bg-construction-600 transition shadow-sm"
+              className="w-full text-center py-3.5 rounded-xl text-xs font-bold text-white bg-navy-950 hover:bg-navy-900 border border-navy-800 transition shadow-sm"
             >
               Contact Us Directly
             </Link>

@@ -7,7 +7,6 @@ import {
   Mail,
   MapPin,
   Clock,
-  MessageSquare,
   Send,
   CheckCircle2,
   AlertCircle,
@@ -15,6 +14,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import { generateWhatsAppUrl } from "@/lib/whatsapp/url";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 
 function ContactFormContent() {
   const searchParams = useSearchParams();
@@ -144,10 +144,10 @@ function ContactFormContent() {
                   href={ownerWhatsApp}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center text-xs font-bold text-emerald-700 hover:text-emerald-800 transition"
+                  className="inline-flex items-center text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 px-3 py-2 rounded-xl transition shadow-xs gap-2"
                 >
-                  <MessageSquare className="w-4 h-4 mr-2 text-emerald-600 shrink-0" />
-                  Chat on WhatsApp
+                  <WhatsAppIcon className="w-3.5 h-3.5" />
+                  <span>Chat on WhatsApp</span>
                 </a>
                 <div className="flex items-center text-xs text-gray-600">
                   <Mail className="w-4 h-4 mr-2 text-construction-500 shrink-0" />
@@ -192,10 +192,10 @@ function ContactFormContent() {
                     href={ownerWhatsApp}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 transition"
+                    className="inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 transition gap-2 shadow-sm"
                   >
-                    <MessageSquare className="w-4 h-4 mr-1.5" />
-                    Chat with Dnyaneshwar Pawale
+                    <WhatsAppIcon className="w-4 h-4" />
+                    <span>Chat with Dnyaneshwar Pawale</span>
                   </a>
                   <button
                     onClick={() => {

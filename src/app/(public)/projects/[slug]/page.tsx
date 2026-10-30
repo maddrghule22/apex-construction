@@ -15,6 +15,7 @@ import {
   Check,
 } from "lucide-react";
 import { generateWhatsAppUrl } from "@/lib/whatsapp/url";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 
 export async function generateStaticParams() {
   const projects = await getPublicProjects();
@@ -95,9 +96,9 @@ export default async function ProjectDetailPage({ params }: { params: { slug: st
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-5 py-3 rounded-xl text-xs font-bold bg-emerald-500 hover:bg-emerald-600 text-white transition shadow-md"
+                className="inline-flex items-center justify-center px-5 py-3 rounded-xl text-xs font-bold bg-emerald-600 hover:bg-emerald-700 text-white transition shadow-md"
               >
-                <MessageSquare className="w-4 h-4 mr-2" />
+                <WhatsAppIcon className="w-4 h-4 mr-2" />
                 Inquire on WhatsApp
               </a>
               <Link
@@ -281,9 +282,9 @@ export default async function ProjectDetailPage({ params }: { params: { slug: st
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center py-2.5 px-4 rounded-xl text-xs font-bold text-emerald-700 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 transition"
+                  className="w-full inline-flex items-center justify-center py-3 px-4 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 transition shadow-sm gap-2"
                 >
-                  <MessageSquare className="w-3.5 h-3.5 mr-1.5" />
+                  <WhatsAppIcon className="w-4 h-4" />
                   Ask Question on WhatsApp
                 </a>
               </div>

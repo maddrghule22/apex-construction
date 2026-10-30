@@ -14,6 +14,7 @@ import {
   ExternalLink,
 } from "lucide-react";
 import { generateWhatsAppUrl } from "@/lib/whatsapp/url";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 
 type ModalTab = "CALL" | "WHATSAPP" | "EMAIL" | null;
 
@@ -76,9 +77,9 @@ export default function QuickContactWidget() {
             <button
               onClick={() => setActiveModal("WHATSAPP")}
               aria-label="Open WhatsApp contact options"
-              className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center shadow-lg transition-transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-emerald-400 cursor-pointer"
+              className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center shadow-lg transition-transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-emerald-400 cursor-pointer"
             >
-              <MessageSquare className="w-5 h-5 sm:w-6 sm:h-6" />
+              <WhatsAppIcon className="w-5 h-5 sm:w-6 sm:h-6" />
               <span className="absolute -top-1 -right-1 w-2.5 h-2.5 sm:w-3 sm:h-3 bg-emerald-400 rounded-full border-2 border-navy-950 animate-pulse" />
             </button>
             <div className="absolute right-14 top-1/2 -translate-y-1/2 hidden group-hover:block bg-navy-900 text-white text-[11px] font-semibold py-1 px-2.5 rounded-lg whitespace-nowrap shadow-md border border-navy-700 pointer-events-none">
@@ -139,7 +140,7 @@ export default function QuickContactWidget() {
                 )}
                 {activeModal === "WHATSAPP" && (
                   <>
-                    <MessageSquare className="w-4 h-4 text-emerald-400" />
+                    <WhatsAppIcon className="w-4 h-4 text-emerald-400" />
                     WhatsApp Consultation
                   </>
                 )}
@@ -201,18 +202,18 @@ export default function QuickContactWidget() {
                     href={dnyaneshwarWhatsApp}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-between p-3.5 rounded-xl bg-emerald-50 hover:bg-emerald-100/80 border border-emerald-200 text-emerald-950 transition group gap-2"
+                    className="flex items-center justify-between p-3.5 rounded-xl bg-slate-50 hover:bg-emerald-50/70 border border-slate-200 hover:border-emerald-300 text-slate-900 transition group gap-2"
                   >
                     <div className="space-y-0.5 min-w-0">
-                      <span className="text-xs font-bold text-emerald-950 block truncate">
+                      <span className="text-xs font-bold text-slate-900 block truncate group-hover:text-emerald-950">
                         Dnyaneshwar Pawale (Owner)
                       </span>
-                      <span className="text-[11px] text-emerald-700 block">
+                      <span className="text-[11px] text-gray-500 block">
                         Direct project discussion &amp; site visit
                       </span>
                     </div>
-                    <span className="text-xs font-bold bg-emerald-600 text-white px-3 py-1.5 rounded-lg group-hover:bg-emerald-700 transition flex items-center gap-1 shrink-0">
-                      <MessageSquare className="w-3.5 h-3.5" />
+                    <span className="text-xs font-bold bg-emerald-600 text-white px-3 py-1.5 rounded-lg group-hover:bg-emerald-700 transition flex items-center gap-1.5 shrink-0 shadow-2xs">
+                      <WhatsAppIcon className="w-3.5 h-3.5" />
                       Chat
                     </span>
                   </a>

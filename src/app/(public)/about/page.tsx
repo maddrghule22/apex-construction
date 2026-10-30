@@ -4,7 +4,6 @@ import {
   Building2,
   CheckCircle2,
   Phone,
-  MessageSquare,
   Award,
   Clock,
   MapPin,
@@ -12,6 +11,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { generateWhatsAppUrl } from "@/lib/whatsapp/url";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 
 export const metadata = {
   title: "About Us | Shree Samarth Krupa Enterprises",
@@ -81,10 +81,10 @@ export default function AboutPage() {
                     href={ownerWhatsApp}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full inline-flex items-center justify-center px-4 py-3 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 transition shadow-sm"
+                    className="w-full inline-flex items-center justify-center px-4 py-3 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 transition shadow-sm gap-2"
                   >
-                    <MessageSquare className="w-4 h-4 mr-2" />
-                    Chat on WhatsApp
+                    <WhatsAppIcon className="w-4 h-4" />
+                    <span>Chat on WhatsApp</span>
                   </a>
                 </div>
               </div>

@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import { Phone, MessageSquare, Check, Copy } from "lucide-react";
+import { Phone, Check, Copy } from "lucide-react";
 import { generateWhatsAppUrl } from "@/lib/whatsapp/url";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 
 export default function VisitingCardShowcase() {
   const [copiedPhone, setCopiedPhone] = useState<string | null>(null);
@@ -60,7 +61,7 @@ export default function VisitingCardShowcase() {
               rel="noopener noreferrer"
               className="px-2.5 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white transition text-xs font-bold flex items-center gap-1"
             >
-              <MessageSquare className="w-3.5 h-3.5" />
+              <WhatsAppIcon className="w-3.5 h-3.5" />
               <span>WhatsApp</span>
             </a>
           </div>

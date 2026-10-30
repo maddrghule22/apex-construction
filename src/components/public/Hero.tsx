@@ -7,11 +7,11 @@ import {
   ShieldCheck,
   CheckCircle2,
   HardHat,
-  MessageSquare,
   Award,
 } from "lucide-react";
 import { generateWhatsAppUrl } from "@/lib/whatsapp/url";
 import HeroProjectShowcase from "./HeroProjectShowcase";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 
 export default function Hero() {
   const generalWhatsApp = generateWhatsAppUrl({ type: "GENERAL" });
@@ -77,7 +77,7 @@ export default function Hero() {
                     className="p-2 sm:px-3 sm:py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold flex items-center gap-1.5 shadow-sm transition"
                     title="WhatsApp Dnyaneshwar Pawale"
                   >
-                    <MessageSquare className="w-3.5 h-3.5" />
+                    <WhatsAppIcon className="w-3.5 h-3.5" />
                     <span>WhatsApp</span>
                   </a>
                   <a

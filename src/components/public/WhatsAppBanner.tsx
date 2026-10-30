@@ -1,7 +1,8 @@
 import React from "react";
 import Link from "next/link";
-import { MessageSquare, Phone, Calendar } from "lucide-react";
+import { Phone, Calendar } from "lucide-react";
 import { generateWhatsAppUrl } from "@/lib/whatsapp/url";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 
 export default function WhatsAppBanner() {
   const constructionWhatsApp = generateWhatsAppUrl({
@@ -34,7 +35,7 @@ export default function WhatsAppBanner() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-5 py-3.5 rounded-xl font-bold text-xs bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg shadow-emerald-900/30 transition text-center"
             >
-              <MessageSquare className="w-4 h-4 mr-2" />
+              <WhatsAppIcon className="w-4 h-4 mr-2" />
               Chat on WhatsApp
             </a>
 

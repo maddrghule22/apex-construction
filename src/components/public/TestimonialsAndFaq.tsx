@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import { ChevronDown, HelpCircle, Phone, MessageSquare } from "lucide-react";
+import { ChevronDown, HelpCircle, Phone } from "lucide-react";
 import { generateWhatsAppUrl } from "@/lib/whatsapp/url";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 
 export default function TestimonialsAndFaq() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
@@ -99,10 +100,10 @@ export default function TestimonialsAndFaq() {
               href={generalWhatsApp}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-4 py-2.5 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 transition"
+              className="inline-flex items-center px-4 py-2.5 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 transition gap-2 shadow-sm"
             >
-              <MessageSquare className="w-3.5 h-3.5 mr-2" />
-              WhatsApp Consultation
+              <WhatsAppIcon className="w-4 h-4" />
+              <span>WhatsApp Consultation</span>
             </a>
           </div>
         </div>
