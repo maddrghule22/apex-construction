@@ -66,24 +66,13 @@ export default function Navbar() {
           {/* Direct Proprietor Contact */}
           <div className="flex items-center space-x-2 sm:space-x-3 text-[10.5px] sm:text-xs">
             <div className="flex items-center space-x-1">
-              <span className="text-gray-400 hidden sm:inline">Dnyaneshwar:</span>
+              <span className="text-gray-400 hidden sm:inline">Owner Direct:</span>
               <a
                 href="tel:+919850291262"
                 className="font-bold text-white hover:text-construction-400 transition flex items-center whitespace-nowrap"
               >
                 <Phone className="w-2.5 h-2.5 sm:w-3 sm:h-3 mr-1 text-construction-500" />
                 +91 98502 91262
-              </a>
-            </div>
-            <span className="text-gray-700">|</span>
-            <div className="flex items-center space-x-1">
-              <span className="text-gray-400 hidden sm:inline">Shravan:</span>
-              <a
-                href="tel:+917276484671"
-                className="font-bold text-construction-400 hover:text-construction-300 transition flex items-center whitespace-nowrap"
-              >
-                <Phone className="w-2.5 h-2.5 sm:w-3 sm:h-3 mr-1 text-construction-400" />
-                +91 72764 84671
               </a>
             </div>
             <span className="text-gray-700 hidden lg:inline">|</span>
@@ -164,18 +153,12 @@ export default function Navbar() {
         <div className="lg:hidden fixed inset-x-0 top-[calc(theme(spacing.16)+37px)] sm:top-[calc(theme(spacing.20)+41px)] bottom-0 bg-white/98 backdrop-blur-md border-b border-gray-200 px-4 pt-4 pb-8 space-y-4 shadow-2xl overflow-y-auto z-50 animate-fadeIn">
           <div className="pb-3 border-b border-gray-100 space-y-2">
             <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">
-              Direct Proprietor Assistance
+              Owner Direct Assistance
             </p>
             <div className="flex justify-between items-center text-xs font-bold">
-              <span className="text-gray-700">Dnyaneshwar Pawale:</span>
+              <span className="text-gray-700">Dnyaneshwar Pawale (Owner):</span>
               <a href="tel:+919850291262" className="text-construction-600 font-bold p-1">
                 +91 98502 91262
-              </a>
-            </div>
-            <div className="flex justify-between items-center text-xs font-bold">
-              <span className="text-gray-700">Shravan Pawale:</span>
-              <a href="tel:+917276484671" className="text-navy-950 font-bold p-1">
-                +91 72764 84671
               </a>
             </div>
           </div>

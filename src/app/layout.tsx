@@ -16,11 +16,10 @@ export const metadata: Metadata = {
       "Shree Samarth Krupa Enterprises | Builders & Developers | Turnkey Construction",
   },
   description:
-    "Shree Samarth Krupa Enterprises — Premier Builders, Developers & Turnkey Civil Contractors in Maharashtra. Turnkey bungalows, luxury villas, independent row houses, and commercial buildings. Directly managed by Dnyaneshwar Pawale (+91 98502 91262) & Shravan Pawale (+91 72764 84671).",
+    "Shree Samarth Krupa Enterprises — Premier Builders, Developers & Turnkey Civil Contractors in Maharashtra. Turnkey bungalows, luxury villas, independent row houses, and commercial buildings. Directly managed by founder Dnyaneshwar Pawale (+91 98502 91262).",
   keywords: [
     "Shree Samarth Krupa Enterprises",
     "Samarth Krupa Builders and Developers",
-    "Shravan Pawale",
     "Dnyaneshwar Pawale",
     "Turnkey Construction Company Maharashtra",
     "Bungalow Builders Pune",
@@ -48,7 +47,7 @@ export const metadata: Metadata = {
       "Turnkey residential bungalows, villas, independent row houses, and commercial complexes with structural precision and 100% proprietor supervision.",
     images: [
       {
-        url: "/images/business-card.png",
+        url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
         width: 1200,
         height: 630,
         alt: "Shree Samarth Krupa Enterprises Builders & Developers",
@@ -59,8 +58,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Shree Samarth Krupa Enterprises | Builders & Developers",
     description:
-      "Turnkey residential bungalows, villas, and commercial complexes in Maharashtra. Contact Dnyaneshwar Pawale (+91 98502 91262) & Shravan Pawale (+91 72764 84671).",
-    images: ["/images/business-card.png"],
+      "Turnkey residential bungalows, villas, and commercial complexes in Maharashtra. Contact Dnyaneshwar Pawale (+91 98502 91262).",
+    images: ["https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80"],
   },
 };
 
@@ -72,8 +71,7 @@ const jsonLd = {
   "description":
     "Premier Builders & Developers providing turnkey residential bungalow construction, luxury villas, independent row houses, and commercial complexes.",
   "url": baseUrl,
-  "telephone": ["+919850291262", "+917276484671"],
-  "priceRange": "₹₹₹",
+  "telephone": "+919850291262",
   "address": {
     "@type": "PostalAddress",
     "addressRegion": "Maharashtra",
@@ -83,14 +81,8 @@ const jsonLd = {
     {
       "@type": "Person",
       "name": "Dnyaneshwar Pawale",
-      "jobTitle": "Proprietor",
+      "jobTitle": "Proprietor & Founder",
       "telephone": "+919850291262",
-    },
-    {
-      "@type": "Person",
-      "name": "Shravan Pawale",
-      "jobTitle": "Proprietor",
-      "telephone": "+917276484671",
     },
   ],
   "knowsAbout": [

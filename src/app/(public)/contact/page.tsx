@@ -10,12 +10,11 @@ import {
   MessageSquare,
   Send,
   CheckCircle2,
-  ShieldCheck,
   AlertCircle,
-  HardHat,
+  Building2,
+  ShieldCheck,
 } from "lucide-react";
 import { generateWhatsAppUrl } from "@/lib/whatsapp/url";
-import VisitingCardShowcase from "@/components/public/VisitingCardShowcase";
 
 function ContactFormContent() {
   const searchParams = useSearchParams();
@@ -28,7 +27,6 @@ function ContactFormContent() {
   const [location, setLocation] = useState("");
   const [category, setCategory] = useState("RESIDENTIAL");
   const [approxArea, setApproxArea] = useState("");
-  const [budgetRange, setBudgetRange] = useState("");
   const [preferredContact, setPreferredContact] = useState("PHONE");
   const [message, setMessage] = useState(
     prefillProject
@@ -43,13 +41,7 @@ function ContactFormContent() {
   const [successResponse, setSuccessResponse] = useState<any>(null);
   const [errorMessage, setErrorMessage] = useState("");
 
-  const shravanWhatsApp = generateWhatsAppUrl({
-    phoneNumber: "917276484671",
-    type: "GENERAL",
-    projectCategory: category,
-  });
-
-  const dnyaneshwarWhatsApp = generateWhatsAppUrl({
+  const ownerWhatsApp = generateWhatsAppUrl({
     phoneNumber: "919850291262",
     type: "GENERAL",
     projectCategory: category,
@@ -71,7 +63,6 @@ function ContactFormContent() {
           location,
           category,
           approxArea: approxArea ? Number(approxArea) : undefined,
-          budgetRange: budgetRange || undefined,
           message: `${message}${preferredContact ? ` (Preferred Contact: ${preferredContact})` : ""}`,
           source: "WEBSITE_FORM",
           websiteUrlHoneypot: honeypot,
@@ -101,7 +92,7 @@ function ContactFormContent() {
               Contact Shree Samarth Krupa Enterprises
             </h1>
             <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-              Connect directly with proprietors <strong>Dnyaneshwar Pawale</strong> &amp; <strong>Shravan Pawale</strong> for turnkey building construction, site inspections, blueprints review, and transparent cost estimates.
+              Connect directly with founder and lead contractor <strong>Dnyaneshwar Pawale</strong> for turnkey building construction, on-site inspections, architectural blueprints review, and project planning.
             </p>
           </div>
         </div>
@@ -110,21 +101,75 @@ function ContactFormContent() {
       {/* Main Content: Info & Form */}
       <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          {/* Left Column: Direct Info, Card & Contacts (5 cols) */}
+          {/* Left Column: Direct Info & Owner Contacts (5 cols) */}
           <div className="lg:col-span-5 space-y-6 text-left">
             <div>
               <span className="text-[11px] font-bold text-construction-600 uppercase tracking-wider block">
-                Direct Line to Proprietors
+                Direct Line to Owner
               </span>
               <h2 className="text-2xl font-extrabold text-navy-950 mt-0.5">
                 Reach Us Anytime
               </h2>
               <p className="text-xs sm:text-sm text-gray-600 leading-relaxed mt-1">
-                Call or WhatsApp our team for prompt quote estimates, architectural review, or free on-site plot inspections.
+                Call or WhatsApp founder Dnyaneshwar Pawale directly for architectural review or on-site plot inspection.
               </p>
             </div>
 
-            <VisitingCardShowcase />
+            {/* Direct Owner Card */}
+            <div className="rounded-2xl border border-gray-200 bg-surface p-6 shadow-sm space-y-4">
+              <div className="flex items-center space-x-3.5">
+                <div className="w-12 h-12 rounded-xl bg-navy-950 text-construction-400 font-extrabold text-sm flex items-center justify-center shrink-0">
+                  DP
+                </div>
+                <div>
+                  <span className="text-[10px] uppercase font-extrabold text-construction-600 tracking-wider block">
+                    Founder &amp; Principal Proprietor
+                  </span>
+                  <h3 className="text-base font-extrabold text-navy-950">
+                    Dnyaneshwar Pawale
+                  </h3>
+                  <p className="text-xs text-gray-500">Civil Engineering &amp; Operations</p>
+                </div>
+              </div>
+
+              <div className="pt-2 space-y-2 border-t border-gray-200/80">
+                <a
+                  href="tel:+919850291262"
+                  className="flex items-center text-xs font-bold text-navy-950 hover:text-construction-600 transition"
+                >
+                  <Phone className="w-4 h-4 mr-2 text-construction-500 shrink-0" />
+                  +91 98502 91262
+                </a>
+                <a
+                  href={ownerWhatsApp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center text-xs font-bold text-emerald-700 hover:text-emerald-800 transition"
+                >
+                  <MessageSquare className="w-4 h-4 mr-2 text-emerald-600 shrink-0" />
+                  Chat on WhatsApp
+                </a>
+                <div className="flex items-center text-xs text-gray-600">
+                  <Mail className="w-4 h-4 mr-2 text-construction-500 shrink-0" />
+                  contact@shreesamarthkrupa.com
+                </div>
+                <div className="flex items-start text-xs text-gray-600">
+                  <MapPin className="w-4 h-4 mr-2 text-construction-500 shrink-0 mt-0.5" />
+                  <span>Main Office &amp; Operations, Maharashtra, India</span>
+                </div>
+                <div className="flex items-center text-xs text-gray-600">
+                  <Clock className="w-4 h-4 mr-2 text-construction-500 shrink-0" />
+                  <span>Mon – Sat: 8:00 AM – 8:00 PM</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="p-4 rounded-xl bg-navy-50 border border-navy-100 space-y-1">
+              <span className="text-xs font-bold text-navy-950 block">Personal Site Inspection</span>
+              <p className="text-xs text-gray-600">
+                Founder Dnyaneshwar Pawale visits your plot in person to evaluate ground conditions, soil feasibility, and road access before planning begins.
+              </p>
+            </div>
           </div>
 
           {/* Right Column: Server-Validated Enquiry Form (7 cols) */}
@@ -137,27 +182,27 @@ function ContactFormContent() {
                 <h3 className="text-2xl font-bold text-navy-950">Enquiry Received!</h3>
                 <p className="text-sm text-gray-600 max-w-md mx-auto leading-relaxed">
                   Reference ID:{" "}
-                  <strong className="text-navy-950 font-mono">{successResponse.enquiryNumber}</strong>. Your requirement has been routed directly to Shravan & Dnyaneshwar Pawale.
+                  <strong className="text-navy-950 font-mono">{successResponse.enquiryNumber}</strong>. Your requirement has been routed directly to founder Dnyaneshwar Pawale.
                 </p>
                 <p className="text-xs text-gray-500">
-                  Our team will call you back to discuss plot parameters or delivery schedule.
+                  We will call you back promptly to discuss your plot parameters or schedule a site visit.
                 </p>
                 <div className="pt-6 flex flex-col sm:flex-row gap-3 justify-center">
                   <a
-                    href={shravanWhatsApp}
+                    href={ownerWhatsApp}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 transition"
                   >
                     <MessageSquare className="w-4 h-4 mr-1.5" />
-                    Chat with Shravan Pawale
+                    Chat with Dnyaneshwar Pawale
                   </a>
                   <button
                     onClick={() => {
                       setSuccessResponse(null);
                       setMessage("");
                     }}
-                    className="px-4 py-2.5 rounded-xl text-xs font-semibold text-gray-600 hover:bg-gray-100 border border-gray-200 transition"
+                    className="px-4 py-2.5 rounded-xl text-xs font-semibold text-gray-600 hover:bg-gray-100 border border-gray-200 transition cursor-pointer"
                   >
                     Submit Another Request
                   </button>
@@ -170,7 +215,7 @@ function ContactFormContent() {
                     Request Site Inspection &amp; Consultation
                   </h3>
                   <p className="text-xs text-gray-500 mt-1">
-                    Fill out your project details and our proprietors will connect with you directly.
+                    Fill out your project details and founder Dnyaneshwar Pawale will connect with you directly.
                   </p>
                 </div>
 
@@ -289,7 +334,7 @@ function ContactFormContent() {
                   <textarea
                     rows={4}
                     required
-                    placeholder="Describe your plot size, floors required, timeline or design ideas..."
+                    placeholder="Describe your plot size, floors required, timeline or architectural ideas..."
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-navy-900 focus:border-transparent transition"

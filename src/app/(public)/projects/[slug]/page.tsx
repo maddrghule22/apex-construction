@@ -267,7 +267,7 @@ export default async function ProjectDetailPage({ params }: { params: { slug: st
                   Planning a Similar Construction?
                 </h4>
                 <p className="text-xs text-gray-500 leading-relaxed">
-                  Our chief project architect and structural team can review your plot dimensions and draft a preliminary BOQ.
+                  Founder Dnyaneshwar Pawale and our structural team can review your plot dimensions and architectural plans.
                 </p>
 
                 <Link

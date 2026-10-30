@@ -1,23 +1,15 @@
 import React from "react";
 import Link from "next/link";
-import {
-  Home,
-  Building2,
-  Wrench,
-  ArrowRight,
-  ShieldCheck,
-  Check,
-  Compass,
-} from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 
 export default function ServicesGrid() {
   const serviceCategories = [
     {
       category: "Residential Construction",
       tagline: "Turnkey Villas, Bungalows & Homes",
-      icon: Home,
+      image:
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
       accentColor: "border-construction-500",
-      badgeColor: "bg-construction-50 text-construction-700 border-construction-200",
       items: [
         {
           title: "Custom Luxury Villas & Bungalows",
@@ -42,9 +34,9 @@ export default function ServicesGrid() {
     {
       category: "Commercial Construction",
       tagline: "Corporate Complexes & Retail Spaces",
-      icon: Building2,
+      image:
+        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
       accentColor: "border-navy-600",
-      badgeColor: "bg-navy-50 text-navy-800 border-navy-200",
       items: [
         {
           title: "Commercial Complexes & Showrooms",
@@ -69,9 +61,9 @@ export default function ServicesGrid() {
     {
       category: "Civil & Structural Engineering",
       tagline: "Renovation, Structural Works & Retrofitting",
-      icon: Wrench,
+      image:
+        "https://images.unsplash.com/photo-1541888946425-d0fbb1861564?auto=format&fit=crop&w=800&q=80",
       accentColor: "border-amber-500",
-      badgeColor: "bg-amber-50 text-amber-800 border-amber-200",
       items: [
         {
           title: "RCC Framework & Structural Casting",
@@ -108,25 +100,28 @@ export default function ServicesGrid() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {serviceCategories.map((group, idx) => {
-            const Icon = group.icon;
-            return (
-              <div
-                key={idx}
-                className={`bg-white rounded-2xl border-t-4 ${group.accentColor} border-x border-b border-gray-200/80 p-6 sm:p-8 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group`}
-              >
-                <div>
-                  <div className="flex items-center space-x-3 mb-4">
-                    <div className="w-12 h-12 rounded-xl bg-navy-50 text-navy-900 flex items-center justify-center group-hover:scale-105 transition shadow-xs">
-                      <Icon className="w-6 h-6 text-construction-600" />
-                    </div>
-                    <div className="text-left">
-                      <h3 className="text-lg sm:text-xl font-bold text-navy-950">{group.category}</h3>
-                      <p className="text-xs text-gray-500 font-medium">{group.tagline}</p>
-                    </div>
+          {serviceCategories.map((group, idx) => (
+            <div
+              key={idx}
+              className={`bg-white rounded-2xl border-t-4 ${group.accentColor} border-x border-b border-gray-200/80 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group text-left`}
+            >
+              <div>
+                {/* Real Construction Photography replacing SVG icon placeholder */}
+                <div className="relative h-48 w-full bg-navy-950 overflow-hidden">
+                  <img
+                    src={group.image}
+                    alt={group.category}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/20 to-transparent" />
+                  <div className="absolute bottom-3 left-4 right-4 text-white">
+                    <h3 className="text-lg sm:text-xl font-extrabold text-white">{group.category}</h3>
+                    <p className="text-xs text-construction-300 font-medium">{group.tagline}</p>
                   </div>
+                </div>
 
-                  <ul className="space-y-3.5 my-6 text-left">
+                <div className="p-6">
+                  <ul className="space-y-3.5 text-left">
                     {group.items.map((item, itemIdx) => (
                       <li key={itemIdx} className="flex items-start space-x-3 text-xs sm:text-sm">
                         <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
@@ -142,19 +137,19 @@ export default function ServicesGrid() {
                     ))}
                   </ul>
                 </div>
-
-                <div className="pt-4 border-t border-gray-100 text-left">
-                  <Link
-                    href={group.link}
-                    className="inline-flex items-center text-xs font-bold text-navy-900 hover:text-construction-600 transition"
-                  >
-                    <span>{group.ctaText}</span>
-                    <ArrowRight className="w-3.5 h-3.5 ml-1 text-construction-500" />
-                  </Link>
-                </div>
               </div>
-            );
-          })}
+
+              <div className="p-6 pt-0 border-t border-gray-100 text-left mt-2">
+                <Link
+                  href={group.link}
+                  className="inline-flex items-center text-xs font-bold text-navy-900 hover:text-construction-600 transition"
+                >
+                  <span>{group.ctaText}</span>
+                  <ArrowRight className="w-3.5 h-3.5 ml-1 text-construction-500" />
+                </Link>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

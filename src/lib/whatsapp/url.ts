@@ -15,7 +15,7 @@ export function cleanPhoneNumber(rawPhone: string): string {
 
 export function generateWhatsAppUrl(options: WhatsAppMessageOptions): string {
   const phone = cleanPhoneNumber(
-    options.phoneNumber || process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "917276484671"
+    options.phoneNumber || process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919850291262"
   );
 
   let messageText = "";
@@ -26,11 +26,11 @@ export function generateWhatsAppUrl(options: WhatsAppMessageOptions): string {
     switch (options.type) {
       case "SITE_VISIT":
         messageText =
-          "Hello Shravan Pawale & Dnyaneshwar Pawale, I would like to schedule an on-site consultation with Shree Samarth Krupa Enterprises. Please share available dates.";
+          "Hello Dnyaneshwar Pawale, I would like to schedule an on-site consultation with Shree Samarth Krupa Enterprises. Please share available dates.";
         break;
       case "COMMERCIAL":
         messageText =
-          "Hello, I am inquiring about commercial civil contracting and construction services from Shree Samarth Krupa Enterprises. Please share details.";
+          "Hello, I am inquiring about commercial civil contracting and development services from Shree Samarth Krupa Enterprises. Please share details.";
         break;
       case "PROJECT":
         messageText = `Hello! I am interested in your construction project "${
@@ -38,9 +38,7 @@ export function generateWhatsAppUrl(options: WhatsAppMessageOptions): string {
         }". I would like to schedule a site consultation.`;
         break;
       case "ESTIMATE":
-        messageText = `Hello, I am inquiring about construction planning and cost breakdown${
-          options.estimateNumber ? ` (#${options.estimateNumber})` : ""
-        } from your website. I would like to review the drawings and get a formal quotation.`;
+        messageText = `Hello Dnyaneshwar Pawale, I am inquiring about construction planning and architectural execution with Shree Samarth Krupa Enterprises. I would like to schedule a project discussion.`;
         break;
       case "ENQUIRY_FOLLOWUP":
         messageText = `Hello ${
@@ -49,9 +47,9 @@ export function generateWhatsAppUrl(options: WhatsAppMessageOptions): string {
         break;
       case "GENERAL":
       default:
-        messageText = `Hello Shravan Pawale & Dnyaneshwar Pawale, I am interested in your construction and development services (${
+        messageText = `Hello Dnyaneshwar Pawale, I am interested in your turnkey construction and development services (${
           options.projectCategory ? options.projectCategory.toLowerCase() : "builders & developers"
-        }) with Shree Samarth Krupa Enterprises. Please contact me.`;
+        }) with Shree Samarth Krupa Enterprises. Please connect with me.`;
         break;
     }
   }

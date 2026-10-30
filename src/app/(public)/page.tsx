@@ -7,12 +7,11 @@ import FeaturedProjects from "@/components/public/FeaturedProjects";
 import ProcessSection from "@/components/public/ProcessSection";
 import WhyChooseUs from "@/components/public/WhyChooseUs";
 import TestimonialsAndFaq from "@/components/public/TestimonialsAndFaq";
-import WhatsAppBanner from "@/components/public/WhatsAppBanner";
 
 export const metadata: Metadata = {
   title: "Shree Samarth Krupa Enterprises | Builders & Developers | Turnkey Construction",
   description:
-    "Turnkey residential bungalows, villas, independent row houses, and commercial complexes in Maharashtra. Directly supervised by Dnyaneshwar Pawale (+91 98502 91262) & Shravan Pawale (+91 72764 84671).",
+    "Turnkey residential bungalows, villas, independent row houses, and commercial complexes in Maharashtra. Directly supervised by founder Dnyaneshwar Pawale (+91 98502 91262).",
   alternates: {
     canonical: "/",
   },
@@ -24,16 +23,16 @@ export default function HomePage() {
       {/* Hero Section */}
       <Hero />
 
-      {/* Verified / Baseline Statistics */}
+      {/* Verified Construction Highlights with Real Images */}
       <StatsSection />
+
+      {/* Featured Projects Portfolio - Scalable Project Showcase */}
+      <FeaturedProjects />
 
       {/* Residential & Commercial Core Services */}
       <ServicesGrid />
 
-      {/* Featured Projects Portfolio */}
-      <FeaturedProjects />
-
-      {/* 6-Step Construction Methodology */}
+      {/* 6-Step Construction Methodology with Images */}
       <ProcessSection />
 
       {/* Engineering Standards & Why Choose Us */}
@@ -41,9 +40,6 @@ export default function HomePage() {
 
       {/* Labeled Sample Testimonials & FAQ */}
       <TestimonialsAndFaq />
-
-      {/* WhatsApp Immediate Action Banner */}
-      <WhatsAppBanner />
     </div>
   );
 }

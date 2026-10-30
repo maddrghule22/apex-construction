@@ -20,11 +20,11 @@ describe("WhatsApp URL Integration", () => {
 
   it("constructs compliant wa.me URL for on-site consultation", () => {
     const url = generateWhatsAppUrl({
-      phoneNumber: "+91 72764 84671",
+      phoneNumber: "+91 98502 91262",
       type: "SITE_VISIT",
     });
 
-    expect(url.startsWith("https://wa.me/917276484671?text=")).toBe(true);
+    expect(url.startsWith("https://wa.me/919850291262?text=")).toBe(true);
     expect(url).toContain(encodeURIComponent("on-site consultation"));
   });
 
@@ -38,13 +38,12 @@ describe("WhatsApp URL Integration", () => {
     expect(url).toContain(encodeURIComponent('project "Skyline Corporate Tower"'));
   });
 
-  it("constructs compliant wa.me URL for cost estimate consultation", () => {
+  it("constructs compliant wa.me URL for project discussion consultation", () => {
     const url = generateWhatsAppUrl({
       phoneNumber: "15552345678",
       type: "ESTIMATE",
-      estimateNumber: "EST-2025-001",
     });
 
-    expect(url).toContain(encodeURIComponent("EST-2025-001"));
+    expect(url).toContain(encodeURIComponent("Dnyaneshwar Pawale"));
   });
 });

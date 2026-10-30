@@ -22,10 +22,6 @@ export default function QuickContactWidget() {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [copiedEmail, setCopiedEmail] = useState(false);
 
-  const shravanWhatsApp = generateWhatsAppUrl({
-    phoneNumber: "917276484671",
-    type: "GENERAL",
-  });
   const dnyaneshwarWhatsApp = generateWhatsAppUrl({
     phoneNumber: "919850291262",
     type: "GENERAL",
@@ -50,9 +46,7 @@ export default function QuickContactWidget() {
 
   return (
     <>
-      {/* ========================================================= */}
-      {/* FLOATING VERTICAL SIDE BAR (Mobile & Desktop)            */}
-      {/* ========================================================= */}
+      {/* FLOATING VERTICAL SIDE BAR (Mobile & Desktop) */}
       <aside
         aria-label="Quick Contact Options"
         className={`fixed right-0 top-1/2 -translate-y-1/2 z-40 transition-transform duration-300 ease-in-out no-print ${
@@ -88,7 +82,7 @@ export default function QuickContactWidget() {
               <span className="absolute -top-1 -right-1 w-2.5 h-2.5 sm:w-3 sm:h-3 bg-emerald-400 rounded-full border-2 border-navy-950 animate-pulse" />
             </button>
             <div className="absolute right-14 top-1/2 -translate-y-1/2 hidden group-hover:block bg-navy-900 text-white text-[11px] font-semibold py-1 px-2.5 rounded-lg whitespace-nowrap shadow-md border border-navy-700 pointer-events-none">
-              WhatsApp Us
+              WhatsApp Owner
             </div>
           </div>
 
@@ -102,7 +96,7 @@ export default function QuickContactWidget() {
               <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
             </button>
             <div className="absolute right-14 top-1/2 -translate-y-1/2 hidden group-hover:block bg-navy-900 text-white text-[11px] font-semibold py-1 px-2.5 rounded-lg whitespace-nowrap shadow-md border border-navy-700 pointer-events-none">
-              Call Proprietors
+              Call Owner
             </div>
           </div>
 
@@ -122,9 +116,7 @@ export default function QuickContactWidget() {
         </div>
       </aside>
 
-      {/* ========================================================= */}
-      {/* POPUP MODAL (When any icon is selected)                   */}
-      {/* ========================================================= */}
+      {/* POPUP MODAL */}
       {activeModal && (
         <div
           role="dialog"
@@ -173,32 +165,12 @@ export default function QuickContactWidget() {
               {activeModal === "CALL" && (
                 <div className="space-y-3">
                   <p className="text-xs text-gray-600">
-                    Tap below to directly dial the proprietors for site visits or construction quotes:
+                    Directly reach founder and lead contractor Dnyaneshwar Pawale:
                   </p>
 
                   <a
-                    href="tel:+917276484671"
-                    className="flex flex-col xs:flex-row xs:items-center justify-between p-3 rounded-xl bg-gray-50 hover:bg-construction-50 border border-gray-200 hover:border-construction-300 transition group gap-2"
-                  >
-                    <div className="space-y-0.5 min-w-0">
-                      <div className="flex items-center space-x-1.5">
-                        <User className="w-3.5 h-3.5 text-navy-600 shrink-0" />
-                        <span className="text-xs font-bold text-navy-950 group-hover:text-construction-700 truncate">
-                          Shravan Pawale
-                        </span>
-                      </div>
-                      <p className="text-[11px] text-gray-500">
-                        Project Management &amp; Site Execution
-                      </p>
-                    </div>
-                    <span className="text-xs font-bold text-construction-600 bg-white px-2.5 py-1.5 rounded-lg border border-gray-200 group-hover:bg-construction-500 group-hover:text-white transition shrink-0 self-start xs:self-auto">
-                      +91 72764 84671
-                    </span>
-                  </a>
-
-                  <a
                     href="tel:+919850291262"
-                    className="flex flex-col xs:flex-row xs:items-center justify-between p-3 rounded-xl bg-gray-50 hover:bg-construction-50 border border-gray-200 hover:border-construction-300 transition group gap-2"
+                    className="flex flex-col xs:flex-row xs:items-center justify-between p-3.5 rounded-xl bg-gray-50 hover:bg-construction-50 border border-gray-200 hover:border-construction-300 transition group gap-2"
                   >
                     <div className="space-y-0.5 min-w-0">
                       <div className="flex items-center space-x-1.5">
@@ -208,7 +180,7 @@ export default function QuickContactWidget() {
                         </span>
                       </div>
                       <p className="text-[11px] text-gray-500">
-                        Contracts &amp; Structural Engineering
+                        Founder &amp; Principal Civil Contractor
                       </p>
                     </div>
                     <span className="text-xs font-bold text-construction-600 bg-white px-2.5 py-1.5 rounded-lg border border-gray-200 group-hover:bg-construction-500 group-hover:text-white transition shrink-0 self-start xs:self-auto">
@@ -222,41 +194,21 @@ export default function QuickContactWidget() {
               {activeModal === "WHATSAPP" && (
                 <div className="space-y-3">
                   <p className="text-xs text-gray-600">
-                    Connect instantly with the proprietors on WhatsApp for plans and drawings:
+                    Connect directly on WhatsApp for architectural blueprints, site consultation, and project reviews:
                   </p>
-
-                  <a
-                    href={shravanWhatsApp}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-between p-3 rounded-xl bg-emerald-50 hover:bg-emerald-100/80 border border-emerald-200 text-emerald-950 transition group gap-2"
-                  >
-                    <div className="space-y-0.5 min-w-0">
-                      <span className="text-xs font-bold text-emerald-950 block truncate">
-                        Shravan Pawale
-                      </span>
-                      <span className="text-[11px] text-emerald-700 block">
-                        Site consultation &amp; plot inspection
-                      </span>
-                    </div>
-                    <span className="text-xs font-bold bg-emerald-600 text-white px-3 py-1.5 rounded-lg group-hover:bg-emerald-700 transition flex items-center gap-1 shrink-0">
-                      <MessageSquare className="w-3.5 h-3.5" />
-                      Chat
-                    </span>
-                  </a>
 
                   <a
                     href={dnyaneshwarWhatsApp}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-between p-3 rounded-xl bg-emerald-50 hover:bg-emerald-100/80 border border-emerald-200 text-emerald-950 transition group gap-2"
+                    className="flex items-center justify-between p-3.5 rounded-xl bg-emerald-50 hover:bg-emerald-100/80 border border-emerald-200 text-emerald-950 transition group gap-2"
                   >
                     <div className="space-y-0.5 min-w-0">
                       <span className="text-xs font-bold text-emerald-950 block truncate">
-                        Dnyaneshwar Pawale
+                        Dnyaneshwar Pawale (Owner)
                       </span>
                       <span className="text-[11px] text-emerald-700 block">
-                        BOQ contracts &amp; civil rates
+                        Direct project discussion &amp; site visit
                       </span>
                     </div>
                     <span className="text-xs font-bold bg-emerald-600 text-white px-3 py-1.5 rounded-lg group-hover:bg-emerald-700 transition flex items-center gap-1 shrink-0">
@@ -271,7 +223,7 @@ export default function QuickContactWidget() {
               {activeModal === "EMAIL" && (
                 <div className="space-y-3">
                   <p className="text-xs text-gray-600">
-                    Send blueprints, drawings, or tender documents to our official mailbox:
+                    Send blueprints, drawings, or tender specifications to our official mailbox:
                   </p>
 
                   <div className="p-3 rounded-xl bg-gray-50 border border-gray-200 space-y-2">
@@ -312,7 +264,7 @@ export default function QuickContactWidget() {
 
               {/* Footer reassurance */}
               <div className="pt-2 border-t border-gray-100 flex items-center justify-between text-[10.5px] sm:text-[11px] text-gray-400">
-                <span>Direct Contact</span>
+                <span>Owner Direct Line</span>
                 <span>Mon – Sat: 8 AM – 8 PM</span>
               </div>
             </div>

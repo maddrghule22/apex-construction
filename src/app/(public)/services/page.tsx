@@ -21,10 +21,6 @@ export const metadata = {
 };
 
 export default function ServicesPage() {
-  const shravanWhatsApp = generateWhatsAppUrl({
-    phoneNumber: "917276484671",
-    type: "GENERAL",
-  });
   const dnyaneshwarWhatsApp = generateWhatsAppUrl({
     phoneNumber: "919850291262",
     type: "GENERAL",
@@ -53,7 +49,7 @@ export default function ServicesPage() {
         "Strict adherence to municipal setback norms and local building codes",
         "High-strength Damp Proof Course (DPC) and waterproofing barrier",
         "Concealed copper electrical circuits with circuit breakers",
-        "Durable, cost-effective Indian construction market rates",
+        "Durable, seismic-compliant structural civil execution",
       ],
       suitable: "Independent plot owners building G+1 or G+2 residential houses",
       image:
@@ -133,7 +129,7 @@ export default function ServicesPage() {
               Our Construction Services
             </h1>
             <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-              Comprehensive turnkey building development and structural civil contracting. Built with certified materials, transparent itemized BOQ contracts, and dedicated proprietor supervision.
+              Comprehensive turnkey building development and structural civil contracting. Built with certified materials, chartered structural designs, and dedicated owner supervision.
             </p>
           </div>
         </div>
@@ -146,7 +142,7 @@ export default function ServicesPage() {
             Bungalows, Villas &amp; Independent Houses
           </h2>
           <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-            From foundation excavation to architectural handover, we build private homes with unyielding structural integrity, quality materials, and transparent billing.
+            From foundation excavation to architectural handover, we build private homes with unyielding structural integrity, quality materials, and certified craftsmanship.
           </p>
         </div>
 

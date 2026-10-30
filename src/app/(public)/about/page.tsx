@@ -1,32 +1,26 @@
 import React from "react";
 import {
   ShieldCheck,
-  HardHat,
   Building2,
-  Users2,
-  Target,
   CheckCircle2,
-  Award,
   Phone,
   MessageSquare,
-  Scale,
+  Award,
+  Clock,
+  MapPin,
+  Hammer,
 } from "lucide-react";
 import Link from "next/link";
 import { generateWhatsAppUrl } from "@/lib/whatsapp/url";
-import VisitingCardShowcase from "@/components/public/VisitingCardShowcase";
 
 export const metadata = {
   title: "About Us | Shree Samarth Krupa Enterprises",
   description:
-    "Learn about Shree Samarth Krupa Enterprises — founded and managed by Dnyaneshwar Pawale and Shravan Pawale. Premier builders, developers, and turnkey general contractors in Maharashtra.",
+    "Learn about Shree Samarth Krupa Enterprises — founded and managed by Dnyaneshwar Pawale. Premier builders, developers, and turnkey general contractors in Maharashtra.",
 };
 
 export default function AboutPage() {
-  const shravanWhatsApp = generateWhatsAppUrl({
-    phoneNumber: "917276484671",
-    type: "GENERAL",
-  });
-  const dnyaneshwarWhatsApp = generateWhatsAppUrl({
+  const ownerWhatsApp = generateWhatsAppUrl({
     phoneNumber: "919850291262",
     type: "GENERAL",
   });
@@ -47,203 +41,162 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Official Business Card & Identity Section */}
-      <section className="py-12 bg-surface border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-2xl p-6 sm:p-8 border border-gray-200 shadow-sm flex flex-col lg:flex-row items-center gap-8 justify-between">
-            <div className="space-y-3 max-w-xl text-left">
-              <h2 className="text-2xl font-extrabold text-navy-950">
-                Official Business Credentials &amp; Visiting Card
-              </h2>
-              <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-                Operating under the name of <strong>SHREE SAMARTH KRUPA ENTERPRISES</strong>, our firm provides complete turnkey civil construction, residential bungalows, villas, row houses, and commercial complexes with structural precision and personal proprietor supervision.
-              </p>
-            </div>
+      {/* Founder & Owner Spotlight (Exclusively Dnyaneshwar Pawale) */}
+      <section className="py-16 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          {/* Owner Profile Card */}
+          <div className="lg:col-span-5 text-left">
+            <div className="bg-white rounded-3xl border border-gray-200 overflow-hidden shadow-xl">
+              <div className="relative h-72 sm:h-80 w-full bg-navy-950 overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1541888946425-d0fbb1861564?auto=format&fit=crop&w=800&q=80"
+                  alt="Dnyaneshwar Pawale on-site supervision"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/20 to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4 text-white">
+                  <span className="text-[10px] font-extrabold uppercase tracking-wider text-construction-400 bg-navy-900/90 px-2.5 py-1 rounded-md border border-white/10">
+                    Founder &amp; Principal Proprietor
+                  </span>
+                  <h2 className="text-2xl font-extrabold mt-1">Dnyaneshwar Pawale</h2>
+                  <p className="text-xs text-gray-300">15+ Years Civil Contracting Mastery</p>
+                </div>
+              </div>
 
-            {/* Business Card Interactive Display */}
-            <div className="w-full lg:w-auto max-w-lg">
-              <VisitingCardShowcase />
+              <div className="p-6 space-y-4">
+                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                  Leading every project from the ground up, Dnyaneshwar Pawale maintains personal daily presence across foundation excavation, steel rebar tying, concrete pouring, and final architectural handover.
+                </p>
+
+                <div className="pt-2 flex flex-col gap-2.5">
+                  <a
+                    href="tel:+919850291262"
+                    className="w-full inline-flex items-center justify-center px-4 py-3 rounded-xl text-xs font-bold text-white bg-navy-950 hover:bg-navy-900 transition shadow-sm"
+                  >
+                    <Phone className="w-4 h-4 mr-2 text-construction-400" />
+                    Call Directly: +91 98502 91262
+                  </a>
+
+                  <a
+                    href={ownerWhatsApp}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full inline-flex items-center justify-center px-4 py-3 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 transition shadow-sm"
+                  >
+                    <MessageSquare className="w-4 h-4 mr-2" />
+                    Chat on WhatsApp
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Introduction & Story */}
-      <section className="py-16 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6 text-left">
+          {/* Company Background & Philosophy */}
+          <div className="lg:col-span-7 space-y-6 text-left">
             <h2 className="text-3xl font-extrabold text-navy-950 tracking-tight">
-              Honest Engineering With Direct Proprietor Accountability
+              Honest Engineering With Direct Owner Accountability
             </h2>
             <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-              Founded by Dnyaneshwar Pawale and Shravan Pawale, <strong>Shree Samarth Krupa Enterprises</strong> provides complete turnkey civil construction services. We eliminate the frustration of dealing with unaccountable subcontractors by maintaining 100% direct proprietor oversight on every foundation, column, slab casting, and finishing stage.
+              Founded and directly led by <strong>Dnyaneshwar Pawale</strong>, <strong>Shree Samarth Krupa Enterprises</strong> provides complete turnkey civil construction and real estate development. We eliminate the common industry frustrations of unaccountable sub-contractors by providing 100% direct owner oversight on every foundation, column, slab casting, and finishing stage.
             </p>
             <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-              Whether building an independent family bungalow, row house, or commercial retail premises, our proprietors personally inspect the site daily, ensuring certified materials, transparent BOQ pricing, and punctual handover.
+              Whether constructing an independent family bungalow, custom residential villa, row houses, or multi-tenant commercial complex, our owner personally verifies structural levels, cube test certifications, and verified building materials daily.
             </p>
 
-            <div className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
               <div className="p-4 rounded-xl bg-surface border border-gray-200">
-                <p className="text-xs font-bold text-navy-950 uppercase tracking-wide">Direct Site Supervision</p>
-                <p className="text-xs text-gray-600 mt-1">Daily on-site contractor coordination and quality checks by founders.</p>
+                <p className="text-xs font-bold text-navy-950 uppercase tracking-wide">Daily On-Site Inspection</p>
+                <p className="text-xs text-gray-600 mt-1">Direct level checking, rebar spacing verification, and concrete hydration monitoring.</p>
               </div>
               <div className="p-4 rounded-xl bg-surface border border-gray-200">
                 <p className="text-xs font-bold text-navy-950 uppercase tracking-wide">Verified Material Standards</p>
-                <p className="text-xs text-gray-600 mt-1">Grade 53 OPC cement, Fe-550D TMT steel, and tested concrete mix ratios.</p>
+                <p className="text-xs text-gray-600 mt-1">Grade 53 OPC cement, tested Fe-550D TMT steel, and certified structural designs.</p>
               </div>
-            </div>
-          </div>
-
-          <div className="relative">
-            <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-200">
-              <img
-                src="https://images.unsplash.com/photo-1541888946425-d0fbb1861564?auto=format&fit=crop&w=1000&q=80"
-                alt="Construction execution and site supervision"
-                className="w-full h-[420px] object-cover"
-              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Proprietary Leadership Profiles */}
+      {/* Core Engineering Values with Real Visuals */}
       <section className="py-16 sm:py-20 bg-surface border-y border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16 space-y-2">
             <h2 className="text-3xl font-extrabold text-navy-950">
-              Proprietors &amp; Management
+              Our Core Construction Principles
             </h2>
             <p className="text-gray-600 text-sm">
-              Hands-on founders directly managing civil contracting and on-site construction quality.
+              Built on decades of practical civil engineering rigor across residential and commercial developments.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {/* Dnyaneshwar Pawale Card */}
-            <div className="bg-white rounded-2xl p-6 sm:p-8 border border-gray-200 shadow-sm flex flex-col justify-between space-y-6 text-left">
-              <div className="space-y-4">
-                <div className="flex items-center space-x-4">
-                  <div className="w-16 h-16 rounded-2xl bg-navy-900 text-construction-400 font-bold text-xl flex items-center justify-center shrink-0 border border-navy-700 shadow-md">
-                    DP
-                  </div>
-                  <div>
-                    <span className="text-xs font-bold text-construction-600 uppercase tracking-wider block">
-                      Proprietor
-                    </span>
-                    <h3 className="text-xl font-extrabold text-navy-950">
-                      Dnyaneshwar Pawale
-                    </h3>
-                    <p className="text-xs text-gray-500 font-medium">
-                      Civil Contracts &amp; Operations Lead
-                    </p>
-                  </div>
-                </div>
-
-                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-                  With deep experience in regional construction, land development, and vendor relationships, Dnyaneshwar Pawale leads client contracts, quality standards, and structural execution.
-                </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 text-left">
+            <div className="rounded-2xl bg-white border border-gray-200 overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col group">
+              <div className="h-44 w-full bg-navy-950 overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80"
+                  alt="Engineering Integrity"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
               </div>
-
-              <div className="pt-4 border-t border-gray-100 flex items-center justify-between">
-                <a
-                  href="tel:+919850291262"
-                  className="inline-flex items-center text-xs font-bold text-navy-950 hover:text-construction-600 transition"
-                >
-                  <Phone className="w-4 h-4 mr-1.5 text-construction-500" />
-                  +91 98502 91262
-                </a>
-                <a
-                  href={dnyaneshwarWhatsApp}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1.5 rounded-lg hover:bg-emerald-100 transition"
-                >
-                  <MessageSquare className="w-3.5 h-3.5 mr-1 text-emerald-600" />
-                  WhatsApp
-                </a>
+              <div className="p-6 space-y-2 flex-1">
+                <h3 className="text-lg font-bold text-navy-950">Structural Integrity</h3>
+                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                  Zero compromises on structural steel grades (Fe-550D), cement hydration, and adequate curing periods for maximum building longevity.
+                </p>
               </div>
             </div>
 
-            {/* Shravan Pawale Card */}
-            <div className="bg-white rounded-2xl p-6 sm:p-8 border border-gray-200 shadow-sm flex flex-col justify-between space-y-6 text-left">
-              <div className="space-y-4">
-                <div className="flex items-center space-x-4">
-                  <div className="w-16 h-16 rounded-2xl bg-navy-900 text-amber-300 font-bold text-xl flex items-center justify-center shrink-0 border border-navy-700 shadow-md">
-                    SP
-                  </div>
-                  <div>
-                    <span className="text-xs font-bold text-construction-600 uppercase tracking-wider block">
-                      Proprietor
-                    </span>
-                    <h3 className="text-xl font-extrabold text-navy-950">
-                      Shravan Pawale
-                    </h3>
-                    <p className="text-xs text-gray-500 font-medium">
-                      Project Management &amp; Civil Site Operations
-                    </p>
-                  </div>
-                </div>
-
+            <div className="rounded-2xl bg-white border border-gray-200 overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col group">
+              <div className="h-44 w-full bg-navy-950 overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80"
+                  alt="Architectural Detailing"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-6 space-y-2 flex-1">
+                <h3 className="text-lg font-bold text-navy-950">Architectural Detailing</h3>
                 <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-                  Overseeing on-site engineering execution, contractor coordination, quality compliance, and timely milestone completion on every residential and commercial project.
+                  Every beam, column alignment, conduit chase, and tile junction is planned and executed to the highest standard of modern craftsmanship.
                 </p>
               </div>
+            </div>
 
-              <div className="pt-4 border-t border-gray-100 flex items-center justify-between">
-                <a
-                  href="tel:+917276484671"
-                  className="inline-flex items-center text-xs font-bold text-navy-950 hover:text-construction-600 transition"
-                >
-                  <Phone className="w-4 h-4 mr-1.5 text-construction-500" />
-                  +91 72764 84671
-                </a>
-                <a
-                  href={shravanWhatsApp}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1.5 rounded-lg hover:bg-emerald-100 transition"
-                >
-                  <MessageSquare className="w-3.5 h-3.5 mr-1 text-emerald-600" />
-                  WhatsApp
-                </a>
+            <div className="rounded-2xl bg-white border border-gray-200 overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col group">
+              <div className="h-44 w-full bg-navy-950 overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1541888946425-d0fbb1861564?auto=format&fit=crop&w=600&q=80"
+                  alt="Direct Owner Accountability"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-6 space-y-2 flex-1">
+                <h3 className="text-lg font-bold text-navy-950">Direct Owner Presence</h3>
+                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                  You interact directly with founder Dnyaneshwar Pawale. No middle-men, no contractor confusion, and clear technical communication at all times.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Core Values */}
-      <section className="py-16 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 text-left">
-          <div className="p-6 sm:p-8 rounded-2xl bg-white border border-gray-200 shadow-sm space-y-3">
-            <div className="w-12 h-12 rounded-xl bg-construction-50 text-construction-600 flex items-center justify-center">
-              <Target className="w-6 h-6" />
-            </div>
-            <h3 className="text-lg font-bold text-navy-950">Engineering Integrity</h3>
-            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-              Zero compromises on structural steel grades (Fe-550D), cement ratios, and adequate curing periods for maximum building lifespan.
-            </p>
-          </div>
-
-          <div className="p-6 sm:p-8 rounded-2xl bg-white border border-gray-200 shadow-sm space-y-3">
-            <div className="w-12 h-12 rounded-xl bg-navy-50 text-navy-700 flex items-center justify-center">
-              <Scale className="w-6 h-6" />
-            </div>
-            <h3 className="text-lg font-bold text-navy-950">Transparent Fixed BOQ</h3>
-            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-              Every item, brand of cement, rebar size, and tile specification is written in the contract upfront with zero hidden surprise extras.
-            </p>
-          </div>
-
-          <div className="p-6 sm:p-8 rounded-2xl bg-white border border-gray-200 shadow-sm space-y-3">
-            <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
-              <ShieldCheck className="w-6 h-6" />
-            </div>
-            <h3 className="text-lg font-bold text-navy-950">Direct Accountability</h3>
-            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-              You talk directly with the owners — no middlemen, no sub-contractor markups, and complete clarity at every stage of construction.
-            </p>
-          </div>
+      {/* Explore Portfolio CTA */}
+      <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+        <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-950">
+          Explore Our Completed &amp; Ongoing Projects
+        </h2>
+        <p className="text-gray-600 text-sm max-w-xl mx-auto leading-relaxed">
+          Discover verified case studies, structural metrics, and photographs of our residential villas and commercial complexes.
+        </p>
+        <div className="pt-2">
+          <Link
+            href="/projects"
+            className="inline-flex items-center px-6 py-3.5 rounded-xl text-sm font-bold text-white bg-construction-500 hover:bg-construction-600 transition shadow-md"
+          >
+            <Building2 className="w-4 h-4 mr-2" />
+            View Project Portfolio
+          </Link>
         </div>
       </section>
     </div>

@@ -10,24 +10,24 @@ export default function TestimonialsAndFaq() {
 
   const faqs = [
     {
-      q: "How are construction rates calculated and are there price escalations?",
-      a: "Our construction contracts are backed by a detailed Bill of Quantities (BOQ). We lock in unit rates for civil, structural, finishing, and plumbing based on your approved specifications. Prices remain fixed for the agreed scope, with no unexpected escalations.",
+      q: "What types of construction projects does Shree Samarth Krupa Enterprises undertake?",
+      a: "We specialize in turnkey residential construction (custom luxury bungalows, villas, independent row houses), commercial complexes, retail showrooms, and specialized structural civil contracting across Maharashtra.",
     },
     {
-      q: "What is your construction payment schedule?",
-      a: "We do not charge heavy advance deposits. Payments are linked strictly to verified physical milestones: Foundation casting, Ground and upper slab casting, Brick masonry & plastering, and Final finishing handover.",
+      q: "How are project milestones and execution schedules structured?",
+      a: "Every project is executed in transparent structural phases: geotechnical site testing, foundation casting, RCC column-beam framing, slab casting, masonry, and architectural handover. Founder Dnyaneshwar Pawale personally verifies each stage before progressing.",
     },
     {
-      q: "Do you assist with architectural plans and municipal approvals?",
-      a: "Yes. Our turnkey contracting service coordinates architectural drafting, 3D elevation designs, structural engineer certifications, and municipal sanction drawings required for building permissions.",
+      q: "Do you assist with architectural blueprints and municipal sanctions?",
+      a: "Yes. Our turnkey services coordinate architectural drafting, 3D elevation designs, structural engineer load certifications, and municipal sanction drawings required for building permissions.",
     },
     {
-      q: "Can clients inspect materials and quality tests on-site?",
-      a: "Yes, clients are welcome on-site at all stages. We provide cube-strength concrete test reports, steel manufacturer test certificates, and maintain complete transparency regarding cement and reinforcement grades.",
+      q: "Can clients inspect materials and certified quality tests on-site?",
+      a: "Yes, clients are always welcome on-site. We provide concrete cube-strength test reports, steel manufacturer test certificates (Fe-550D TMT), and maintain complete transparency regarding cement and reinforcement grades.",
     },
     {
       q: "Who supervises the daily construction work on site?",
-      a: "Proprietors Dnyaneshwar Pawale and Shravan Pawale oversee daily operations, material delivery, reinforcement alignment, and contractor execution personally across our project sites.",
+      a: "Founder and proprietor Dnyaneshwar Pawale oversees daily operations, material delivery, rebar tying, concrete vibration, and finishing craftsmanship personally across every project site.",
     },
   ];
 
@@ -39,7 +39,7 @@ export default function TestimonialsAndFaq() {
             Frequently Asked Questions
           </h2>
           <p className="text-gray-600 text-sm max-w-xl mx-auto">
-            Clear, transparent answers about our construction contracts, payment milestones, material standards, and on-site supervision.
+            Clear information about our construction capabilities, material standards, and on-site owner supervision.
           </p>
         </div>
 
@@ -68,6 +68,7 @@ export default function TestimonialsAndFaq() {
                     }`}
                   />
                 </button>
+
                 {isOpen && (
                   <div className="px-4 pb-5 sm:px-5 sm:pb-6 text-xs sm:text-sm text-gray-600 leading-relaxed border-t border-gray-100 pt-3">
                     {faq.a}
@@ -81,18 +82,18 @@ export default function TestimonialsAndFaq() {
         {/* Direct Consultation prompt */}
         <div className="bg-white rounded-2xl p-6 border border-gray-200 text-center space-y-3 shadow-xs">
           <h3 className="text-base font-bold text-navy-950">
-            Have questions regarding your specific plot or blueprint?
+            Have questions regarding your plot or architectural design?
           </h3>
           <p className="text-xs sm:text-sm text-gray-600 max-w-md mx-auto">
-            Discuss your requirements directly with our proprietors for practical guidance and estimates.
+            Discuss your requirements directly with founder Dnyaneshwar Pawale for practical technical guidance.
           </p>
           <div className="pt-2 flex flex-wrap justify-center items-center gap-3">
             <a
-              href="tel:+917276484671"
+              href="tel:+919850291262"
               className="inline-flex items-center px-4 py-2.5 rounded-xl text-xs font-bold text-white bg-navy-950 hover:bg-navy-900 transition"
             >
               <Phone className="w-3.5 h-3.5 mr-2 text-construction-400" />
-              Call Shravan Pawale
+              Call Dnyaneshwar Pawale (+91 98502 91262)
             </a>
             <a
               href={generalWhatsApp}

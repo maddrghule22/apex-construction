@@ -483,7 +483,7 @@ export const SEED_ENQUIRIES = [
     status: "NEW",
     priority: "HIGH",
     nextFollowUpDate: new Date(Date.now() + 86400000 * 1).toISOString(),
-    notes: "Inbound industrial warehouse lead via WhatsApp. Forwarded to Shravan Pawale for site inspection.",
+    notes: "Inbound industrial warehouse lead via WhatsApp. Forwarded to Dnyaneshwar Pawale for site inspection.",
     createdAt: new Date("2024-07-03T11:20:00Z").toISOString(),
     interactions: [],
   },

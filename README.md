@@ -2,7 +2,7 @@
 
 A production-grade, full-stack web application and operations management platform built for **Shree Samarth Krupa Enterprises**:
 - 🏗️ **Builders & Developers**: Turnkey residential bungalows, villas, independent row houses, and commercial complexes across Maharashtra.
-- 📐 **Direct Proprietor Oversight**: Daily on-site quality control and structural execution by Dnyaneshwar Pawale and Shravan Pawale.
+- 📐 **Direct Proprietor Oversight**: Daily on-site quality control and structural execution by founder Dnyaneshwar Pawale.
 
 ---
 
@@ -13,10 +13,9 @@ A production-grade, full-stack web application and operations management platfor
 
 ---
 
-## 👥 Proprietors & Direct Contact
+## 👥 Proprietor & Direct Contact
 
-- **Senior Proprietor**: Dnyaneshwar Pawale — `+91 98502 91262`
-- **Managing Partner**: Shravan Pawale — `+91 72764 84671`
+- **Founder & Principal Proprietor**: Dnyaneshwar Pawale — `+91 98502 91262`
 - **WhatsApp Support**: Direct click-to-chat integration for site inspection bookings and project consultations.
 
 ---
@@ -64,16 +63,14 @@ DATABASE_URL="postgresql://postgres:postgres@localhost:5432/construction_db?sche
 
 JWT_SECRET="dev-super-secure-jwt-secret-construction-platform-2025"
 
-INITIAL_OWNER_EMAIL="shravanpawale@gmail.com"
+INITIAL_OWNER_EMAIL="dnyaneshwarpawale@gmail.com"
 INITIAL_OWNER_PASSWORD="OwnerSecurePassword2025!"
-INITIAL_OWNER_NAME="Shravan Pawale"
+INITIAL_OWNER_NAME="Dnyaneshwar Pawale"
 
-NEXT_PUBLIC_COMPANY_NAME="Sree Samarth Krupa Enterprises"
-NEXT_PUBLIC_COMPANY_PHONE="+91 72764 84671"
-NEXT_PUBLIC_COMPANY_SECONDARY_PHONE="+91 98502 91262"
-NEXT_PUBLIC_COMPANY_EMAIL="contact@sreesamarthkrupa.com"
-NEXT_PUBLIC_WHATSAPP_NUMBER="917276484671"
-NEXT_PUBLIC_CURRENCY_SYMBOL="₹"
+NEXT_PUBLIC_COMPANY_NAME="Shree Samarth Krupa Enterprises"
+NEXT_PUBLIC_COMPANY_PHONE="+91 98502 91262"
+NEXT_PUBLIC_COMPANY_EMAIL="contact@shreesamarthkrupa.com"
+NEXT_PUBLIC_WHATSAPP_NUMBER="919850291262"
 ```
 
 ### Step 4: Initialize the Database
@@ -101,11 +98,11 @@ Open **[http://localhost:3000](http://localhost:3000)** in your browser.
   - Commercial Complexes & Showrooms.
   - Civil & Structural Engineering (RCC, waterproofing, renovation).
 - **Projects Portfolio (`/projects`)**: Filterable project gallery with verified case studies and detailed metrics.
-- **Contact Us (`/contact`)**: Form with direct WhatsApp dispatch to both proprietors and click-to-call hotlines.
+- **Contact Us (`/contact`)**: Form with direct WhatsApp dispatch to founder Dnyaneshwar Pawale and click-to-call hotline.
 
 ### B. Secure Owner Portal
 - **Login (`/login`)**: Secure authentication for company management.
-  - Default Owner Email: `shravanpawale@gmail.com`
+  - Default Owner Email: `dnyaneshwarpawale@gmail.com`
   - Default Owner Password: `OwnerSecurePassword2025!`
 - **Overview Dashboard (`/dashboard`)**: Budgets vs actual expenses, project progress, and recent enquiry activity.
 - **Leads & Enquiries (`/dashboard/enquiries`)**: Track incoming leads, convert inquiries into projects, export CSV.

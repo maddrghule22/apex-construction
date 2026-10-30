@@ -5,7 +5,7 @@ import { getPublicProjects } from "@/server/repositories/projectRepository";
 
 export default async function FeaturedProjects() {
   const projects = await getPublicProjects();
-  const featured = projects.slice(0, 3);
+  const featured = projects.slice(0, 6);
 
   return (
     <section className="py-20 bg-white">

@@ -26,7 +26,7 @@ export default function Footer() {
             <BrandLogo variant="light" />
 
             <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">
-              Premier civil construction firm delivering turnkey residential bungalows, modern villas, independent row houses, and commercial complexes with 15+ years of engineering rigor and transparent fixed BOQ contracts.
+              Premier civil construction firm delivering turnkey residential bungalows, modern villas, independent row houses, and commercial complexes with 15+ years of engineering rigor and dedicated structural craftsmanship.
             </p>
 
             <div className="pt-2">
@@ -75,7 +75,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/contact" className="hover:text-construction-400 transition font-bold text-construction-400 inline-block pt-1">
-                  Request Free Site Consultation & Quote →
+                  Request Free Site Consultation →
                 </Link>
               </li>
             </ul>
@@ -118,35 +118,24 @@ export default function Footer() {
           {/* Direct Contact Info */}
           <div className="space-y-3.5">
             <h4 className="text-white font-bold text-sm mb-4 tracking-wide uppercase">
-              Proprietors &amp; Contact
+              Owner &amp; Direct Contact
             </h4>
             
-            <div className="p-3 rounded-xl bg-navy-900 border border-navy-800 space-y-1.5">
-              <span className="text-[11px] font-bold text-construction-400 block uppercase">
-                Proprietor
+            <div className="p-3.5 rounded-xl bg-navy-900 border border-navy-800 space-y-2">
+              <span className="text-[11px] font-bold text-construction-400 block uppercase tracking-wider">
+                Founder &amp; Principal Proprietor
               </span>
-              <p className="text-xs font-bold text-white">Dnyaneshwar Pawale</p>
+              <p className="text-sm font-bold text-white">Dnyaneshwar Pawale</p>
               <a
                 href="tel:+919850291262"
-                className="text-xs text-gray-300 hover:text-construction-400 flex items-center font-semibold"
+                className="text-xs text-construction-400 hover:text-construction-300 flex items-center font-bold"
               >
                 <Phone className="w-3.5 h-3.5 mr-1.5 text-construction-500" />
                 +91 98502 91262
               </a>
-            </div>
-
-            <div className="p-3 rounded-xl bg-navy-900 border border-navy-800 space-y-1.5">
-              <span className="text-[11px] font-bold text-construction-400 block uppercase">
-                Proprietor
-              </span>
-              <p className="text-xs font-bold text-white">Shravan Pawale</p>
-              <a
-                href="tel:+917276484671"
-                className="text-xs text-gray-300 hover:text-construction-400 flex items-center font-semibold"
-              >
-                <Phone className="w-3.5 h-3.5 mr-1.5 text-construction-500" />
-                +91 72764 84671
-              </a>
+              <p className="text-[11px] text-gray-400">
+                Direct on-site quality inspection &amp; architectural execution.
+              </p>
             </div>
 
             <div className="flex items-center space-x-2 text-xs text-gray-400 pt-1">
