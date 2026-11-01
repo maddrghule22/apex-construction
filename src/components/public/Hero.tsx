@@ -39,21 +39,24 @@ export default function Hero() {
           {/* Left Column: Clear Value Proposition (7 cols) */}
           <div className="lg:col-span-7 space-y-5 sm:space-y-6 text-left">
             <div className="space-y-2 sm:space-y-3">
-              <p className="text-[11px] sm:text-xs md:text-sm font-bold uppercase tracking-wider text-construction-400">
+              <p className="text-[11px] sm:text-xs md:text-sm font-bold uppercase tracking-wider text-construction-400 animate-fade-in-up">
                 Shree Samarth Krupa Enterprises • General Contractors &amp; Developers
               </p>
-              <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight break-words">
+              <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight break-words animate-fade-in-up [animation-delay:150ms]">
                 Turnkey Residential &amp; Commercial Construction
               </h1>
             </div>
 
-            <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed max-w-2xl">
+            <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed max-w-2xl animate-fade-in-up [animation-delay:300ms]">
               From foundation excavation to final structural finishing. We build custom residential bungalows, modern villas, independent row houses, and commercial premises across Maharashtra with certified materials, chartered structural designs, and daily proprietor supervision.
             </p>
 
             {/* Direct Owner Spotlight Hotline */}
-            <div className="max-w-md pt-1">
-              <div className="p-3.5 sm:p-4 rounded-2xl bg-navy-900/90 border border-navy-800 flex flex-wrap xs:flex-nowrap items-center justify-between gap-3 shadow-lg">
+            <div className="max-w-md pt-1 animate-fade-in-up [animation-delay:450ms]">
+              <div
+                className="p-3.5 sm:p-4 rounded-2xl bg-navy-900/90 border border-navy-800 flex flex-wrap xs:flex-nowrap items-center justify-between gap-3 shadow-lg hover:border-construction-500/50 transition-colors"
+                style={{ backgroundColor: "rgba(13, 27, 42, 0.95)" }}
+              >
                 <div className="space-y-0.5 min-w-0">
                   <div className="flex items-center space-x-1.5">
                     <span className="text-[10px] text-construction-400 uppercase font-extrabold tracking-wider block">
@@ -77,7 +80,7 @@ export default function Hero() {
                     href={ownerWhatsApp}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 sm:px-3 sm:py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold flex items-center gap-1.5 shadow-sm transition"
+                    className="p-2 sm:px-3 sm:py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold flex items-center gap-1.5 shadow-sm transition transform hover:-translate-y-0.5 active:translate-y-0"
                     title="WhatsApp Dnyaneshwar Pawale"
                   >
                     <WhatsAppIcon className="w-3.5 h-3.5" />
@@ -85,7 +88,7 @@ export default function Hero() {
                   </a>
                   <a
                     href="tel:+919850291262"
-                    className="p-2 sm:px-3 sm:py-2 rounded-xl bg-construction-500 hover:bg-construction-600 text-white text-xs font-bold flex items-center gap-1.5 shadow-sm transition"
+                    className="p-2 sm:px-3 sm:py-2 rounded-xl bg-construction-500 hover:bg-construction-600 text-white text-xs font-bold flex items-center gap-1.5 shadow-sm transition transform hover:-translate-y-0.5 active:translate-y-0"
                     title="Direct Call"
                   >
                     <Phone className="w-3.5 h-3.5" />
@@ -96,10 +99,10 @@ export default function Hero() {
             </div>
 
             {/* Responsive Actions */}
-            <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3">
+            <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3 animate-fade-in-up [animation-delay:600ms]">
               <Link
                 href="/projects"
-                className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl text-sm font-bold text-white bg-construction-500 hover:bg-construction-600 shadow-md shadow-construction-500/20 transition active:scale-95 text-center"
+                className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl text-sm font-bold text-white bg-construction-500 hover:bg-construction-600 shadow-md shadow-construction-500/20 transition transform hover:-translate-y-0.5 active:scale-95 text-center"
               >
                 <Building2 className="w-4 h-4 mr-2" />
                 Explore Our Work
@@ -107,7 +110,7 @@ export default function Hero() {
 
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl text-sm font-bold text-white bg-navy-900 hover:bg-navy-850 hover:text-white border border-navy-700 transition active:scale-95 text-center shadow-sm"
+                className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl text-sm font-bold text-white bg-navy-900 hover:bg-navy-850 hover:text-white border border-navy-700 transition transform hover:-translate-y-0.5 active:scale-95 text-center shadow-sm"
                 style={{ backgroundColor: "#0D1B2A" }}
               >
                 <span>Contact Us</span>
@@ -116,7 +119,7 @@ export default function Hero() {
             </div>
 
             {/* Core Commitments */}
-            <div className="pt-5 grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 border-t border-navy-800/80 text-[11px] sm:text-xs text-gray-300">
+            <div className="pt-5 grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 border-t border-navy-800/80 text-[11px] sm:text-xs text-gray-300 animate-fade-in-up [animation-delay:750ms]">
               <div className="flex items-center space-x-1.5 sm:space-x-2">
                 <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-400 shrink-0" />
                 <span>Turnkey Delivery</span>
@@ -137,9 +140,24 @@ export default function Hero() {
           </div>
 
           {/* Right Column: Scalable Project Showcase (5 cols) */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end w-full">
+          <div className="lg:col-span-5 flex justify-center lg:justify-end w-full animate-fade-in-up [animation-delay:300ms]">
             <HeroProjectShowcase />
           </div>
+        </div>
+
+        {/* JSW Greentech Style Animated Scroll Indicator */}
+        <div className="mt-8 sm:mt-12 flex flex-col items-center justify-center text-center">
+          <a
+            href="#standards-belt"
+            className="inline-flex flex-col items-center text-[10px] sm:text-xs text-gray-400 hover:text-construction-400 transition group cursor-pointer"
+          >
+            <span className="uppercase tracking-widest font-semibold mb-1.5 opacity-70 group-hover:opacity-100 transition-opacity text-[9.5px]">
+              Explore Engineering Standards
+            </span>
+            <div className="w-5 h-8 sm:w-5.5 sm:h-8.5 rounded-full border-2 border-gray-600 group-hover:border-construction-400 transition-colors flex items-start justify-center p-1">
+              <div className="w-1.5 h-2 rounded-full bg-construction-400 animate-scroll-indicator" />
+            </div>
+          </a>
         </div>
       </div>
     </section>

@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { MapPin, ArrowRight, Layers, ShieldCheck, CheckCircle2, ChevronRight } from "lucide-react";
+import { MapPin, ShieldCheck, CheckCircle2, ChevronRight } from "lucide-react";
 
 interface ProjectPreview {
   id: string;
@@ -58,30 +58,51 @@ const FEATURED_SHOWCASE: ProjectPreview[] = [
 
 export default function HeroProjectShowcase() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
   const current = FEATURED_SHOWCASE[activeIndex];
 
+  // Auto-slide like JSW Greentech banner
+  useEffect(() => {
+    if (isPaused) return;
+    const timer = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % FEATURED_SHOWCASE.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [isPaused, activeIndex]);
+
   return (
-    <div className="w-full max-w-lg lg:max-w-xl mx-auto">
+    <div
+      className="w-full max-w-lg lg:max-w-xl mx-auto"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
       {/* Container with premium card depth */}
       <div
         className="relative rounded-3xl bg-navy-900/95 border border-navy-700/80 p-3 sm:p-4 shadow-2xl backdrop-blur-md overflow-hidden text-left"
         style={{ backgroundColor: "rgba(13, 27, 42, 0.95)" }}
       >
-        {/* Main Project Hero Card */}
+        {/* Main Project Hero Card with Smooth Crossfade */}
         <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-navy-950 group">
-          <img
-            src={current.image}
-            alt={current.title}
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-          />
+          {FEATURED_SHOWCASE.map((proj, idx) => (
+            <img
+              key={proj.id}
+              src={proj.image}
+              alt={proj.title}
+              className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-out group-hover:scale-105 ${
+                idx === activeIndex
+                  ? "opacity-100 scale-100 z-0"
+                  : "opacity-0 scale-95 pointer-events-none -z-10"
+              }`}
+            />
+          ))}
 
           {/* Gradient Overlay for Text Readability */}
-          <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-transparent pointer-events-none" />
 
           {/* Top Status & Category Badges */}
-          <div className="absolute top-3 left-3 right-3 flex items-center justify-between gap-2">
+          <div className="absolute top-3 left-3 right-3 flex items-center justify-between gap-2 z-10">
             <span className="px-3 py-1 rounded-lg text-[11px] font-bold uppercase tracking-wider bg-navy-950/90 text-white backdrop-blur-md border border-slate-700/80 shadow-sm flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-construction-400" />
+              <span className="w-1.5 h-1.5 rounded-full bg-construction-400 animate-pulse" />
               {current.category}
             </span>
             <span className="px-3 py-1 rounded-lg text-[11px] font-bold uppercase tracking-wider bg-emerald-600 text-white shadow-sm flex items-center gap-1.5">
@@ -91,7 +112,7 @@ export default function HeroProjectShowcase() {
           </div>
 
           {/* Bottom Card Information */}
-          <div className="absolute bottom-3 left-3 right-3 space-y-1.5">
+          <div className="absolute bottom-3 left-3 right-3 space-y-1.5 z-10">
             <div className="flex items-center text-xs text-gray-300">
               <MapPin className="w-3.5 h-3.5 mr-1 text-construction-400 shrink-0" />
               <span className="truncate">{current.location}</span>
@@ -105,8 +126,7 @@ export default function HeroProjectShowcase() {
               {current.highlight}
             </p>
 
-            {/* Quick Specs Grid */}
-            <div className="grid grid-cols-2 gap-2 pt-2 text-[11px]">
+            <div className="pt-1 grid grid-cols-2 gap-2 text-xs">
               <div className="bg-navy-900/80 backdrop-blur-md px-2.5 py-1.5 rounded-lg border border-white/10">
                 <span className="text-gray-400 block text-[9px] uppercase tracking-wide">Built-Up Area</span>
                 <span className="font-extrabold text-white">{current.builtUpArea}</span>
@@ -119,26 +139,40 @@ export default function HeroProjectShowcase() {
           </div>
         </div>
 
-        {/* Project Selector Tabs (Scalable Showcase) */}
+        {/* Project Selector Tabs with Animated Progress Timer Bar (JSW Greentech slider style) */}
         <div className="mt-3 grid grid-cols-3 gap-2">
-          {FEATURED_SHOWCASE.map((proj, idx) => (
-            <button
-              key={proj.id}
-              onClick={() => setActiveIndex(idx)}
-              className={`p-2 rounded-xl text-left transition border ${
-                idx === activeIndex
-                  ? "bg-navy-800 border-construction-500 shadow-xs"
-                  : "bg-navy-950/60 border-navy-800 hover:bg-navy-850 hover:border-navy-700 opacity-70 hover:opacity-100"
-              }`}
-            >
-              <span className="text-[10px] text-construction-400 font-bold block truncate">
-                0{idx + 1}. {proj.category}
-              </span>
-              <span className="text-[11px] font-bold text-white block truncate">
-                {proj.title}
-              </span>
-            </button>
-          ))}
+          {FEATURED_SHOWCASE.map((proj, idx) => {
+            const isActive = idx === activeIndex;
+            return (
+              <button
+                key={proj.id}
+                onClick={() => setActiveIndex(idx)}
+                className={`relative p-2 rounded-xl text-left transition-all duration-300 border overflow-hidden cursor-pointer ${
+                  isActive
+                    ? "bg-navy-800 border-construction-500 shadow-sm"
+                    : "bg-navy-950/60 border-navy-800 hover:bg-navy-850 hover:border-navy-700 opacity-70 hover:opacity-100"
+                }`}
+              >
+                <span className="text-[10px] text-construction-400 font-bold block truncate">
+                  0{idx + 1}. {proj.category}
+                </span>
+                <span className="text-[11px] font-bold text-white block truncate">
+                  {proj.title}
+                </span>
+
+                {/* Active Slider Progress Bar */}
+                {isActive && !isPaused && (
+                  <div
+                    key={`timer-${activeIndex}`}
+                    className="absolute bottom-0 left-0 h-0.5 bg-construction-500 animate-progress-timer"
+                  />
+                )}
+                {isActive && isPaused && (
+                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-construction-500" />
+                )}
+              </button>
+            );
+          })}
         </div>
 
         {/* Bottom Direct Link to Project Details */}
@@ -149,10 +183,10 @@ export default function HeroProjectShowcase() {
           </div>
           <Link
             href={`/projects/${current.slug}`}
-            className="inline-flex items-center text-xs font-bold text-construction-400 hover:text-construction-300 transition shrink-0 ml-2"
+            className="inline-flex items-center text-xs font-bold text-construction-400 hover:text-construction-300 transition shrink-0 ml-2 group"
           >
             <span>View Details</span>
-            <ChevronRight className="w-3.5 h-3.5 ml-0.5" />
+            <ChevronRight className="w-3.5 h-3.5 ml-0.5 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
       </div>

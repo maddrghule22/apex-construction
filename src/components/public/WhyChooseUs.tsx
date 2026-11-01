@@ -1,4 +1,5 @@
 import React from "react";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function WhyChooseUs() {
   const points = [
@@ -54,29 +55,28 @@ export default function WhyChooseUs() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {points.map((pt, idx) => (
-            <div
-              key={idx}
-              className="bg-navy-800/80 border border-navy-700/80 rounded-2xl overflow-hidden hover:bg-navy-800 transition flex flex-col group text-left"
-            >
-              <div className="h-40 w-full overflow-hidden relative bg-navy-950">
-                <img
-                  src={pt.image}
-                  alt={pt.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-transparent to-transparent" />
-              </div>
-              <div className="p-6 flex-1 flex flex-col justify-between">
-                <div>
-                  <h3 className="text-base font-bold text-white mb-2 group-hover:text-construction-400 transition">
-                    {pt.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
-                    {pt.desc}
-                  </p>
+            <ScrollReveal key={idx} delayMs={idx * 120} direction="up" className="h-full">
+              <div className="bg-navy-800/80 border border-navy-700/80 rounded-2xl overflow-hidden hover:bg-navy-800 hover:border-construction-500/60 hover:-translate-y-2 hover:shadow-2xl transition-all duration-500 flex flex-col group text-left h-full">
+                <div className="h-40 w-full overflow-hidden relative bg-navy-950">
+                  <img
+                    src={pt.image}
+                    alt={pt.title}
+                    className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out opacity-90"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-transparent to-transparent" />
+                </div>
+                <div className="p-6 flex-1 flex flex-col justify-between">
+                  <div>
+                    <h3 className="text-base font-bold text-white mb-2 group-hover:text-construction-400 transition">
+                      {pt.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                      {pt.desc}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

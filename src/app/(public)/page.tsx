@@ -1,6 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import Hero from "@/components/public/Hero";
+import ScrollBelt from "@/components/public/ScrollBelt";
 import StatsSection from "@/components/public/StatsSection";
 import ServicesGrid from "@/components/public/ServicesGrid";
 import FeaturedProjects from "@/components/public/FeaturedProjects";
@@ -22,6 +23,11 @@ export default function HomePage() {
     <div>
       {/* Hero Section */}
       <Hero />
+
+      {/* JSW Greentech Style Continuous Scrolling Belt ("scroll-belt anim") */}
+      <div id="standards-belt">
+        <ScrollBelt />
+      </div>
 
       {/* Verified Construction Highlights with Real Images */}
       <StatsSection />

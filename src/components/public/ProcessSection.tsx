@@ -1,4 +1,5 @@
 import React from "react";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function ProcessSection() {
   const steps = [
@@ -60,38 +61,37 @@ export default function ProcessSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {steps.map((step, idx) => (
-            <div
-              key={idx}
-              className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-xs relative group hover:shadow-xl transition-all duration-300 flex flex-col text-left"
-            >
-              {/* Construction Step Real Image replacing SVG icon */}
-              <div className="relative h-48 w-full bg-navy-950 overflow-hidden">
-                <img
-                  src={step.image}
-                  alt={step.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-navy-950/20 to-transparent" />
-                <span className="absolute top-3 right-3 text-2xl font-black text-white/90 bg-navy-950/70 px-3 py-1 rounded-xl backdrop-blur-xs border border-white/10">
-                  {step.number}
-                </span>
-                <span className="absolute bottom-3 left-4 text-xs font-bold text-construction-300">
-                  Phase {step.number}
-                </span>
-              </div>
+            <ScrollReveal key={idx} delayMs={idx * 120} direction="up" className="h-full">
+              <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-xs relative group hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col text-left h-full">
+                {/* Construction Step Real Image replacing SVG icon */}
+                <div className="relative h-48 w-full bg-navy-950 overflow-hidden">
+                  <img
+                    src={step.image}
+                    alt={step.title}
+                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-108"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-navy-950/20 to-transparent" />
+                  <span className="absolute top-3 right-3 text-2xl font-black text-white/90 bg-navy-950/70 px-3 py-1 rounded-xl backdrop-blur-xs border border-white/10">
+                    {step.number}
+                  </span>
+                  <span className="absolute bottom-3 left-4 text-xs font-bold text-construction-300">
+                    Phase {step.number}
+                  </span>
+                </div>
 
-              {/* Content */}
-              <div className="p-6 flex-1 flex flex-col justify-between">
-                <div>
-                  <h3 className="text-lg font-bold text-navy-950 mb-2 group-hover:text-construction-600 transition">
-                    {step.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-                    {step.desc}
-                  </p>
+                {/* Content */}
+                <div className="p-6 flex-1 flex flex-col justify-between">
+                  <div>
+                    <h3 className="text-lg font-bold text-navy-950 mb-2 group-hover:text-construction-600 transition">
+                      {step.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                      {step.desc}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function ServicesGrid() {
   const serviceCategories = [
@@ -101,54 +102,55 @@ export default function ServicesGrid() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {serviceCategories.map((group, idx) => (
-            <div
-              key={idx}
-              className={`bg-white rounded-2xl border-t-4 ${group.accentColor} border-x border-b border-gray-200/80 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group text-left`}
-            >
-              <div>
-                {/* Real Construction Photography replacing SVG icon placeholder */}
-                <div className="relative h-48 w-full bg-navy-950 overflow-hidden">
-                  <img
-                    src={group.image}
-                    alt={group.category}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/20 to-transparent" />
-                  <div className="absolute bottom-3 left-4 right-4 text-white">
-                    <h3 className="text-lg sm:text-xl font-extrabold text-white">{group.category}</h3>
-                    <p className="text-xs text-construction-300 font-medium">{group.tagline}</p>
+            <ScrollReveal key={idx} delayMs={idx * 150} direction="up" className="h-full">
+              <div
+                className={`bg-white rounded-2xl border-t-4 ${group.accentColor} border-x border-b border-gray-200/80 overflow-hidden shadow-xs hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between group text-left h-full`}
+              >
+                <div>
+                  {/* Real Construction Photography replacing SVG icon placeholder */}
+                  <div className="relative h-48 w-full bg-navy-950 overflow-hidden">
+                    <img
+                      src={group.image}
+                      alt={group.category}
+                      className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/20 to-transparent" />
+                    <div className="absolute bottom-3 left-4 right-4 text-white">
+                      <h3 className="text-lg sm:text-xl font-extrabold text-white">{group.category}</h3>
+                      <p className="text-xs text-construction-300 font-medium">{group.tagline}</p>
+                    </div>
+                  </div>
+
+                  <div className="p-6">
+                    <ul className="space-y-3.5 text-left">
+                      {group.items.map((item, itemIdx) => (
+                        <li key={itemIdx} className="flex items-start space-x-3 text-xs sm:text-sm">
+                          <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                          <div>
+                            <strong className="text-charcoal-900 block font-semibold">
+                              {item.title}
+                            </strong>
+                            <span className="text-gray-500 text-xs leading-relaxed">
+                              {item.desc}
+                            </span>
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
 
-                <div className="p-6">
-                  <ul className="space-y-3.5 text-left">
-                    {group.items.map((item, itemIdx) => (
-                      <li key={itemIdx} className="flex items-start space-x-3 text-xs sm:text-sm">
-                        <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                        <div>
-                          <strong className="text-charcoal-900 block font-semibold">
-                            {item.title}
-                          </strong>
-                          <span className="text-gray-500 text-xs leading-relaxed">
-                            {item.desc}
-                          </span>
-                        </div>
-                      </li>
-                    ))}
-                  </ul>
+                <div className="p-6 pt-0 border-t border-gray-100 text-left mt-2">
+                  <Link
+                    href={group.link}
+                    className="inline-flex items-center text-xs font-bold text-navy-900 hover:text-construction-600 transition gap-1 group/link"
+                  >
+                    <span>{group.ctaText}</span>
+                    <ArrowRight className="w-3.5 h-3.5 text-construction-500 shrink-0 group-hover/link:translate-x-1 transition-transform" />
+                  </Link>
                 </div>
               </div>
-
-              <div className="p-6 pt-0 border-t border-gray-100 text-left mt-2">
-                <Link
-                  href={group.link}
-                  className="inline-flex items-center text-xs font-bold text-navy-900 hover:text-construction-600 transition gap-1"
-                >
-                  <span>{group.ctaText}</span>
-                  <ArrowRight className="w-3.5 h-3.5 text-construction-500 shrink-0" />
-                </Link>
-              </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

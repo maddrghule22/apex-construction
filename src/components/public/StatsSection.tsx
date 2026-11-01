@@ -1,4 +1,5 @@
 import React from "react";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function StatsSection() {
   const highlights = [
@@ -41,35 +42,34 @@ export default function StatsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {highlights.map((item, idx) => (
-            <div
-              key={idx}
-              className="bg-white rounded-2xl border border-gray-200/90 overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col group text-left"
-            >
-              {/* Real Construction Image replacing SVG Icon */}
-              <div className="relative h-44 w-full bg-navy-950 overflow-hidden">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy-950/70 via-transparent to-transparent" />
-                <span className="absolute bottom-2.5 left-3 text-[10px] font-extrabold uppercase tracking-wider text-construction-300 bg-navy-950/80 px-2 py-0.5 rounded-md backdrop-blur-xs border border-white/10">
-                  {item.tag}
-                </span>
-              </div>
+            <ScrollReveal key={idx} delayMs={idx * 120} direction="up" className="h-full">
+              <div className="bg-white rounded-2xl border border-gray-200/90 overflow-hidden shadow-xs hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col group text-left h-full">
+                {/* Real Construction Image replacing SVG Icon */}
+                <div className="relative h-44 w-full bg-navy-950 overflow-hidden">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950/70 via-transparent to-transparent" />
+                  <span className="absolute bottom-2.5 left-3 text-[10px] font-extrabold uppercase tracking-wider text-construction-300 bg-navy-950/80 px-2 py-0.5 rounded-md backdrop-blur-xs border border-white/10">
+                    {item.tag}
+                  </span>
+                </div>
 
-              {/* Text Description */}
-              <div className="p-5 flex-1 flex flex-col justify-between space-y-2">
-                <div>
-                  <h3 className="text-base font-bold text-navy-950 group-hover:text-construction-600 transition">
-                    {item.title}
-                  </h3>
-                  <p className="text-xs text-gray-600 leading-relaxed mt-1.5">
-                    {item.description}
-                  </p>
+                {/* Text Description */}
+                <div className="p-5 flex-1 flex flex-col justify-between space-y-2">
+                  <div>
+                    <h3 className="text-base font-bold text-navy-950 group-hover:text-construction-600 transition">
+                      {item.title}
+                    </h3>
+                    <p className="text-xs text-gray-600 leading-relaxed mt-1.5">
+                      {item.description}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

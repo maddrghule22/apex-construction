@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { ChevronDown, HelpCircle, Phone } from "lucide-react";
 import { generateWhatsAppUrl } from "@/lib/whatsapp/url";
 import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function TestimonialsAndFaq() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
@@ -45,69 +46,73 @@ export default function TestimonialsAndFaq() {
         </div>
 
         {/* Accordion FAQ items */}
-        <div className="space-y-3">
-          {faqs.map((faq, idx) => {
-            const isOpen = openFaq === idx;
-            return (
-              <div
-                key={idx}
-                className="bg-white rounded-xl border border-gray-200 shadow-2xs overflow-hidden transition"
-              >
-                <button
-                  type="button"
-                  onClick={() => setOpenFaq(isOpen ? null : idx)}
-                  className="w-full p-4 sm:p-5 text-left flex items-center justify-between text-navy-950 hover:text-construction-600 font-bold text-sm sm:text-base cursor-pointer focus:outline-none"
-                  aria-expanded={isOpen}
+        <ScrollReveal direction="up" delayMs={100}>
+          <div className="space-y-3">
+            {faqs.map((faq, idx) => {
+              const isOpen = openFaq === idx;
+              return (
+                <div
+                  key={idx}
+                  className="bg-white rounded-xl border border-gray-200 shadow-2xs overflow-hidden transition"
                 >
-                  <span className="flex items-center pr-4">
-                    <HelpCircle className="w-4 h-4 mr-2.5 text-construction-500 shrink-0" />
-                    {faq.q}
-                  </span>
-                  <ChevronDown
-                    className={`w-4 h-4 text-gray-400 shrink-0 transition-transform duration-200 ${
-                      isOpen ? "transform rotate-180 text-construction-600" : ""
-                    }`}
-                  />
-                </button>
+                  <button
+                    type="button"
+                    onClick={() => setOpenFaq(isOpen ? null : idx)}
+                    className="w-full p-4 sm:p-5 text-left flex items-center justify-between text-navy-950 hover:text-construction-600 font-bold text-sm sm:text-base cursor-pointer focus:outline-none"
+                    aria-expanded={isOpen}
+                  >
+                    <span className="flex items-center pr-4">
+                      <HelpCircle className="w-4 h-4 mr-2.5 text-construction-500 shrink-0" />
+                      {faq.q}
+                    </span>
+                    <ChevronDown
+                      className={`w-4 h-4 text-gray-400 shrink-0 transition-transform duration-300 ${
+                        isOpen ? "transform rotate-180 text-construction-600" : ""
+                      }`}
+                    />
+                  </button>
 
-                {isOpen && (
-                  <div className="px-4 pb-5 sm:px-5 sm:pb-6 text-xs sm:text-sm text-gray-600 leading-relaxed border-t border-gray-100 pt-3">
-                    {faq.a}
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </div>
+                  {isOpen && (
+                    <div className="px-4 pb-5 sm:px-5 sm:pb-6 text-xs sm:text-sm text-gray-600 leading-relaxed border-t border-gray-100 pt-3">
+                      {faq.a}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </ScrollReveal>
 
         {/* Direct Consultation prompt */}
-        <div className="bg-white rounded-2xl p-6 border border-gray-200 text-center space-y-3 shadow-xs">
-          <h3 className="text-base font-bold text-navy-950">
-            Have questions regarding your plot or architectural design?
-          </h3>
-          <p className="text-xs sm:text-sm text-gray-600 max-w-md mx-auto">
-            Discuss your requirements directly with founder Dnyaneshwar Pawale for practical technical guidance.
-          </p>
-          <div className="pt-2 flex flex-wrap justify-center items-center gap-3">
-            <a
-              href="tel:+919850291262"
-              className="inline-flex items-center px-4 py-2.5 rounded-xl text-xs font-bold text-white bg-navy-950 hover:bg-navy-900 transition shadow-sm"
-              style={{ backgroundColor: "#070E17" }}
-            >
-              <Phone className="w-3.5 h-3.5 mr-2 text-construction-400" />
-              Call Dnyaneshwar Pawale (+91 98502 91262)
-            </a>
-            <a
-              href={generalWhatsApp}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-4 py-2.5 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 transition gap-2 shadow-sm"
-            >
-              <WhatsAppIcon className="w-4 h-4" />
-              <span>WhatsApp Consultation</span>
-            </a>
+        <ScrollReveal direction="up" delayMs={200}>
+          <div className="bg-white rounded-2xl p-6 border border-gray-200 text-center space-y-3 shadow-xs">
+            <h3 className="text-base font-bold text-navy-950">
+              Have questions regarding your plot or architectural design?
+            </h3>
+            <p className="text-xs sm:text-sm text-gray-600 max-w-md mx-auto">
+              Discuss your requirements directly with founder Dnyaneshwar Pawale for practical technical guidance.
+            </p>
+            <div className="pt-2 flex flex-wrap justify-center items-center gap-3">
+              <a
+                href="tel:+919850291262"
+                className="inline-flex items-center px-4 py-2.5 rounded-xl text-xs font-bold text-white bg-navy-950 hover:bg-navy-900 transition shadow-sm transform hover:-translate-y-0.5"
+                style={{ backgroundColor: "#070E17" }}
+              >
+                <Phone className="w-3.5 h-3.5 mr-2 text-construction-400" />
+                Call Dnyaneshwar Pawale (+91 98502 91262)
+              </a>
+              <a
+                href={generalWhatsApp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-4 py-2.5 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 transition gap-2 shadow-sm transform hover:-translate-y-0.5"
+              >
+                <WhatsAppIcon className="w-4 h-4" />
+                <span>WhatsApp Consultation</span>
+              </a>
+            </div>
           </div>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );
