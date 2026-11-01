@@ -11,7 +11,10 @@ export default function WhatsAppBanner() {
   });
 
   return (
-    <section className="bg-gradient-to-r from-navy-950 via-navy-900 to-navy-950 text-white py-12 sm:py-16 border-y border-navy-800">
+    <section
+      className="bg-gradient-to-r from-navy-950 via-navy-900 to-navy-950 text-white py-12 sm:py-16 border-y border-navy-800"
+      style={{ backgroundColor: "#070E17" }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white/5 backdrop-blur-md rounded-3xl p-6 sm:p-10 border border-white/10 flex flex-col lg:flex-row items-center justify-between gap-8 shadow-xl">
           <div className="space-y-3 text-center lg:text-left max-w-2xl">

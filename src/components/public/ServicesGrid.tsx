@@ -142,10 +142,10 @@ export default function ServicesGrid() {
               <div className="p-6 pt-0 border-t border-gray-100 text-left mt-2">
                 <Link
                   href={group.link}
-                  className="inline-flex items-center text-xs font-bold text-navy-900 hover:text-construction-600 transition"
+                  className="inline-flex items-center text-xs font-bold text-navy-900 hover:text-construction-600 transition gap-1"
                 >
                   <span>{group.ctaText}</span>
-                  <ArrowRight className="w-3.5 h-3.5 ml-1 text-construction-500" />
+                  <ArrowRight className="w-3.5 h-3.5 text-construction-500 shrink-0" />
                 </Link>
               </div>
             </div>

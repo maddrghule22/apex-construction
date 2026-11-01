@@ -91,7 +91,8 @@ export default function TestimonialsAndFaq() {
           <div className="pt-2 flex flex-wrap justify-center items-center gap-3">
             <a
               href="tel:+919850291262"
-              className="inline-flex items-center px-4 py-2.5 rounded-xl text-xs font-bold text-white bg-navy-950 hover:bg-navy-900 transition"
+              className="inline-flex items-center px-4 py-2.5 rounded-xl text-xs font-bold text-white bg-navy-950 hover:bg-navy-900 transition shadow-sm"
+              style={{ backgroundColor: "#070E17" }}
             >
               <Phone className="w-3.5 h-3.5 mr-2 text-construction-400" />
               Call Dnyaneshwar Pawale (+91 98502 91262)

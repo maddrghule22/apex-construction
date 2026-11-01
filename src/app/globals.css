@@ -7,6 +7,29 @@
   --dark-charcoal: #202833;
   --construction-orange: #F28C28;
   --surface-gray: #F4F6F8;
+  --navy-950: #070E17;
+  --navy-900: #0D1B2A;
+  --navy-800: #14283F;
+}
+
+/* Explicit fallback utilities for dark theme tokens */
+.bg-navy-950 {
+  background-color: #070E17;
+}
+.text-navy-950 {
+  color: #070E17;
+}
+.border-navy-950 {
+  border-color: #070E17;
+}
+.bg-navy-900 {
+  background-color: #0D1B2A;
+}
+.border-navy-900 {
+  border-color: #0D1B2A;
+}
+.bg-navy-800 {
+  background-color: #14283F;
 }
 
 body {

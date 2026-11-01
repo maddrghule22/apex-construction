@@ -122,7 +122,10 @@ export default function ServicesPage() {
   return (
     <div className="bg-white min-h-screen">
       {/* Header Banner */}
-      <section className="bg-navy-950 text-white py-16 sm:py-20 relative overflow-hidden">
+      <section
+        className="bg-navy-950 text-white py-16 sm:py-20 relative overflow-hidden"
+        style={{ backgroundColor: "#070E17" }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-3xl space-y-3 text-left">
             <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight">

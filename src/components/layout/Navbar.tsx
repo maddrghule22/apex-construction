@@ -52,7 +52,10 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-40 bg-white border-b border-gray-200 shadow-2xs transition-all">
       {/* Top Contact Micro-Bar */}
-      <div className="bg-navy-950 text-gray-300 text-xs py-1.5 sm:py-2 px-3 sm:px-4 border-b border-navy-900">
+      <div
+        className="bg-navy-950 text-gray-300 text-xs py-1.5 sm:py-2 px-3 sm:px-4 border-b border-navy-900"
+        style={{ backgroundColor: "#070E17" }}
+      >
         <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-1.5 sm:gap-2">
           {/* Company Identification */}
           <div className="flex items-center space-x-1.5 sm:space-x-2 text-construction-400 font-bold text-[10px] sm:text-xs tracking-wide">
@@ -128,10 +131,11 @@ export default function Navbar() {
 
             <Link
               href="/contact"
-              className="inline-flex items-center px-4 py-2.5 rounded-xl text-xs font-bold text-white bg-navy-950 hover:bg-navy-900 border border-navy-800 shadow-sm transition-all duration-200 active:scale-95 gap-1"
+              className="inline-flex items-center px-4 py-2.5 rounded-xl text-xs font-bold text-white bg-navy-950 hover:bg-navy-900 border border-navy-800 shadow-sm transition-all duration-200 active:scale-95 gap-1.5"
+              style={{ backgroundColor: "#070E17" }}
             >
               <span>Contact Us</span>
-              <ChevronRight className="w-3.5 h-3.5 text-construction-400" />
+              <ChevronRight className="w-3.5 h-3.5 text-construction-400 shrink-0" />
             </Link>
           </div>
 
@@ -176,7 +180,7 @@ export default function Navbar() {
                 }`}
               >
                 <span>{link.label}</span>
-                <ChevronRight className="w-4 h-4 opacity-50" />
+                <ChevronRight className="w-4 h-4 opacity-50 shrink-0" />
               </Link>
             ))}
           </nav>
@@ -195,6 +199,7 @@ export default function Navbar() {
               href="/contact"
               onClick={() => setMobileMenuOpen(false)}
               className="w-full text-center py-3.5 rounded-xl text-xs font-bold text-white bg-navy-950 hover:bg-navy-900 border border-navy-800 transition shadow-sm"
+              style={{ backgroundColor: "#070E17" }}
             >
               Contact Us Directly
             </Link>

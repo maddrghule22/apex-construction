@@ -21,7 +21,10 @@ export default function Hero() {
   });
 
   return (
-    <section className="relative bg-navy-950 text-white overflow-hidden border-b border-navy-800">
+    <section
+      className="relative bg-navy-950 text-white overflow-hidden border-b border-navy-800"
+      style={{ backgroundColor: "#070E17" }}
+    >
       {/* Background Architectural Photo with Dark Overlay for Maximum Contrast */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-10"
@@ -104,10 +107,11 @@ export default function Hero() {
 
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl text-sm font-bold text-gray-200 bg-navy-900 hover:bg-navy-850 hover:text-white border border-navy-700 transition active:scale-95 text-center"
+                className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl text-sm font-bold text-white bg-navy-900 hover:bg-navy-850 hover:text-white border border-navy-700 transition active:scale-95 text-center shadow-sm"
+                style={{ backgroundColor: "#0D1B2A" }}
               >
-                Contact Us
-                <ArrowRight className="w-4 h-4 ml-2" />
+                <span>Contact Us</span>
+                <ArrowRight className="w-4 h-4 ml-2 text-construction-400" />
               </Link>
             </div>
 

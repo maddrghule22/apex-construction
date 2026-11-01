@@ -48,7 +48,10 @@ export default async function ProjectDetailPage({ params }: { params: { slug: st
   return (
     <div className="bg-white min-h-screen">
       {/* Top Breadcrumb & Hero */}
-      <section className="bg-navy-900 text-white pt-10 pb-16 relative overflow-hidden">
+      <section
+        className="bg-navy-900 text-white pt-10 pb-16 relative overflow-hidden"
+        style={{ backgroundColor: "#0D1B2A" }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             href="/projects"

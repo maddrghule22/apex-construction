@@ -18,7 +18,10 @@ export default function Footer() {
   const whatsappUrl = generateWhatsAppUrl({ type: "GENERAL" });
 
   return (
-    <footer className="bg-navy-950 text-gray-300 pt-16 pb-8 border-t border-navy-800">
+    <footer
+      className="bg-navy-950 text-gray-300 pt-16 pb-8 border-t border-navy-800"
+      style={{ backgroundColor: "#070E17" }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-navy-800/80">
           {/* Company Bio */}
@@ -121,7 +124,10 @@ export default function Footer() {
               Owner &amp; Direct Contact
             </h4>
             
-            <div className="p-3.5 rounded-xl bg-navy-900 border border-navy-800 space-y-2">
+            <div
+              className="p-3.5 rounded-xl bg-navy-900 border border-navy-800 space-y-2"
+              style={{ backgroundColor: "#0D1B2A" }}
+            >
               <span className="text-[11px] font-bold text-construction-400 block uppercase tracking-wider">
                 Founder &amp; Principal Proprietor
               </span>

@@ -54,12 +54,16 @@ export default function QuickContactWidget() {
           isCollapsed ? "translate-x-full" : "translate-x-0"
         }`}
       >
-        <div className="relative flex flex-col items-center bg-navy-950/95 backdrop-blur-md rounded-l-2xl border-l-2 border-y-2 border-navy-800 shadow-2xl p-1.5 sm:p-2.5 space-y-2.5 sm:space-y-3">
+        <div
+          className="relative flex flex-col items-center bg-navy-950/95 backdrop-blur-md rounded-l-2xl border-l-2 border-y-2 border-navy-800 shadow-2xl p-1.5 sm:p-2.5 space-y-2.5 sm:space-y-3"
+          style={{ backgroundColor: "rgba(7, 14, 23, 0.95)" }}
+        >
           {/* Collapse / Expand Toggle Tab */}
           <button
             onClick={() => setIsCollapsed(!isCollapsed)}
             aria-label={isCollapsed ? "Open contact options" : "Hide contact options"}
             className="absolute -left-6 sm:-left-7 top-1/2 -translate-y-1/2 w-6 sm:w-7 h-10 sm:h-12 bg-navy-900/95 border-y-2 border-l-2 border-navy-700 rounded-l-xl flex items-center justify-center text-gray-300 hover:text-white shadow-lg cursor-pointer focus:outline-none focus:ring-2 focus:ring-construction-400"
+            style={{ backgroundColor: "rgba(13, 27, 42, 0.95)" }}
           >
             {isCollapsed ? (
               <ChevronLeft className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-construction-400" />
@@ -130,7 +134,10 @@ export default function QuickContactWidget() {
             className="bg-white rounded-2xl shadow-2xl border border-gray-200 w-full max-w-sm max-h-[85vh] overflow-y-auto animate-scaleUp"
           >
             {/* Modal Header */}
-            <div className="sticky top-0 z-10 bg-navy-950 text-white p-4 sm:p-5 flex items-center justify-between border-b border-navy-800">
+            <div
+              className="sticky top-0 z-10 bg-navy-950 text-white p-4 sm:p-5 flex items-center justify-between border-b border-navy-800"
+              style={{ backgroundColor: "#070E17" }}
+            >
               <h3 className="text-sm sm:text-base font-bold text-white flex items-center gap-2">
                 {activeModal === "CALL" && (
                   <>

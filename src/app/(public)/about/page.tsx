@@ -28,7 +28,10 @@ export default function AboutPage() {
   return (
     <div className="bg-white">
       {/* Header Banner */}
-      <section className="bg-navy-950 text-white py-16 sm:py-20 relative overflow-hidden">
+      <section
+        className="bg-navy-950 text-white py-16 sm:py-20 relative overflow-hidden"
+        style={{ backgroundColor: "#070E17" }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-3xl space-y-4">
             <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight">
@@ -72,6 +75,7 @@ export default function AboutPage() {
                   <a
                     href="tel:+919850291262"
                     className="w-full inline-flex items-center justify-center px-4 py-3 rounded-xl text-xs font-bold text-white bg-navy-950 hover:bg-navy-900 transition shadow-sm"
+                    style={{ backgroundColor: "#070E17" }}
                   >
                     <Phone className="w-4 h-4 mr-2 text-construction-400" />
                     Call Directly: +91 98502 91262
