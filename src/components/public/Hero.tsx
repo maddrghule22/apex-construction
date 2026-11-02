@@ -39,15 +39,24 @@ export default function Hero() {
           {/* Left Column: Clear Value Proposition (7 cols) */}
           <div className="lg:col-span-7 space-y-5 sm:space-y-6 text-left">
             <div className="space-y-2 sm:space-y-3">
-              <p className="text-[11px] sm:text-xs md:text-sm font-bold uppercase tracking-wider text-construction-400 animate-fade-in-up">
+              <p
+                className="text-[11px] sm:text-xs md:text-sm font-bold uppercase tracking-wider text-construction-400 animate-fade-in-up"
+                style={{ color: "#F5A653" }}
+              >
                 Shree Samarth Krupa Enterprises • General Contractors &amp; Developers
               </p>
-              <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight break-words animate-fade-in-up [animation-delay:150ms]">
+              <h1
+                className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight break-words animate-fade-in-up [animation-delay:150ms]"
+                style={{ color: "#FFFFFF" }}
+              >
                 Turnkey Residential &amp; Commercial Construction
               </h1>
             </div>
 
-            <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed max-w-2xl animate-fade-in-up [animation-delay:300ms]">
+            <p
+              className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed max-w-2xl animate-fade-in-up [animation-delay:300ms]"
+              style={{ color: "#E2E8F0" }}
+            >
               From foundation excavation to final structural finishing. We build custom residential bungalows, modern villas, independent row houses, and commercial premises across Maharashtra with certified materials, chartered structural designs, and daily proprietor supervision.
             </p>
 

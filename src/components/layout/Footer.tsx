@@ -20,7 +20,7 @@ export default function Footer() {
   return (
     <footer
       className="bg-navy-950 text-gray-300 pt-16 pb-8 border-t border-navy-800"
-      style={{ backgroundColor: "#070E17" }}
+      style={{ backgroundColor: "#070E17", color: "#CBD5E1" }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-navy-800/80">
@@ -28,7 +28,7 @@ export default function Footer() {
           <div className="space-y-4">
             <BrandLogo variant="light" />
 
-            <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">
+            <p className="text-xs sm:text-sm text-gray-300 leading-relaxed" style={{ color: "#CBD5E1" }}>
               Premier civil construction firm delivering turnkey residential bungalows, modern villas, independent row houses, and commercial complexes with 15+ years of engineering rigor and dedicated structural craftsmanship.
             </p>
 
@@ -38,6 +38,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 text-xs font-semibold text-white bg-emerald-600 hover:bg-emerald-700 px-3.5 py-2.5 rounded-xl transition w-full justify-center shadow-xs gap-1.5"
+                style={{ backgroundColor: "#059669", color: "#FFFFFF" }}
               >
                 <WhatsAppIcon className="w-4 h-4 text-white shrink-0" />
                 <span>Chat with Us on WhatsApp</span>
@@ -47,10 +48,13 @@ export default function Footer() {
 
           {/* Core Services */}
           <div>
-            <h4 className="text-white font-bold text-sm mb-4 tracking-wide uppercase">
+            <h4
+              className="text-white font-bold text-sm mb-4 tracking-wide uppercase"
+              style={{ color: "#FFFFFF" }}
+            >
               Our Core Services
             </h4>
-            <ul className="space-y-2.5 text-xs sm:text-sm text-gray-400">
+            <ul className="space-y-2.5 text-xs sm:text-sm text-gray-300" style={{ color: "#CBD5E1" }}>
               <li>
                 <Link href="/services#residential" className="hover:text-construction-400 transition">
                   Turnkey Bungalows &amp; Villa Construction
@@ -86,10 +90,13 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white font-bold text-sm mb-4 tracking-wide uppercase">
+            <h4
+              className="text-white font-bold text-sm mb-4 tracking-wide uppercase"
+              style={{ color: "#FFFFFF" }}
+            >
               Company &amp; Projects
             </h4>
-            <ul className="space-y-2.5 text-xs sm:text-sm text-gray-400">
+            <ul className="space-y-2.5 text-xs sm:text-sm text-gray-300" style={{ color: "#CBD5E1" }}>
               <li>
                 <Link href="/about" className="hover:text-white transition">
                   About Founders &amp; Leadership
@@ -120,31 +127,40 @@ export default function Footer() {
 
           {/* Direct Contact Info */}
           <div className="space-y-3.5">
-            <h4 className="text-white font-bold text-sm mb-4 tracking-wide uppercase">
+            <h4
+              className="text-white font-bold text-sm mb-4 tracking-wide uppercase"
+              style={{ color: "#FFFFFF" }}
+            >
               Owner &amp; Direct Contact
             </h4>
             
             <div
-              className="p-3.5 rounded-xl bg-navy-900 border border-navy-800 space-y-2"
-              style={{ backgroundColor: "#0D1B2A" }}
+              className="p-3.5 rounded-xl bg-navy-900 border border-navy-800 space-y-2 shadow-sm"
+              style={{ backgroundColor: "#0D1B2A", borderColor: "#1E293B" }}
             >
-              <span className="text-[11px] font-bold text-construction-400 block uppercase tracking-wider">
+              <span
+                className="text-[11px] font-bold text-construction-400 block uppercase tracking-wider"
+                style={{ color: "#F5A653" }}
+              >
                 Founder &amp; Principal Proprietor
               </span>
-              <p className="text-sm font-bold text-white">Dnyaneshwar Pawale</p>
+              <p className="text-sm font-bold text-white" style={{ color: "#FFFFFF" }}>
+                Dnyaneshwar Pawale
+              </p>
               <a
                 href="tel:+919850291262"
                 className="text-xs text-construction-400 hover:text-construction-300 flex items-center font-bold"
+                style={{ color: "#F5A653" }}
               >
                 <Phone className="w-3.5 h-3.5 mr-1.5 text-construction-500" />
                 +91 98502 91262
               </a>
-              <p className="text-[11px] text-gray-400">
+              <p className="text-[11px] text-gray-400" style={{ color: "#94A3B8" }}>
                 Direct on-site quality inspection &amp; architectural execution.
               </p>
             </div>
 
-            <div className="flex items-center space-x-2 text-xs text-gray-400 pt-1">
+            <div className="flex items-center space-x-2 text-xs text-gray-300 pt-1" style={{ color: "#CBD5E1" }}>
               <Mail className="w-3.5 h-3.5 text-construction-500 shrink-0" />
               <a href="mailto:contact@shreesamarthkrupa.com" className="hover:text-white transition">
                 contact@shreesamarthkrupa.com

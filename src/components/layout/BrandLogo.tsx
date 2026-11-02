@@ -33,17 +33,24 @@ export default function BrandLogo({
           className={`font-black text-xs sm:text-base lg:text-lg tracking-tight leading-tight truncate ${
             isLight ? "text-white" : "text-navy-950 group-hover:text-construction-600"
           } transition-colors`}
+          style={{ color: isLight ? "#FFFFFF" : undefined }}
         >
           SHREE SAMARTH KRUPA
         </span>
 
         {showTagline && (
           <div className="mt-0.5 flex items-center gap-1 sm:gap-1.5 text-[8px] sm:text-[9.5px] font-extrabold uppercase tracking-wider sm:tracking-widest flex-wrap leading-tight">
-            <span className={`${isLight ? "text-construction-400" : "text-construction-600"} font-black`}>
+            <span
+              className={`${isLight ? "text-construction-400" : "text-construction-600"} font-black`}
+              style={{ color: isLight ? "#F5A653" : "#D97011" }}
+            >
               ENTERPRISES
             </span>
             <span className={isLight ? "text-slate-400 hidden xs:inline" : "text-slate-300 hidden xs:inline"}>•</span>
-            <span className={`${isLight ? "text-slate-300" : "text-slate-600"} font-bold hidden xs:inline`}>
+            <span
+              className={`${isLight ? "text-slate-300" : "text-slate-600"} font-bold hidden xs:inline`}
+              style={{ color: isLight ? "#CBD5E1" : undefined }}
+            >
               BUILDERS &amp; DEVELOPERS
             </span>
           </div>
