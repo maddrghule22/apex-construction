@@ -123,7 +123,7 @@ export default function Navbar() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-4 py-2.5 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 shadow-sm transition-all duration-200 active:scale-95 gap-1.5 whitespace-nowrap shrink-0"
+              className="inline-flex items-center px-4 py-2.5 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 shadow-sm gap-1.5 whitespace-nowrap shrink-0 btn-spring"
               style={{ backgroundColor: "#059669", color: "#FFFFFF" }}
             >
               <WhatsAppIcon className="w-3.5 h-3.5 shrink-0" />
@@ -132,7 +132,7 @@ export default function Navbar() {
 
             <Link
               href="/contact"
-              className="inline-flex items-center px-4 py-2.5 rounded-xl text-xs font-bold text-white bg-construction-500 hover:bg-construction-600 shadow-sm transition-all duration-200 active:scale-95 gap-1.5 whitespace-nowrap shrink-0"
+              className="inline-flex items-center px-4 py-2.5 rounded-xl text-xs font-bold text-white bg-construction-500 hover:bg-construction-600 shadow-sm gap-1.5 whitespace-nowrap shrink-0 btn-spring"
               style={{ backgroundColor: "#F28C28", color: "#FFFFFF" }}
             >
               <span className="whitespace-nowrap">Contact Us</span>

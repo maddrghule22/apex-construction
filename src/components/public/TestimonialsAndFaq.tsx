@@ -53,12 +53,12 @@ export default function TestimonialsAndFaq() {
               return (
                 <div
                   key={idx}
-                  className="bg-white rounded-xl border border-gray-200 shadow-2xs overflow-hidden transition"
+                  className="bg-white rounded-xl border border-gray-200 shadow-2xs overflow-hidden transition-all duration-300 hover:border-construction-400/60"
                 >
                   <button
                     type="button"
                     onClick={() => setOpenFaq(isOpen ? null : idx)}
-                    className="w-full p-4 sm:p-5 text-left flex items-center justify-between text-navy-950 hover:text-construction-600 font-bold text-sm sm:text-base cursor-pointer focus:outline-none"
+                    className="w-full p-4 sm:p-5 text-left flex items-center justify-between text-navy-950 hover:text-construction-600 font-bold text-sm sm:text-base cursor-pointer focus:outline-none transition-colors duration-200"
                     aria-expanded={isOpen}
                   >
                     <span className="flex items-center pr-4">
@@ -73,7 +73,7 @@ export default function TestimonialsAndFaq() {
                   </button>
 
                   {isOpen && (
-                    <div className="px-4 pb-5 sm:px-5 sm:pb-6 text-xs sm:text-sm text-gray-600 leading-relaxed border-t border-gray-100 pt-3">
+                    <div className="px-4 pb-5 sm:px-5 sm:pb-6 text-xs sm:text-sm text-gray-600 leading-relaxed border-t border-gray-100 pt-3 animate-fade-in-up">
                       {faq.a}
                     </div>
                   )}
@@ -85,7 +85,7 @@ export default function TestimonialsAndFaq() {
 
         {/* Direct Consultation prompt */}
         <ScrollReveal direction="up" delayMs={200}>
-          <div className="bg-white rounded-2xl p-6 border border-gray-200 text-center space-y-3 shadow-xs">
+          <div className="bg-white rounded-2xl p-6 border border-gray-200 text-center space-y-3 shadow-xs hover-lift">
             <h3 className="text-base font-bold text-navy-950">
               Have questions regarding your plot or architectural design?
             </h3>
@@ -95,7 +95,7 @@ export default function TestimonialsAndFaq() {
             <div className="pt-2 flex flex-wrap justify-center items-center gap-3">
               <a
                 href="tel:+919850291262"
-                className="inline-flex items-center px-4 py-2.5 rounded-xl text-xs font-bold text-white bg-navy-950 hover:bg-navy-900 transition shadow-sm transform hover:-translate-y-0.5"
+                className="inline-flex items-center px-4 py-2.5 rounded-xl text-xs font-bold text-white bg-navy-950 hover:bg-navy-900 transition shadow-sm btn-spring"
                 style={{ backgroundColor: "#070E17" }}
               >
                 <Phone className="w-3.5 h-3.5 mr-2 text-construction-400" />
@@ -105,7 +105,7 @@ export default function TestimonialsAndFaq() {
                 href={generalWhatsApp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-4 py-2.5 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 transition gap-2 shadow-sm transform hover:-translate-y-0.5"
+                className="inline-flex items-center px-4 py-2.5 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 transition gap-2 shadow-sm btn-spring"
               >
                 <WhatsAppIcon className="w-4 h-4" />
                 <span>WhatsApp Consultation</span>

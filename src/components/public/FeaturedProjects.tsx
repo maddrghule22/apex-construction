@@ -34,8 +34,8 @@ export default async function FeaturedProjects() {
           {featured.map((project: any, idx: number) => {
             const isOngoing = project.status === "ONGOING";
             return (
-              <ScrollReveal key={project.id} delayMs={idx * 120} direction="up" className="h-full">
-                <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-xs hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col group h-full">
+              <ScrollReveal key={project.id} delayMs={idx * 90} direction="up" className="h-full">
+                <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-xs hover-lift flex flex-col group h-full">
                   {/* Cover Image Container */}
                   <div className="relative h-64 w-full bg-navy-900 overflow-hidden">
                     <img
@@ -46,7 +46,7 @@ export default async function FeaturedProjects() {
                       alt={project.title}
                       loading="lazy"
                       decoding="async"
-                      className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
+                      className="w-full h-full object-cover hover-zoom-img"
                     />
                     <div className="absolute top-4 left-4 flex space-x-2">
                       <span className="px-2.5 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider bg-navy-900/85 text-white backdrop-blur-xs">

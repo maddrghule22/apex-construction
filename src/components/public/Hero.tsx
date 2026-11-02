@@ -63,7 +63,7 @@ export default function Hero() {
             {/* Direct Owner Spotlight Hotline */}
             <div className="max-w-md pt-1 animate-fade-in-up [animation-delay:450ms]">
               <div
-                className="p-3.5 sm:p-4 rounded-2xl bg-navy-900/90 border border-navy-800 flex flex-wrap xs:flex-nowrap items-center justify-between gap-3 shadow-lg hover:border-construction-500/50 transition-colors"
+                className="p-3.5 sm:p-4 rounded-2xl bg-navy-900/90 border border-navy-800 flex flex-wrap xs:flex-nowrap items-center justify-between gap-3 shadow-lg hover-lift hover:border-construction-500/50 transition-colors"
                 style={{ backgroundColor: "rgba(13, 27, 42, 0.95)" }}
               >
                 <div className="space-y-0.5 min-w-0">
@@ -89,7 +89,7 @@ export default function Hero() {
                     href={ownerWhatsApp}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 sm:px-3 sm:py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold flex items-center gap-1.5 shadow-sm transition transform hover:-translate-y-0.5 active:translate-y-0"
+                    className="p-2 sm:px-3 sm:py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold flex items-center gap-1.5 shadow-sm btn-spring"
                     title="WhatsApp Dnyaneshwar Pawale"
                   >
                     <WhatsAppIcon className="w-3.5 h-3.5" />
@@ -97,7 +97,7 @@ export default function Hero() {
                   </a>
                   <a
                     href="tel:+919850291262"
-                    className="p-2 sm:px-3 sm:py-2 rounded-xl bg-construction-500 hover:bg-construction-600 text-white text-xs font-bold flex items-center gap-1.5 shadow-sm transition transform hover:-translate-y-0.5 active:translate-y-0"
+                    className="p-2 sm:px-3 sm:py-2 rounded-xl bg-construction-500 hover:bg-construction-600 text-white text-xs font-bold flex items-center gap-1.5 shadow-sm btn-spring"
                     title="Direct Call"
                   >
                     <Phone className="w-3.5 h-3.5" />
@@ -111,7 +111,7 @@ export default function Hero() {
             <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3 animate-fade-in-up [animation-delay:600ms]">
               <Link
                 href="/projects"
-                className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl text-sm font-bold text-white bg-construction-500 hover:bg-construction-600 shadow-md shadow-construction-500/20 transition transform hover:-translate-y-0.5 active:scale-95 text-center"
+                className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl text-sm font-bold text-white bg-construction-500 hover:bg-construction-600 shadow-md shadow-construction-500/20 text-center btn-spring"
               >
                 <Building2 className="w-4 h-4 mr-2" />
                 Explore Our Work
@@ -119,11 +119,11 @@ export default function Hero() {
 
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl text-sm font-bold text-white bg-navy-900 hover:bg-navy-850 hover:text-white border border-navy-700 transition transform hover:-translate-y-0.5 active:scale-95 text-center shadow-sm"
+                className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl text-sm font-bold text-white bg-navy-900 hover:bg-navy-850 hover:text-white border border-navy-700 text-center shadow-sm btn-spring"
                 style={{ backgroundColor: "#0D1B2A" }}
               >
                 <span>Contact Us</span>
-                <ArrowRight className="w-4 h-4 ml-2 text-construction-400" />
+                <ArrowRight className="w-4 h-4 ml-2 text-construction-400 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
 

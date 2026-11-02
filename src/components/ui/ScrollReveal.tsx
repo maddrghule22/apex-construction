@@ -6,7 +6,9 @@ interface ScrollRevealProps {
   children: React.ReactNode;
   className?: string;
   delayMs?: number;
-  direction?: "up" | "down" | "left" | "right" | "none";
+  direction?: "up" | "down" | "left" | "right" | "zoom" | "none";
+  distance?: number;
+  durationMs?: number;
 }
 
 export default function ScrollReveal({
@@ -14,20 +16,28 @@ export default function ScrollReveal({
   className = "",
   delayMs = 0,
   direction = "up",
+  distance = 28,
+  durationMs = 700,
 }: ScrollRevealProps) {
   const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    // If IntersectionObserver is unavailable, display immediately
+    if (typeof window === "undefined" || !("IntersectionObserver" in window)) {
+      setIsVisible(true);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.disconnect(); // Only animate once
+          observer.disconnect(); // Trigger once for 60fps performance
         }
       },
       {
-        threshold: 0.15,
+        threshold: 0.1,
         rootMargin: "0px 0px -40px 0px",
       }
     );
@@ -39,19 +49,22 @@ export default function ScrollReveal({
     return () => observer.disconnect();
   }, []);
 
-  const getTransform = () => {
-    if (isVisible) return "translate-x-0 translate-y-0 scale-100 opacity-100";
+  // Compute 60 FPS hardware-accelerated 3D transform strings
+  const getInitialTransform = () => {
+    if (isVisible) return "translate3d(0, 0, 0) scale3d(1, 1, 1)";
     switch (direction) {
       case "up":
-        return "translate-y-7 opacity-0";
+        return `translate3d(0, ${distance}px, 0)`;
       case "down":
-        return "-translate-y-7 opacity-0";
+        return `translate3d(0, -${distance}px, 0)`;
       case "left":
-        return "translate-x-7 opacity-0";
+        return `translate3d(${distance}px, 0, 0)`;
       case "right":
-        return "-translate-x-7 opacity-0";
+        return `translate3d(-${distance}px, 0, 0)`;
+      case "zoom":
+        return "scale3d(0.94, 0.94, 1)";
       default:
-        return "opacity-0";
+        return "translate3d(0, 0, 0)";
     }
   };
 
@@ -59,11 +72,17 @@ export default function ScrollReveal({
     <div
       ref={elementRef}
       style={{
-        transitionDuration: "800ms",
+        transform: getInitialTransform(),
+        opacity: isVisible ? 1 : 0,
+        transitionProperty: "transform, opacity",
+        transitionDuration: `${durationMs}ms`,
         transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)",
         transitionDelay: `${delayMs}ms`,
+        willChange: "transform, opacity",
+        backfaceVisibility: "hidden",
+        WebkitBackfaceVisibility: "hidden",
       }}
-      className={`transform transition-all will-change-transform ${getTransform()} ${className}`}
+      className={className}
     >
       {children}
     </div>

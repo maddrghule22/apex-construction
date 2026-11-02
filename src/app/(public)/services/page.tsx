@@ -13,6 +13,7 @@ import {
   Calendar,
 } from "lucide-react";
 import { generateWhatsAppUrl } from "@/lib/whatsapp/url";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export const metadata = {
   title: "Turnkey Construction Services | Shree Samarth Krupa Enterprises",
@@ -150,59 +151,62 @@ export default function ServicesPage() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {residentialServices.map((svc) => (
-            <div
-              key={svc.id}
-              className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between text-left"
-            >
-              <div>
-                <div className="h-56 w-full bg-navy-900 relative">
-                  <img
-                    src={svc.image}
-                    alt={svc.title}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute top-4 left-4 bg-navy-900/90 text-white text-[11px] font-bold px-3 py-1 rounded-md shadow-md uppercase tracking-wide">
-                    Turnkey Contract
+          {residentialServices.map((svc, idx) => (
+            <ScrollReveal key={svc.id} delayMs={idx * 120} direction="up" className="h-full">
+              <div
+                className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover-lift flex flex-col justify-between text-left h-full group"
+              >
+                <div>
+                  <div className="h-56 w-full bg-navy-900 relative overflow-hidden">
+                    <img
+                      src={svc.image}
+                      alt={svc.title}
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-full object-cover hover-zoom-img"
+                    />
+                    <div className="absolute top-4 left-4 bg-navy-900/90 text-white text-[11px] font-bold px-3 py-1 rounded-md shadow-md uppercase tracking-wide">
+                      Turnkey Contract
+                    </div>
+                  </div>
+
+                  <div className="p-6 sm:p-8 space-y-4">
+                    <h3 className="text-xl font-bold text-navy-950">{svc.title}</h3>
+                    <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{svc.desc}</p>
+
+                    <div>
+                      <h4 className="text-xs font-bold text-navy-900 uppercase tracking-wider mb-2">
+                        Execution Highlights:
+                      </h4>
+                      <ul className="space-y-2">
+                        {svc.benefits.map((b, i) => (
+                          <li key={i} className="flex items-start text-xs text-charcoal-700">
+                            <Check className="w-4 h-4 text-emerald-600 mr-2 shrink-0 mt-0.5" />
+                            <span>{b}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 </div>
 
-                <div className="p-6 sm:p-8 space-y-4">
-                  <h3 className="text-xl font-bold text-navy-950">{svc.title}</h3>
-                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{svc.desc}</p>
-
-                  <div>
-                    <h4 className="text-xs font-bold text-navy-900 uppercase tracking-wider mb-2">
-                      Execution Highlights:
-                    </h4>
-                    <ul className="space-y-2">
-                      {svc.benefits.map((b, i) => (
-                        <li key={i} className="flex items-start text-xs text-charcoal-700">
-                          <Check className="w-4 h-4 text-emerald-600 mr-2 shrink-0 mt-0.5" />
-                          <span>{b}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                <div className="p-6 bg-surface border-t border-gray-100 flex flex-wrap items-center justify-between gap-3">
+                  <Link
+                    href={`/contact?service=${encodeURIComponent(svc.title)}`}
+                    className="inline-flex items-center text-xs font-bold text-construction-700 hover:text-construction-800 btn-spring"
+                  >
+                    <ArrowRight className="w-4 h-4 mr-1 text-construction-600" />
+                    Get Service Quote →
+                  </Link>
+                  <Link
+                    href="/contact"
+                    className="text-xs font-semibold text-gray-500 hover:text-navy-900 btn-spring"
+                  >
+                    Consult Owner
+                  </Link>
                 </div>
               </div>
-
-              <div className="p-6 bg-surface border-t border-gray-100 flex flex-wrap items-center justify-between gap-3">
-                <Link
-                  href={`/contact?service=${encodeURIComponent(svc.title)}`}
-                  className="inline-flex items-center text-xs font-bold text-construction-700 hover:text-construction-800"
-                >
-                  <ArrowRight className="w-4 h-4 mr-1 text-construction-600" />
-                  Get Service Quote →
-                </Link>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center text-xs font-bold text-white bg-navy-900 px-3.5 py-2 rounded-xl hover:bg-navy-800 transition"
-                >
-                  Request Consultation
-                </Link>
-              </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </section>
@@ -220,42 +224,45 @@ export default function ServicesPage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {commercialServices.map((svc) => (
-              <div
-                key={svc.id}
-                className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between text-left"
-              >
-                <div>
-                  <div className="h-56 w-full bg-navy-900 relative">
-                    <img
-                      src={svc.image}
-                      alt={svc.title}
-                      className="w-full h-full object-cover"
-                    />
+            {commercialServices.map((svc, idx) => (
+              <ScrollReveal key={svc.id} delayMs={idx * 120} direction="up" className="h-full">
+                <div
+                  className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover-lift flex flex-col justify-between text-left h-full group"
+                >
+                  <div>
+                    <div className="h-56 w-full bg-navy-900 relative overflow-hidden">
+                      <img
+                        src={svc.image}
+                        alt={svc.title}
+                        loading="lazy"
+                        decoding="async"
+                        className="w-full h-full object-cover hover-zoom-img"
+                      />
+                    </div>
+                    <div className="p-6 sm:p-8 space-y-4">
+                      <h3 className="text-xl font-bold text-navy-950">{svc.title}</h3>
+                      <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{svc.desc}</p>
+                      <ul className="space-y-2">
+                        {svc.benefits.map((b, i) => (
+                          <li key={i} className="flex items-start text-xs text-charcoal-700">
+                            <Check className="w-4 h-4 text-emerald-600 mr-2 shrink-0 mt-0.5" />
+                            <span>{b}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
-                  <div className="p-6 sm:p-8 space-y-4">
-                    <h3 className="text-xl font-bold text-navy-950">{svc.title}</h3>
-                    <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{svc.desc}</p>
-                    <ul className="space-y-2">
-                      {svc.benefits.map((b, i) => (
-                        <li key={i} className="flex items-start text-xs text-charcoal-700">
-                          <Check className="w-4 h-4 text-emerald-600 mr-2 shrink-0 mt-0.5" />
-                          <span>{b}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
 
-                <div className="p-6 bg-surface border-t border-gray-100 flex items-center justify-between">
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center text-xs font-bold text-navy-950 hover:text-construction-600"
-                  >
-                    Discuss Commercial Requirements →
-                  </Link>
+                  <div className="p-6 bg-surface border-t border-gray-100 flex items-center justify-between">
+                    <Link
+                      href="/contact"
+                      className="inline-flex items-center text-xs font-bold text-navy-950 hover:text-construction-600 btn-spring"
+                    >
+                      Discuss Commercial Requirements →
+                    </Link>
+                  </div>
                 </div>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>

@@ -12,6 +12,7 @@ import {
 import Link from "next/link";
 import { generateWhatsAppUrl } from "@/lib/whatsapp/url";
 import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export const metadata = {
   title: "About Us | Shree Samarth Krupa Enterprises",
@@ -49,74 +50,78 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Owner Profile Card */}
           <div className="lg:col-span-5 text-left">
-            <div className="bg-white rounded-3xl border border-gray-200 overflow-hidden shadow-xl">
-              <div className="relative h-72 sm:h-80 w-full bg-navy-950 overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1541888946425-d0fbb1861564?auto=format&fit=crop&w=800&q=80"
-                  alt="Dnyaneshwar Pawale on-site supervision"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/20 to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <span className="text-[10px] font-extrabold uppercase tracking-wider text-construction-400 bg-navy-900/90 px-2.5 py-1 rounded-md border border-white/10">
-                    Founder &amp; Principal Proprietor
-                  </span>
-                  <h2 className="text-2xl font-extrabold mt-1">Dnyaneshwar Pawale</h2>
-                  <p className="text-xs text-gray-300">15+ Years Civil Contracting Mastery</p>
+            <ScrollReveal direction="left" delayMs={100}>
+              <div className="bg-white rounded-3xl border border-gray-200 overflow-hidden shadow-xl hover-lift">
+                <div className="relative h-72 sm:h-80 w-full bg-navy-950 overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1541888946425-d0fbb1861564?auto=format&fit=crop&w=800&q=80"
+                    alt="Dnyaneshwar Pawale on-site supervision"
+                    className="w-full h-full object-cover hover-zoom-img"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/20 to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4 text-white">
+                    <span className="text-[10px] font-extrabold uppercase tracking-wider text-construction-400 bg-navy-900/90 px-2.5 py-1 rounded-md border border-white/10">
+                      Founder &amp; Principal Proprietor
+                    </span>
+                    <h2 className="text-2xl font-extrabold mt-1">Dnyaneshwar Pawale</h2>
+                    <p className="text-xs text-gray-300">15+ Years Civil Contracting Mastery</p>
+                  </div>
+                </div>
+
+                <div className="p-6 space-y-4">
+                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                    Leading every project from the ground up, Dnyaneshwar Pawale maintains personal daily presence across foundation excavation, steel rebar tying, concrete pouring, and final architectural handover.
+                  </p>
+
+                  <div className="pt-2 flex flex-col gap-2.5">
+                    <a
+                      href="tel:+919850291262"
+                      className="w-full inline-flex items-center justify-center px-4 py-3 rounded-xl text-xs font-bold text-white bg-navy-950 hover:bg-navy-900 transition shadow-sm btn-spring"
+                      style={{ backgroundColor: "#070E17" }}
+                    >
+                      <Phone className="w-4 h-4 mr-2 text-construction-400" />
+                      Call Directly: +91 98502 91262
+                    </a>
+
+                    <a
+                      href={ownerWhatsApp}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full inline-flex items-center justify-center px-4 py-3 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 transition shadow-sm gap-2 btn-spring"
+                    >
+                      <WhatsAppIcon className="w-4 h-4" />
+                      <span>Chat on WhatsApp</span>
+                    </a>
+                  </div>
                 </div>
               </div>
-
-              <div className="p-6 space-y-4">
-                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-                  Leading every project from the ground up, Dnyaneshwar Pawale maintains personal daily presence across foundation excavation, steel rebar tying, concrete pouring, and final architectural handover.
-                </p>
-
-                <div className="pt-2 flex flex-col gap-2.5">
-                  <a
-                    href="tel:+919850291262"
-                    className="w-full inline-flex items-center justify-center px-4 py-3 rounded-xl text-xs font-bold text-white bg-navy-950 hover:bg-navy-900 transition shadow-sm"
-                    style={{ backgroundColor: "#070E17" }}
-                  >
-                    <Phone className="w-4 h-4 mr-2 text-construction-400" />
-                    Call Directly: +91 98502 91262
-                  </a>
-
-                  <a
-                    href={ownerWhatsApp}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full inline-flex items-center justify-center px-4 py-3 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 transition shadow-sm gap-2"
-                  >
-                    <WhatsAppIcon className="w-4 h-4" />
-                    <span>Chat on WhatsApp</span>
-                  </a>
-                </div>
-              </div>
-            </div>
+            </ScrollReveal>
           </div>
 
           {/* Company Background & Philosophy */}
           <div className="lg:col-span-7 space-y-6 text-left">
-            <h2 className="text-3xl font-extrabold text-navy-950 tracking-tight">
-              Honest Engineering With Direct Owner Accountability
-            </h2>
-            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-              Founded and directly led by <strong>Dnyaneshwar Pawale</strong>, <strong>Shree Samarth Krupa Enterprises</strong> provides complete turnkey civil construction and real estate development. We eliminate the common industry frustrations of unaccountable sub-contractors by providing 100% direct owner oversight on every foundation, column, slab casting, and finishing stage.
-            </p>
-            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-              Whether constructing an independent family bungalow, custom residential villa, row houses, or multi-tenant commercial complex, our owner personally verifies structural levels, cube test certifications, and verified building materials daily.
-            </p>
+            <ScrollReveal direction="right" delayMs={150}>
+              <h2 className="text-3xl font-extrabold text-navy-950 tracking-tight">
+                Honest Engineering With Direct Owner Accountability
+              </h2>
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed mt-4">
+                Founded and directly led by <strong>Dnyaneshwar Pawale</strong>, <strong>Shree Samarth Krupa Enterprises</strong> provides complete turnkey civil construction and real estate development. We eliminate the common industry frustrations of unaccountable sub-contractors by providing 100% direct owner oversight on every foundation, column, slab casting, and finishing stage.
+              </p>
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed mt-4">
+                Whether constructing an independent family bungalow, custom residential villa, row houses, or multi-tenant commercial complex, our owner personally verifies structural levels, cube test certifications, and verified building materials daily.
+              </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-              <div className="p-4 rounded-xl bg-surface border border-gray-200">
-                <p className="text-xs font-bold text-navy-950 uppercase tracking-wide">Daily On-Site Inspection</p>
-                <p className="text-xs text-gray-600 mt-1">Direct level checking, rebar spacing verification, and concrete hydration monitoring.</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6">
+                <div className="p-4 rounded-xl bg-surface border border-gray-200 hover-lift">
+                  <p className="text-xs font-bold text-navy-950 uppercase tracking-wide">Daily On-Site Inspection</p>
+                  <p className="text-xs text-gray-600 mt-1">Direct level checking, rebar spacing verification, and concrete hydration monitoring.</p>
+                </div>
+                <div className="p-4 rounded-xl bg-surface border border-gray-200 hover-lift">
+                  <p className="text-xs font-bold text-navy-950 uppercase tracking-wide">Verified Material Standards</p>
+                  <p className="text-xs text-gray-600 mt-1">Grade 53 OPC cement, tested Fe-550D TMT steel, and certified structural designs.</p>
+                </div>
               </div>
-              <div className="p-4 rounded-xl bg-surface border border-gray-200">
-                <p className="text-xs font-bold text-navy-950 uppercase tracking-wide">Verified Material Standards</p>
-                <p className="text-xs text-gray-600 mt-1">Grade 53 OPC cement, tested Fe-550D TMT steel, and certified structural designs.</p>
-              </div>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>

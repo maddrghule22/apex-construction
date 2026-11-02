@@ -102,9 +102,9 @@ export default function ServicesGrid() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {serviceCategories.map((group, idx) => (
-            <ScrollReveal key={idx} delayMs={idx * 150} direction="up" className="h-full">
+            <ScrollReveal key={idx} delayMs={idx * 110} direction="up" className="h-full">
               <div
-                className={`bg-white rounded-2xl border-t-4 ${group.accentColor} border-x border-b border-gray-200/80 overflow-hidden shadow-xs hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between group text-left h-full`}
+                className={`bg-white rounded-2xl border-t-4 ${group.accentColor} border-x border-b border-gray-200/80 overflow-hidden shadow-xs hover-lift flex flex-col justify-between group text-left h-full`}
               >
                 <div>
                   {/* Real Construction Photography replacing SVG icon placeholder */}
@@ -114,7 +114,7 @@ export default function ServicesGrid() {
                       alt={group.category}
                       loading="lazy"
                       decoding="async"
-                      className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
+                      className="w-full h-full object-cover hover-zoom-img"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/20 to-transparent" />
                     <div className="absolute bottom-3 left-4 right-4 text-white">

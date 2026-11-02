@@ -16,7 +16,7 @@ export default function WhatsAppBanner() {
       style={{ backgroundColor: "#070E17" }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-white/5 backdrop-blur-md rounded-3xl p-6 sm:p-10 border border-white/10 flex flex-col lg:flex-row items-center justify-between gap-8 shadow-xl">
+        <div className="bg-white/5 backdrop-blur-md rounded-3xl p-6 sm:p-10 border border-white/10 flex flex-col lg:flex-row items-center justify-between gap-8 shadow-xl hover-lift">
           <div className="space-y-3 text-center lg:text-left max-w-2xl">
             <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
               Planning to Build a Bungalow, Villa, or Commercial Space?
@@ -36,7 +36,7 @@ export default function WhatsAppBanner() {
               href={constructionWhatsApp}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-5 py-3.5 rounded-xl font-bold text-xs bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg shadow-emerald-900/30 transition text-center"
+              className="inline-flex items-center justify-center px-5 py-3.5 rounded-xl font-bold text-xs bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg shadow-emerald-900/30 text-center btn-spring"
             >
               <WhatsAppIcon className="w-4 h-4 mr-2" />
               Chat on WhatsApp
@@ -44,7 +44,7 @@ export default function WhatsAppBanner() {
 
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-5 py-3.5 rounded-xl font-bold text-xs bg-construction-500 hover:bg-construction-600 text-white shadow-lg shadow-construction-900/30 transition text-center"
+              className="inline-flex items-center justify-center px-5 py-3.5 rounded-xl font-bold text-xs bg-construction-500 hover:bg-construction-600 text-white shadow-lg shadow-construction-900/30 text-center btn-spring"
             >
               <Calendar className="w-4 h-4 mr-2" />
               Book Free Site Visit
@@ -52,7 +52,7 @@ export default function WhatsAppBanner() {
 
             <a
               href="tel:+919850291262"
-              className="inline-flex items-center justify-center px-4 py-3.5 rounded-xl font-semibold text-xs bg-navy-800 hover:bg-navy-750 text-white border border-white/20 transition text-center"
+              className="inline-flex items-center justify-center px-4 py-3.5 rounded-xl font-semibold text-xs bg-navy-800 hover:bg-navy-750 text-white border border-white/20 text-center btn-spring"
             >
               <Phone className="w-4 h-4 mr-1.5 text-construction-400" />
               Direct Call

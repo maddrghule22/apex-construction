@@ -78,7 +78,7 @@ export default function HeroProjectShowcase() {
     >
       {/* Container with premium card depth */}
       <div
-        className="relative rounded-3xl bg-navy-900/95 border border-navy-700/80 p-3 sm:p-4 shadow-2xl backdrop-blur-md overflow-hidden text-left"
+        className="relative rounded-3xl bg-navy-900/95 border border-navy-700/80 p-3 sm:p-4 shadow-2xl backdrop-blur-md overflow-hidden text-left hover-lift"
         style={{ backgroundColor: "rgba(13, 27, 42, 0.95)" }}
       >
         {/* Main Project Hero Card with Smooth Crossfade */}
@@ -92,7 +92,7 @@ export default function HeroProjectShowcase() {
               height={450}
               loading={idx === 0 ? "eager" : "lazy"}
               decoding="async"
-              className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-out group-hover:scale-105 ${
+              className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-out hover-zoom-img ${
                 idx === activeIndex
                   ? "opacity-100 scale-100 z-0"
                   : "opacity-0 scale-95 pointer-events-none -z-10"

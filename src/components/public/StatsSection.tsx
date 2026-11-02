@@ -42,8 +42,8 @@ export default function StatsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {highlights.map((item, idx) => (
-            <ScrollReveal key={idx} delayMs={idx * 120} direction="up" className="h-full">
-              <div className="bg-white rounded-2xl border border-gray-200/90 overflow-hidden shadow-xs hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col group text-left h-full">
+            <ScrollReveal key={idx} delayMs={idx * 100} direction="up" className="h-full">
+              <div className="bg-white rounded-2xl border border-gray-200/90 overflow-hidden shadow-xs hover-lift flex flex-col group text-left h-full">
                 {/* Real Construction Image replacing SVG Icon */}
                 <div className="relative h-44 w-full bg-navy-950 overflow-hidden">
                   <img
@@ -51,7 +51,7 @@ export default function StatsSection() {
                     alt={item.title}
                     loading="lazy"
                     decoding="async"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108"
+                    className="w-full h-full object-cover hover-zoom-img"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950/70 via-transparent to-transparent" />
                   <span className="absolute bottom-2.5 left-3 text-[10px] font-extrabold uppercase tracking-wider text-construction-300 bg-navy-950/80 px-2 py-0.5 rounded-md backdrop-blur-xs border border-white/10">

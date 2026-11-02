@@ -55,15 +55,15 @@ export default function WhyChooseUs() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {points.map((pt, idx) => (
-            <ScrollReveal key={idx} delayMs={idx * 120} direction="up" className="h-full">
-              <div className="bg-navy-800/80 border border-navy-700/80 rounded-2xl overflow-hidden hover:bg-navy-800 hover:border-construction-500/60 hover:-translate-y-2 hover:shadow-2xl transition-all duration-500 flex flex-col group text-left h-full">
+            <ScrollReveal key={idx} delayMs={idx * 90} direction="up" className="h-full">
+              <div className="bg-navy-800/80 border border-navy-700/80 rounded-2xl overflow-hidden hover:bg-navy-800 hover:border-construction-500/60 hover-lift flex flex-col group text-left h-full">
                 <div className="h-40 w-full overflow-hidden relative bg-navy-950">
                   <img
                     src={pt.image}
                     alt={pt.title}
                     loading="lazy"
                     decoding="async"
-                    className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out opacity-90"
+                    className="w-full h-full object-cover hover-zoom-img opacity-90"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-transparent to-transparent" />
                 </div>

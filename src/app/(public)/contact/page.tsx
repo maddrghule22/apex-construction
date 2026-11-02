@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { generateWhatsAppUrl } from "@/lib/whatsapp/url";
 import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 function ContactFormContent() {
   const searchParams = useSearchParams();
@@ -106,77 +107,80 @@ function ContactFormContent() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Left Column: Direct Info & Owner Contacts (5 cols) */}
           <div className="lg:col-span-5 space-y-6 text-left">
-            <div>
-              <span className="text-[11px] font-bold text-construction-600 uppercase tracking-wider block">
-                Direct Line to Owner
-              </span>
-              <h2 className="text-2xl font-extrabold text-navy-950 mt-0.5">
-                Reach Us Anytime
-              </h2>
-              <p className="text-xs sm:text-sm text-gray-600 leading-relaxed mt-1">
-                Call or WhatsApp founder Dnyaneshwar Pawale directly for architectural review or on-site plot inspection.
-              </p>
-            </div>
+            <ScrollReveal direction="left" delayMs={100}>
+              <div>
+                <span className="text-[11px] font-bold text-construction-600 uppercase tracking-wider block">
+                  Direct Line to Owner
+                </span>
+                <h2 className="text-2xl font-extrabold text-navy-950 mt-0.5">
+                  Reach Us Anytime
+                </h2>
+                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed mt-1">
+                  Call or WhatsApp founder Dnyaneshwar Pawale directly for architectural review or on-site plot inspection.
+                </p>
+              </div>
 
-            {/* Direct Owner Card */}
-            <div className="rounded-2xl border border-gray-200 bg-surface p-6 shadow-sm space-y-4">
-              <div className="flex items-center space-x-3.5">
-                <div className="w-12 h-12 rounded-xl bg-navy-950 text-construction-400 font-extrabold text-sm flex items-center justify-center shrink-0">
-                  DP
+              {/* Direct Owner Card */}
+              <div className="rounded-2xl border border-gray-200 bg-surface p-6 shadow-sm space-y-4 hover-lift mt-6">
+                <div className="flex items-center space-x-3.5">
+                  <div className="w-12 h-12 rounded-xl bg-navy-950 text-construction-400 font-extrabold text-sm flex items-center justify-center shrink-0">
+                    DP
+                  </div>
+                  <div>
+                    <span className="text-[10px] uppercase font-extrabold text-construction-600 tracking-wider block">
+                      Founder &amp; Principal Proprietor
+                    </span>
+                    <h3 className="text-base font-extrabold text-navy-950">
+                      Dnyaneshwar Pawale
+                    </h3>
+                    <p className="text-xs text-gray-500">Civil Engineering &amp; Operations</p>
+                  </div>
                 </div>
-                <div>
-                  <span className="text-[10px] uppercase font-extrabold text-construction-600 tracking-wider block">
-                    Founder &amp; Principal Proprietor
-                  </span>
-                  <h3 className="text-base font-extrabold text-navy-950">
-                    Dnyaneshwar Pawale
-                  </h3>
-                  <p className="text-xs text-gray-500">Civil Engineering &amp; Operations</p>
+
+                <div className="pt-2 space-y-2 border-t border-gray-200/80">
+                  <a
+                    href="tel:+919850291262"
+                    className="flex items-center text-xs font-bold text-navy-950 hover:text-construction-600 transition"
+                  >
+                    <Phone className="w-4 h-4 mr-2 text-construction-500 shrink-0" />
+                    +91 98502 91262
+                  </a>
+                  <a
+                    href={ownerWhatsApp}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 px-3 py-2 rounded-xl transition shadow-xs gap-2 btn-spring"
+                  >
+                    <WhatsAppIcon className="w-3.5 h-3.5" />
+                    <span>Chat on WhatsApp</span>
+                  </a>
+                  <div className="flex items-center text-xs text-gray-600">
+                    <Mail className="w-4 h-4 mr-2 text-construction-500 shrink-0" />
+                    contact@shreesamarthkrupa.com
+                  </div>
+                  <div className="flex items-start text-xs text-gray-600">
+                    <MapPin className="w-4 h-4 mr-2 text-construction-500 shrink-0 mt-0.5" />
+                    <span>Main Office &amp; Operations, Maharashtra, India</span>
+                  </div>
+                  <div className="flex items-center text-xs text-gray-600">
+                    <Clock className="w-4 h-4 mr-2 text-construction-500 shrink-0" />
+                    <span>Mon – Sat: 8:00 AM – 8:00 PM</span>
+                  </div>
                 </div>
               </div>
 
-              <div className="pt-2 space-y-2 border-t border-gray-200/80">
-                <a
-                  href="tel:+919850291262"
-                  className="flex items-center text-xs font-bold text-navy-950 hover:text-construction-600 transition"
-                >
-                  <Phone className="w-4 h-4 mr-2 text-construction-500 shrink-0" />
-                  +91 98502 91262
-                </a>
-                <a
-                  href={ownerWhatsApp}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 px-3 py-2 rounded-xl transition shadow-xs gap-2"
-                >
-                  <WhatsAppIcon className="w-3.5 h-3.5" />
-                  <span>Chat on WhatsApp</span>
-                </a>
-                <div className="flex items-center text-xs text-gray-600">
-                  <Mail className="w-4 h-4 mr-2 text-construction-500 shrink-0" />
-                  contact@shreesamarthkrupa.com
-                </div>
-                <div className="flex items-start text-xs text-gray-600">
-                  <MapPin className="w-4 h-4 mr-2 text-construction-500 shrink-0 mt-0.5" />
-                  <span>Main Office &amp; Operations, Maharashtra, India</span>
-                </div>
-                <div className="flex items-center text-xs text-gray-600">
-                  <Clock className="w-4 h-4 mr-2 text-construction-500 shrink-0" />
-                  <span>Mon – Sat: 8:00 AM – 8:00 PM</span>
-                </div>
+              <div className="p-4 rounded-xl bg-navy-50 border border-navy-100 space-y-1 mt-6 hover-lift">
+                <span className="text-xs font-bold text-navy-950 block">Personal Site Inspection</span>
+                <p className="text-xs text-gray-600">
+                  Founder Dnyaneshwar Pawale visits your plot in person to evaluate ground conditions, soil feasibility, and road access before planning begins.
+                </p>
               </div>
-            </div>
-
-            <div className="p-4 rounded-xl bg-navy-50 border border-navy-100 space-y-1">
-              <span className="text-xs font-bold text-navy-950 block">Personal Site Inspection</span>
-              <p className="text-xs text-gray-600">
-                Founder Dnyaneshwar Pawale visits your plot in person to evaluate ground conditions, soil feasibility, and road access before planning begins.
-              </p>
-            </div>
+            </ScrollReveal>
           </div>
 
           {/* Right Column: Server-Validated Enquiry Form (7 cols) */}
-          <div className="lg:col-span-7 bg-white p-6 sm:p-10 rounded-2xl border border-gray-200 shadow-md">
+          <div className="lg:col-span-7 bg-white p-6 sm:p-10 rounded-2xl border border-gray-200 shadow-md hover-lift">
+            <ScrollReveal direction="right" delayMs={150}>
             {successResponse ? (
               <div className="py-12 text-center space-y-4">
                 <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
@@ -347,7 +351,7 @@ function ContactFormContent() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full py-3.5 px-6 rounded-xl font-bold text-sm text-white bg-construction-500 hover:bg-construction-600 disabled:opacity-50 transition shadow-md flex items-center justify-center cursor-pointer"
+                  className="w-full py-3.5 px-6 rounded-xl font-bold text-sm text-white bg-construction-500 hover:bg-construction-600 disabled:opacity-50 transition shadow-md flex items-center justify-center cursor-pointer btn-spring"
                 >
                   {loading ? (
                     <span>Submitting Enquiry...</span>
@@ -360,6 +364,7 @@ function ContactFormContent() {
                 </button>
               </form>
             )}
+            </ScrollReveal>
           </div>
         </div>
       </section>
