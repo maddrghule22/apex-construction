@@ -61,6 +61,8 @@ export default function WhyChooseUs() {
                   <img
                     src={pt.image}
                     alt={pt.title}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out opacity-90"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-transparent to-transparent" />

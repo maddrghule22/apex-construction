@@ -11,7 +11,7 @@ export default function PublicLayout({
   return (
     <>
       <Navbar />
-      <main className="flex-1">{children}</main>
+      <main className="flex-1 w-full overflow-x-hidden min-h-[60vh]">{children}</main>
       <Footer />
       <QuickContactWidget />
     </>

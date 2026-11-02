@@ -88,6 +88,10 @@ export default function HeroProjectShowcase() {
               key={proj.id}
               src={proj.image}
               alt={proj.title}
+              width={600}
+              height={450}
+              loading={idx === 0 ? "eager" : "lazy"}
+              decoding="async"
               className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-out group-hover:scale-105 ${
                 idx === activeIndex
                   ? "opacity-100 scale-100 z-0"

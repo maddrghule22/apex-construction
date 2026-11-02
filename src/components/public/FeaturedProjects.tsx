@@ -44,6 +44,8 @@ export default async function FeaturedProjects() {
                         "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
                       }
                       alt={project.title}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
                     />
                     <div className="absolute top-4 left-4 flex space-x-2">
