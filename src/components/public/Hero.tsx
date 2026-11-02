@@ -153,21 +153,6 @@ export default function Hero() {
             <HeroProjectShowcase />
           </div>
         </div>
-
-        {/* JSW Greentech Style Animated Scroll Indicator */}
-        <div className="mt-8 sm:mt-12 flex flex-col items-center justify-center text-center">
-          <a
-            href="#standards-belt"
-            className="inline-flex flex-col items-center text-[10px] sm:text-xs text-gray-400 hover:text-construction-400 transition group cursor-pointer"
-          >
-            <span className="uppercase tracking-widest font-semibold mb-1.5 opacity-70 group-hover:opacity-100 transition-opacity text-[9.5px]">
-              Explore Engineering Standards
-            </span>
-            <div className="w-5 h-8 sm:w-5.5 sm:h-8.5 rounded-full border-2 border-gray-600 group-hover:border-construction-400 transition-colors flex items-start justify-center p-1">
-              <div className="w-1.5 h-2 rounded-full bg-construction-400 animate-scroll-indicator" />
-            </div>
-          </a>
-        </div>
       </div>
     </section>
   );
